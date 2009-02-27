@@ -1,0 +1,17 @@
+Ruby-GetText Sample Rails Plugin.
+
+Files
+-----
+* Rakefile: rake file for updatpo/makemo.
+
+* init.rb:
+     - initialize this plugin.
+
+* lib/lang_helper.rb:
+     - The main part of localized plugin.
+
+* po/* (lang_helper.po[t])
+     - Catalog files which translators edit. They are convert to
+       mofiles by "rake makemo".
+* locale/*
+     - mo-files for this plugin.

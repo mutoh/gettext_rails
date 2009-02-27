@@ -1,0 +1,95 @@
+#
+# a po-file for Ruby-GetText-Package and Ruby on Rails.
+#
+# Copyright (C) 2005,2006 Masao Mutoh
+# This file is distributed under the same license as the Ruby-GetText-Package.
+#
+# Aivars Akots, 2008.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: gettext_rails 1.93.0\n"
+"POT-Creation-Date: 2009-02-20 20:21+0900\n"
+"PO-Revision-Date: 2008-07-25 09:37+0200\n"
+"Last-Translator: Aivars Akots <aivars.akots@gmail.com>\n"
+"Language-Team: Latvian\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n != 0 ? 1 : "
+"2);\n"
+
+#: lib/gettext_rails/action_view/active_record_helper.rb:23
+msgid "%{num} error prohibited this %{record} from being saved"
+msgid_plural "%{num} errors prohibited this %{record} from being saved"
+msgstr[0] "%d kļūdas rezultātā %s netika saglabāts"
+msgstr[1] "%d kļūdu rezultātā %s netika saglabāts"
+
+#: lib/gettext_rails/action_view/active_record_helper.rb:25
+msgid "There was a problem with the following field:"
+msgid_plural "There were problems with the following fields:"
+msgstr[0] "Radās problēmas ar sekojošu lauku:"
+msgstr[1] "Radās problēmas ar sekojošajiem laukiem:"
+
+#: lib/gettext_rails/action_view/date_helper.rb:24
+msgid "less than 5 seconds"
+msgstr "mazāk kā 5 sekundes"
+
+#: lib/gettext_rails/action_view/date_helper.rb:24
+msgid "less than 10 seconds"
+msgstr "mazāk kā 10 sekundes"
+
+#: lib/gettext_rails/action_view/date_helper.rb:24
+msgid "less than 20 seconds"
+msgstr "mazāk kā 20 sekundes"
+
+#: lib/gettext_rails/action_view/date_helper.rb:25
+msgid "half a minute"
+msgstr "pus minūte"
+
+#: lib/gettext_rails/action_view/date_helper.rb:25
+msgid "less than a minute"
+msgstr "mazāk kā 1 minūte"
+
+#: lib/gettext_rails/action_view/date_helper.rb:25
+msgid "about 1 month"
+msgstr "apmēram 1 mēnesis"
+
+#: lib/gettext_rails/action_view/date_helper.rb:26
+msgid "about 1 year"
+msgstr "apmēram 1 gads"
+
+#: lib/gettext_rails/action_view/date_helper.rb:27
+#, fuzzy
+msgid "1 minute"
+msgid_plural "%{num} minutes"
+msgstr[0] "pus minūte"
+msgstr[1] "pus minūte"
+msgstr[2] "pus minūte"
+
+#: lib/gettext_rails/action_view/date_helper.rb:28
+msgid "about 1 hour"
+msgid_plural "about %{num} hours"
+msgstr[0] "apmēram 1 stunda"
+msgstr[1] "apmērm %{num} stundas"
+
+#: lib/gettext_rails/action_view/date_helper.rb:29
+msgid "1 day"
+msgid_plural "%{num} days"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+
+#: lib/gettext_rails/action_view/date_helper.rb:30
+#, fuzzy
+msgid "1 month"
+msgid_plural "%{num} months"
+msgstr[0] "apmēram 1 mēnesis"
+msgstr[1] "apmēram 1 mēnesis"
+msgstr[2] "apmēram 1 mēnesis"
+
+#: lib/gettext_rails/action_view/date_helper.rb:31
+msgid "over 1 year"
+msgid_plural "over %{num} years"
+msgstr[0] "vairāk kā 1 gads"
+msgstr[1] "vairāk kā %{num} gadi"

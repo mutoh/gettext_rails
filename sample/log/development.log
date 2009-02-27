@@ -1,0 +1,2856 @@
+  [4;36;1mSQL (0.3ms)[0m   [0;1mselect sqlite_version(*)[0m
+  [4;35;1mSQL (0.2ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (4.1ms)[0m   [0;1mCREATE TABLE "articles" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "title" varchar(255) DEFAULT '' NOT NULL, "description" text NOT NULL, "lastupdate" date) [0m
+  [4;35;1mSQL (0.2ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (3.2ms)[0m   [0;1mCREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) [0m
+  [4;35;1mSQL (13.2ms)[0m   [0mCREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT version FROM "schema_migrations"[0m
+  [4;36;1mSQL (3.9ms)[0m   [0;1mINSERT INTO "schema_migrations" (version) VALUES ('1')[0m
+
+
+Processing Rails::InfoController#properties (for 127.0.0.1 at 2009-02-21 16:13:31) [GET]
+  [4;36;1mSQL (0.7ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Completed in 80ms (View: 32, DB: 1) | 200 OK [http://localhost/rails/info/properties]
+
+
+Processing ArticlesController#index (for 127.0.0.1 at 2009-02-21 16:13:43) [GET]
+  [4;36;1mArticle Load (0.7ms)[0m   [0;1mSELECT * FROM "articles" [0m
+Rendering template within layouts/articles
+Rendering articles/index
+Completed in 53ms (View: 44, DB: 1) | 200 OK [http://localhost/articles/]
+
+
+Processing ArticlesController#new (for 127.0.0.1 at 2009-02-21 16:13:57) [GET]
+Rendering template within layouts/articles
+Rendering articles/new
+Completed in 25ms (View: 17, DB: 0) | 200 OK [http://localhost/articles/new]
+
+
+Processing ArticlesController#index (for 127.0.0.1 at 2009-02-21 16:14:01) [GET]
+  [4;35;1mArticle Load (0.7ms)[0m   [0mSELECT * FROM "articles" [0m
+Rendering template within layouts/articles
+Rendering articles/index
+Completed in 21ms (View: 13, DB: 1) | 200 OK [http://localhost/articles]
+
+
+Processing ArticlesController#index (for 127.0.0.1 at 2009-02-21 16:31:04) [GET]
+  [4;36;1mArticle Load (0.8ms)[0m   [0;1mSELECT * FROM "articles" [0m
+Rendering template within layouts/articles
+Rendering articles/index
+Completed in 16ms (View: 10, DB: 1) | 200 OK [http://localhost/articles]
+
+
+Processing ArticlesController#new (for 127.0.0.1 at 2009-02-21 16:31:06) [GET]
+Rendering template within layouts/articles
+Rendering articles/new
+Completed in 16ms (View: 11, DB: 0) | 200 OK [http://localhost/articles/new]
+
+
+Processing ActionController::Base#index (for 127.0.0.1 at 2009-02-26 01:33:27) [GET]
+
+NoMethodError (undefined method `init_gettext' for ApplicationController:Class):
+  app/controllers/application_controller.rb:18
+  activesupport (2.3.0) lib/active_support/dependencies.rb:380:in `load_without_new_constant_marking'
+  activesupport (2.3.0) lib/active_support/dependencies.rb:380:in `load_file'
+  activesupport (2.3.0) lib/active_support/dependencies.rb:521:in `new_constants_in'
+  activesupport (2.3.0) lib/active_support/dependencies.rb:379:in `load_file'
+  activesupport (2.3.0) lib/active_support/dependencies.rb:259:in `require_or_load'
+  activesupport (2.3.0) lib/active_support/dependencies.rb:425:in `load_missing_constant'
+  activesupport (2.3.0) lib/active_support/dependencies.rb:80:in `const_missing'
+  activesupport (2.3.0) lib/active_support/dependencies.rb:92:in `const_missing'
+  app/controllers/articles_controller.rb:8
+  activesupport (2.3.0) lib/active_support/dependencies.rb:380:in `load_without_new_constant_marking'
+  activesupport (2.3.0) lib/active_support/dependencies.rb:380:in `load_file'
+  activesupport (2.3.0) lib/active_support/dependencies.rb:521:in `new_constants_in'
+  activesupport (2.3.0) lib/active_support/dependencies.rb:379:in `load_file'
+  activesupport (2.3.0) lib/active_support/dependencies.rb:259:in `require_or_load'
+  activesupport (2.3.0) lib/active_support/dependencies.rb:425:in `load_missing_constant'
+  activesupport (2.3.0) lib/active_support/dependencies.rb:80:in `const_missing'
+  activesupport (2.3.0) lib/active_support/dependencies.rb:92:in `const_missing'
+  activesupport (2.3.0) lib/active_support/inflector.rb:359:in `constantize'
+  activesupport (2.3.0) lib/active_support/inflector.rb:358:in `each'
+  activesupport (2.3.0) lib/active_support/inflector.rb:358:in `constantize'
+  activesupport (2.3.0) lib/active_support/core_ext/string/inflections.rb:162:in `constantize'
+  actionpack (2.3.0) lib/action_controller/routing/route_set.rb:439:in `recognize'
+  actionpack (2.3.0) lib/action_controller/routing/route_set.rb:432:in `call'
+  actionpack (2.3.0) lib/action_controller/dispatcher.rb:65:in `dispatch'
+  actionpack (2.3.0) lib/action_controller/dispatcher.rb:88:in `_call'
+  actionpack (2.3.0) lib/action_controller/dispatcher.rb:59:in `initialize'
+  activerecord (2.3.0) lib/active_record/query_cache.rb:29:in `call'
+  activerecord (2.3.0) lib/active_record/query_cache.rb:29:in `call'
+  activerecord (2.3.0) lib/active_record/connection_adapters/abstract/query_cache.rb:34:in `cache'
+  activerecord (2.3.0) lib/active_record/query_cache.rb:9:in `cache'
+  activerecord (2.3.0) lib/active_record/query_cache.rb:28:in `call'
+  actionpack (2.3.0) lib/action_controller/params_parser.rb:15:in `call'
+  actionpack (2.3.0) lib/action_controller/rewindable_input.rb:25:in `call'
+  actionpack (2.3.0) lib/action_controller/session/cookie_store.rb:93:in `call'
+  actionpack (2.3.0) lib/action_controller/failsafe.rb:11:in `call'
+  actionpack (2.3.0) lib/action_controller/rack_ext/lock.rb:15:in `call'
+  actionpack (2.3.0) lib/action_controller/rack_ext/lock.rb:15:in `synchronize'
+  actionpack (2.3.0) lib/action_controller/rack_ext/lock.rb:15:in `call'
+  actionpack (2.3.0) lib/action_controller/dispatcher.rb:83:in `call'
+  rails (2.3.0) lib/rails/rack/static.rb:27:in `call'
+  rails (2.3.0) lib/rails/rack/log_tailer.rb:17:in `call'
+  rails (2.3.0) lib/commands/server.rb:100
+
+Rendered rescues/_trace (130.0ms)
+Rendered rescues/_request_and_response (0.7ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing ArticlesController#index (for 127.0.0.1 at 2009-02-26 02:25:40) [GET]
+  [4;36;1mArticle Load (0.6ms)[0m   [0;1mSELECT * FROM "articles" [0m
+Rendering template within layouts/articles
+Rendering articles/index
+Completed in 23ms (View: 16, DB: 1) | 200 OK [http://localhost/articles]
+
+
+Processing Rails::InfoController#properties (for 127.0.0.1 at 2009-02-27 00:24:47) [GET]
+  [4;36;1mSQL (0.7ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Completed in 69ms (View: 19, DB: 1) | 200 OK [http://localhost/rails/info/properties]
+
+
+Processing ArticlesController#index (for 127.0.0.1 at 2009-02-27 00:25:58) [GET]
+  [4;36;1mArticle Load (0.8ms)[0m   [0;1mSELECT * FROM "articles" [0m
+Rendering template within layouts/articles
+Rendering articles/index
+Completed in 125ms (View: 110, DB: 1) | 200 OK [http://localhost/articles]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-02-27 00:26:02) [GET]
+
+ActionController::RoutingError (No route matches "/ja/articles" with {:method=>:get}):
+  actionpack (2.3.0) lib/action_controller/routing/recognition_optimisation.rb:66:in `recognize_path'
+  actionpack (2.3.0) lib/action_controller/routing/route_set.rb:437:in `recognize'
+  actionpack (2.3.0) lib/action_controller/routing/route_set.rb:432:in `call'
+  actionpack (2.3.0) lib/action_controller/dispatcher.rb:65:in `dispatch'
+  actionpack (2.3.0) lib/action_controller/dispatcher.rb:88:in `_call'
+  actionpack (2.3.0) lib/action_controller/dispatcher.rb:59:in `initialize'
+  activerecord (2.3.0) lib/active_record/query_cache.rb:29:in `call'
+  activerecord (2.3.0) lib/active_record/query_cache.rb:29:in `call'
+  activerecord (2.3.0) lib/active_record/connection_adapters/abstract/query_cache.rb:34:in `cache'
+  activerecord (2.3.0) lib/active_record/query_cache.rb:9:in `cache'
+  activerecord (2.3.0) lib/active_record/query_cache.rb:28:in `call'
+  actionpack (2.3.0) lib/action_controller/params_parser.rb:15:in `call'
+  actionpack (2.3.0) lib/action_controller/rewindable_input.rb:25:in `call'
+  actionpack (2.3.0) lib/action_controller/session/cookie_store.rb:93:in `call'
+  actionpack (2.3.0) lib/action_controller/failsafe.rb:11:in `call'
+  actionpack (2.3.0) lib/action_controller/rack_ext/lock.rb:15:in `call'
+  actionpack (2.3.0) lib/action_controller/rack_ext/lock.rb:15:in `synchronize'
+  actionpack (2.3.0) lib/action_controller/rack_ext/lock.rb:15:in `call'
+  actionpack (2.3.0) lib/action_controller/dispatcher.rb:83:in `call'
+  rails (2.3.0) lib/rails/rack/static.rb:27:in `call'
+  rails (2.3.0) lib/rails/rack/log_tailer.rb:17:in `call'
+  rails (2.3.0) lib/commands/server.rb:100
+
+Rendering rescues/layout (not_found)
+
+
+Processing ArticlesController#index (for 127.0.0.1 at 2009-02-27 00:26:05) [GET]
+  [4;35;1mArticle Load (0.7ms)[0m   [0mSELECT * FROM "articles" [0m
+Rendering template within layouts/articles
+Rendering articles/index
+Completed in 25ms (View: 16, DB: 1) | 200 OK [http://localhost/articles]
+
+
+Processing ActionController::Base#index (for 127.0.0.1 at 2009-02-27 00:27:22) [GET]
+
+NoMethodError (undefined method `init_gettext' for ApplicationController:Class):
+  app/controllers/application_controller.rb:18
+  activesupport (2.3.0) lib/active_support/dependencies.rb:380:in `load_without_new_constant_marking'
+  activesupport (2.3.0) lib/active_support/dependencies.rb:380:in `load_file'
+  activesupport (2.3.0) lib/active_support/dependencies.rb:521:in `new_constants_in'
+  activesupport (2.3.0) lib/active_support/dependencies.rb:379:in `load_file'
+  activesupport (2.3.0) lib/active_support/dependencies.rb:259:in `require_or_load'
+  activesupport (2.3.0) lib/active_support/dependencies.rb:425:in `load_missing_constant'
+  activesupport (2.3.0) lib/active_support/dependencies.rb:80:in `const_missing'
+  activesupport (2.3.0) lib/active_support/dependencies.rb:92:in `const_missing'
+  app/controllers/articles_controller.rb:8
+  activesupport (2.3.0) lib/active_support/dependencies.rb:380:in `load_without_new_constant_marking'
+  activesupport (2.3.0) lib/active_support/dependencies.rb:380:in `load_file'
+  activesupport (2.3.0) lib/active_support/dependencies.rb:521:in `new_constants_in'
+  activesupport (2.3.0) lib/active_support/dependencies.rb:379:in `load_file'
+  activesupport (2.3.0) lib/active_support/dependencies.rb:259:in `require_or_load'
+  activesupport (2.3.0) lib/active_support/dependencies.rb:425:in `load_missing_constant'
+  activesupport (2.3.0) lib/active_support/dependencies.rb:80:in `const_missing'
+  activesupport (2.3.0) lib/active_support/dependencies.rb:92:in `const_missing'
+  activesupport (2.3.0) lib/active_support/inflector.rb:359:in `constantize'
+  activesupport (2.3.0) lib/active_support/inflector.rb:358:in `each'
+  activesupport (2.3.0) lib/active_support/inflector.rb:358:in `constantize'
+  activesupport (2.3.0) lib/active_support/core_ext/string/inflections.rb:162:in `constantize'
+  actionpack (2.3.0) lib/action_controller/routing/route_set.rb:439:in `recognize'
+  actionpack (2.3.0) lib/action_controller/routing/route_set.rb:432:in `call'
+  actionpack (2.3.0) lib/action_controller/dispatcher.rb:65:in `dispatch'
+  actionpack (2.3.0) lib/action_controller/dispatcher.rb:88:in `_call'
+  actionpack (2.3.0) lib/action_controller/dispatcher.rb:59:in `initialize'
+  activerecord (2.3.0) lib/active_record/query_cache.rb:29:in `call'
+  activerecord (2.3.0) lib/active_record/query_cache.rb:29:in `call'
+  activerecord (2.3.0) lib/active_record/connection_adapters/abstract/query_cache.rb:34:in `cache'
+  activerecord (2.3.0) lib/active_record/query_cache.rb:9:in `cache'
+  activerecord (2.3.0) lib/active_record/query_cache.rb:28:in `call'
+  actionpack (2.3.0) lib/action_controller/params_parser.rb:15:in `call'
+  actionpack (2.3.0) lib/action_controller/rewindable_input.rb:25:in `call'
+  actionpack (2.3.0) lib/action_controller/session/cookie_store.rb:93:in `call'
+  actionpack (2.3.0) lib/action_controller/failsafe.rb:11:in `call'
+  actionpack (2.3.0) lib/action_controller/rack_ext/lock.rb:15:in `call'
+  actionpack (2.3.0) lib/action_controller/rack_ext/lock.rb:15:in `synchronize'
+  actionpack (2.3.0) lib/action_controller/rack_ext/lock.rb:15:in `call'
+  actionpack (2.3.0) lib/action_controller/dispatcher.rb:83:in `call'
+  rails (2.3.0) lib/rails/rack/static.rb:27:in `call'
+  rails (2.3.0) lib/rails/rack/log_tailer.rb:17:in `call'
+  rails (2.3.0) lib/commands/server.rb:100
+
+Rendered rescues/_trace (107.6ms)
+Rendered rescues/_request_and_response (0.7ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (1.0ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.7ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT version FROM schema_migrations[0m
+
+
+Processing ActionController::Base#index (for 127.0.0.1 at 2009-02-27 00:29:08) [GET]
+
+NoMethodError (undefined method `init_gettext' for ApplicationController:Class):
+  app/controllers/application_controller.rb:18
+  activesupport (2.3.0) lib/active_support/dependencies.rb:380:in `load_without_new_constant_marking'
+  activesupport (2.3.0) lib/active_support/dependencies.rb:380:in `load_file'
+  activesupport (2.3.0) lib/active_support/dependencies.rb:521:in `new_constants_in'
+  activesupport (2.3.0) lib/active_support/dependencies.rb:379:in `load_file'
+  activesupport (2.3.0) lib/active_support/dependencies.rb:259:in `require_or_load'
+  activesupport (2.3.0) lib/active_support/dependencies.rb:425:in `load_missing_constant'
+  activesupport (2.3.0) lib/active_support/dependencies.rb:80:in `const_missing'
+  activesupport (2.3.0) lib/active_support/dependencies.rb:92:in `const_missing'
+  app/controllers/articles_controller.rb:8
+  activesupport (2.3.0) lib/active_support/dependencies.rb:380:in `load_without_new_constant_marking'
+  activesupport (2.3.0) lib/active_support/dependencies.rb:380:in `load_file'
+  activesupport (2.3.0) lib/active_support/dependencies.rb:521:in `new_constants_in'
+  activesupport (2.3.0) lib/active_support/dependencies.rb:379:in `load_file'
+  activesupport (2.3.0) lib/active_support/dependencies.rb:259:in `require_or_load'
+  activesupport (2.3.0) lib/active_support/dependencies.rb:425:in `load_missing_constant'
+  activesupport (2.3.0) lib/active_support/dependencies.rb:80:in `const_missing'
+  activesupport (2.3.0) lib/active_support/dependencies.rb:92:in `const_missing'
+  activesupport (2.3.0) lib/active_support/inflector.rb:359:in `constantize'
+  activesupport (2.3.0) lib/active_support/inflector.rb:358:in `each'
+  activesupport (2.3.0) lib/active_support/inflector.rb:358:in `constantize'
+  activesupport (2.3.0) lib/active_support/core_ext/string/inflections.rb:162:in `constantize'
+  actionpack (2.3.0) lib/action_controller/routing/route_set.rb:439:in `recognize'
+  actionpack (2.3.0) lib/action_controller/routing/route_set.rb:432:in `call'
+  actionpack (2.3.0) lib/action_controller/dispatcher.rb:65:in `dispatch'
+  actionpack (2.3.0) lib/action_controller/dispatcher.rb:88:in `_call'
+  actionpack (2.3.0) lib/action_controller/dispatcher.rb:59:in `initialize'
+  activerecord (2.3.0) lib/active_record/query_cache.rb:29:in `call'
+  activerecord (2.3.0) lib/active_record/query_cache.rb:29:in `call'
+  activerecord (2.3.0) lib/active_record/connection_adapters/abstract/query_cache.rb:34:in `cache'
+  activerecord (2.3.0) lib/active_record/query_cache.rb:9:in `cache'
+  activerecord (2.3.0) lib/active_record/query_cache.rb:28:in `call'
+  actionpack (2.3.0) lib/action_controller/params_parser.rb:15:in `call'
+  actionpack (2.3.0) lib/action_controller/rewindable_input.rb:25:in `call'
+  actionpack (2.3.0) lib/action_controller/session/cookie_store.rb:93:in `call'
+  actionpack (2.3.0) lib/action_controller/failsafe.rb:11:in `call'
+  actionpack (2.3.0) lib/action_controller/rack_ext/lock.rb:15:in `call'
+  actionpack (2.3.0) lib/action_controller/rack_ext/lock.rb:15:in `synchronize'
+  actionpack (2.3.0) lib/action_controller/rack_ext/lock.rb:15:in `call'
+  actionpack (2.3.0) lib/action_controller/dispatcher.rb:83:in `call'
+  rails (2.3.0) lib/rails/rack/static.rb:27:in `call'
+  rails (2.3.0) lib/rails/rack/log_tailer.rb:17:in `call'
+  rails (2.3.0) lib/commands/server.rb:100
+
+Rendered rescues/_trace (54.2ms)
+Rendered rescues/_request_and_response (0.9ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.6ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT version FROM schema_migrations[0m
+
+
+Processing ArticlesController#index (for 127.0.0.1 at 2009-02-27 00:30:12) [GET]
+
+NoMethodError (undefined method `has_key?' for #<ActionController::Request:0x7fc1ea339858>):
+  locale (0.9.0) lib/locale/driver/cgi.rb:38:in `locales'
+  locale (0.9.0) lib/locale.rb:156:in `current'
+  locale (0.9.0) lib/locale.rb:198:in `candidates'
+  /usr/lib/ruby/gems/1.8/gems/locale_rails-0.1.0/lib/locale_rails/i18n.rb:50:in `candidates'
+  /usr/lib/ruby/gems/1.8/gems/locale_rails-0.1.0/lib/locale_rails/i18n.rb:32:in `locale='
+  /usr/lib/ruby/gems/1.8/gems/locale_rails-0.1.0/lib/locale_rails/action_controller/base.rb:46:in `init_locale'
+  activesupport (2.3.0) lib/active_support/callbacks.rb:178:in `send'
+  activesupport (2.3.0) lib/active_support/callbacks.rb:178:in `evaluate_method'
+  activesupport (2.3.0) lib/active_support/callbacks.rb:166:in `call'
+  actionpack (2.3.0) lib/action_controller/filters.rb:225:in `call'
+  actionpack (2.3.0) lib/action_controller/filters.rb:629:in `run_before_filters'
+  actionpack (2.3.0) lib/action_controller/filters.rb:615:in `call_filters'
+  actionpack (2.3.0) lib/action_controller/filters.rb:610:in `perform_action_without_benchmark'
+  actionpack (2.3.0) lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+  actionpack (2.3.0) lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+  actionpack (2.3.0) lib/action_controller/rescue.rb:154:in `perform_action_without_flash'
+  actionpack (2.3.0) lib/action_controller/flash.rb:141:in `perform_action'
+  actionpack (2.3.0) lib/action_controller/base.rb:523:in `send'
+  actionpack (2.3.0) lib/action_controller/base.rb:523:in `process_without_filters'
+  actionpack (2.3.0) lib/action_controller/filters.rb:606:in `process'
+  actionpack (2.3.0) lib/action_controller/base.rb:391:in `process'
+  actionpack (2.3.0) lib/action_controller/base.rb:386:in `call'
+  actionpack (2.3.0) lib/action_controller/routing/route_set.rb:433:in `call'
+  actionpack (2.3.0) lib/action_controller/dispatcher.rb:65:in `dispatch'
+  actionpack (2.3.0) lib/action_controller/dispatcher.rb:88:in `_call'
+  actionpack (2.3.0) lib/action_controller/dispatcher.rb:59:in `initialize'
+  activerecord (2.3.0) lib/active_record/query_cache.rb:29:in `call'
+  activerecord (2.3.0) lib/active_record/query_cache.rb:29:in `call'
+  activerecord (2.3.0) lib/active_record/connection_adapters/abstract/query_cache.rb:34:in `cache'
+  activerecord (2.3.0) lib/active_record/query_cache.rb:9:in `cache'
+  activerecord (2.3.0) lib/active_record/query_cache.rb:28:in `call'
+  actionpack (2.3.0) lib/action_controller/params_parser.rb:15:in `call'
+  actionpack (2.3.0) lib/action_controller/rewindable_input.rb:25:in `call'
+  actionpack (2.3.0) lib/action_controller/session/cookie_store.rb:93:in `call'
+  actionpack (2.3.0) lib/action_controller/failsafe.rb:11:in `call'
+  actionpack (2.3.0) lib/action_controller/rack_ext/lock.rb:15:in `call'
+  actionpack (2.3.0) lib/action_controller/rack_ext/lock.rb:15:in `synchronize'
+  actionpack (2.3.0) lib/action_controller/rack_ext/lock.rb:15:in `call'
+  actionpack (2.3.0) lib/action_controller/dispatcher.rb:83:in `call'
+  rails (2.3.0) lib/rails/rack/static.rb:27:in `call'
+  rails (2.3.0) lib/rails/rack/log_tailer.rb:17:in `call'
+  rails (2.3.0) lib/commands/server.rb:100
+
+Rendered rescues/_trace (30.8ms)
+Rendered rescues/_request_and_response (0.6ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing ArticlesController#index (for 127.0.0.1 at 2009-02-27 00:30:14) [GET]
+
+NoMethodError (undefined method `has_key?' for #<ActionController::Request:0x7fc1ea0f7c20>):
+  locale (0.9.0) lib/locale/driver/cgi.rb:38:in `locales'
+  locale (0.9.0) lib/locale.rb:156:in `current'
+  locale (0.9.0) lib/locale.rb:198:in `candidates'
+  /usr/lib/ruby/gems/1.8/gems/locale_rails-0.1.0/lib/locale_rails/i18n.rb:50:in `candidates'
+  /usr/lib/ruby/gems/1.8/gems/locale_rails-0.1.0/lib/locale_rails/i18n.rb:32:in `locale='
+  /usr/lib/ruby/gems/1.8/gems/locale_rails-0.1.0/lib/locale_rails/action_controller/base.rb:46:in `init_locale'
+  activesupport (2.3.0) lib/active_support/callbacks.rb:178:in `send'
+  activesupport (2.3.0) lib/active_support/callbacks.rb:178:in `evaluate_method'
+  activesupport (2.3.0) lib/active_support/callbacks.rb:166:in `call'
+  actionpack (2.3.0) lib/action_controller/filters.rb:225:in `call'
+  actionpack (2.3.0) lib/action_controller/filters.rb:629:in `run_before_filters'
+  actionpack (2.3.0) lib/action_controller/filters.rb:615:in `call_filters'
+  actionpack (2.3.0) lib/action_controller/filters.rb:610:in `perform_action_without_benchmark'
+  actionpack (2.3.0) lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+  actionpack (2.3.0) lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+  actionpack (2.3.0) lib/action_controller/rescue.rb:154:in `perform_action_without_flash'
+  actionpack (2.3.0) lib/action_controller/flash.rb:141:in `perform_action'
+  actionpack (2.3.0) lib/action_controller/base.rb:523:in `send'
+  actionpack (2.3.0) lib/action_controller/base.rb:523:in `process_without_filters'
+  actionpack (2.3.0) lib/action_controller/filters.rb:606:in `process'
+  actionpack (2.3.0) lib/action_controller/base.rb:391:in `process'
+  actionpack (2.3.0) lib/action_controller/base.rb:386:in `call'
+  actionpack (2.3.0) lib/action_controller/routing/route_set.rb:433:in `call'
+  actionpack (2.3.0) lib/action_controller/dispatcher.rb:65:in `dispatch'
+  actionpack (2.3.0) lib/action_controller/dispatcher.rb:88:in `_call'
+  actionpack (2.3.0) lib/action_controller/dispatcher.rb:59:in `initialize'
+  activerecord (2.3.0) lib/active_record/query_cache.rb:29:in `call'
+  activerecord (2.3.0) lib/active_record/query_cache.rb:29:in `call'
+  activerecord (2.3.0) lib/active_record/connection_adapters/abstract/query_cache.rb:34:in `cache'
+  activerecord (2.3.0) lib/active_record/query_cache.rb:9:in `cache'
+  activerecord (2.3.0) lib/active_record/query_cache.rb:28:in `call'
+  actionpack (2.3.0) lib/action_controller/params_parser.rb:15:in `call'
+  actionpack (2.3.0) lib/action_controller/rewindable_input.rb:25:in `call'
+  actionpack (2.3.0) lib/action_controller/session/cookie_store.rb:93:in `call'
+  actionpack (2.3.0) lib/action_controller/failsafe.rb:11:in `call'
+  actionpack (2.3.0) lib/action_controller/rack_ext/lock.rb:15:in `call'
+  actionpack (2.3.0) lib/action_controller/rack_ext/lock.rb:15:in `synchronize'
+  actionpack (2.3.0) lib/action_controller/rack_ext/lock.rb:15:in `call'
+  actionpack (2.3.0) lib/action_controller/dispatcher.rb:83:in `call'
+  rails (2.3.0) lib/rails/rack/static.rb:27:in `call'
+  rails (2.3.0) lib/rails/rack/log_tailer.rb:17:in `call'
+  rails (2.3.0) lib/commands/server.rb:100
+
+Rendered rescues/_trace (32.1ms)
+Rendered rescues/_request_and_response (0.4ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing ArticlesController#index (for 127.0.0.1 at 2009-02-27 00:30:15) [GET]
+
+NoMethodError (undefined method `has_key?' for #<ActionController::Request:0x7fc1e9f47600>):
+  locale (0.9.0) lib/locale/driver/cgi.rb:38:in `locales'
+  locale (0.9.0) lib/locale.rb:156:in `current'
+  locale (0.9.0) lib/locale.rb:198:in `candidates'
+  /usr/lib/ruby/gems/1.8/gems/locale_rails-0.1.0/lib/locale_rails/i18n.rb:50:in `candidates'
+  /usr/lib/ruby/gems/1.8/gems/locale_rails-0.1.0/lib/locale_rails/i18n.rb:32:in `locale='
+  /usr/lib/ruby/gems/1.8/gems/locale_rails-0.1.0/lib/locale_rails/action_controller/base.rb:46:in `init_locale'
+  activesupport (2.3.0) lib/active_support/callbacks.rb:178:in `send'
+  activesupport (2.3.0) lib/active_support/callbacks.rb:178:in `evaluate_method'
+  activesupport (2.3.0) lib/active_support/callbacks.rb:166:in `call'
+  actionpack (2.3.0) lib/action_controller/filters.rb:225:in `call'
+  actionpack (2.3.0) lib/action_controller/filters.rb:629:in `run_before_filters'
+  actionpack (2.3.0) lib/action_controller/filters.rb:615:in `call_filters'
+  actionpack (2.3.0) lib/action_controller/filters.rb:610:in `perform_action_without_benchmark'
+  actionpack (2.3.0) lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+  actionpack (2.3.0) lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+  actionpack (2.3.0) lib/action_controller/rescue.rb:154:in `perform_action_without_flash'
+  actionpack (2.3.0) lib/action_controller/flash.rb:141:in `perform_action'
+  actionpack (2.3.0) lib/action_controller/base.rb:523:in `send'
+  actionpack (2.3.0) lib/action_controller/base.rb:523:in `process_without_filters'
+  actionpack (2.3.0) lib/action_controller/filters.rb:606:in `process'
+  actionpack (2.3.0) lib/action_controller/base.rb:391:in `process'
+  actionpack (2.3.0) lib/action_controller/base.rb:386:in `call'
+  actionpack (2.3.0) lib/action_controller/routing/route_set.rb:433:in `call'
+  actionpack (2.3.0) lib/action_controller/dispatcher.rb:65:in `dispatch'
+  actionpack (2.3.0) lib/action_controller/dispatcher.rb:88:in `_call'
+  actionpack (2.3.0) lib/action_controller/dispatcher.rb:59:in `initialize'
+  activerecord (2.3.0) lib/active_record/query_cache.rb:29:in `call'
+  activerecord (2.3.0) lib/active_record/query_cache.rb:29:in `call'
+  activerecord (2.3.0) lib/active_record/connection_adapters/abstract/query_cache.rb:34:in `cache'
+  activerecord (2.3.0) lib/active_record/query_cache.rb:9:in `cache'
+  activerecord (2.3.0) lib/active_record/query_cache.rb:28:in `call'
+  actionpack (2.3.0) lib/action_controller/params_parser.rb:15:in `call'
+  actionpack (2.3.0) lib/action_controller/rewindable_input.rb:25:in `call'
+  actionpack (2.3.0) lib/action_controller/session/cookie_store.rb:93:in `call'
+  actionpack (2.3.0) lib/action_controller/failsafe.rb:11:in `call'
+  actionpack (2.3.0) lib/action_controller/rack_ext/lock.rb:15:in `call'
+  actionpack (2.3.0) lib/action_controller/rack_ext/lock.rb:15:in `synchronize'
+  actionpack (2.3.0) lib/action_controller/rack_ext/lock.rb:15:in `call'
+  actionpack (2.3.0) lib/action_controller/dispatcher.rb:83:in `call'
+  rails (2.3.0) lib/rails/rack/static.rb:27:in `call'
+  rails (2.3.0) lib/rails/rack/log_tailer.rb:17:in `call'
+  rails (2.3.0) lib/commands/server.rb:100
+
+Rendered rescues/_trace (133.9ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.6ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT version FROM schema_migrations[0m
+
+
+Processing ArticlesController#index (for 127.0.0.1 at 2009-02-27 00:33:12) [GET]
+
+NoMethodError (undefined method `params' for #<Hash:0x7f0f05b69098>):
+  app/controllers/application_controller.rb:6:in `has_key?'
+  locale (0.9.0) lib/locale/driver/cgi.rb:38:in `locales'
+  locale (0.9.0) lib/locale.rb:156:in `current'
+  locale (0.9.0) lib/locale.rb:198:in `candidates'
+  /usr/lib/ruby/gems/1.8/gems/locale_rails-0.1.0/lib/locale_rails/i18n.rb:50:in `candidates'
+  /usr/lib/ruby/gems/1.8/gems/locale_rails-0.1.0/lib/locale_rails/i18n.rb:32:in `locale='
+  /usr/lib/ruby/gems/1.8/gems/locale_rails-0.1.0/lib/locale_rails/action_controller/base.rb:46:in `init_locale'
+  activesupport (2.3.0) lib/active_support/callbacks.rb:178:in `send'
+  activesupport (2.3.0) lib/active_support/callbacks.rb:178:in `evaluate_method'
+  activesupport (2.3.0) lib/active_support/callbacks.rb:166:in `call'
+  actionpack (2.3.0) lib/action_controller/filters.rb:225:in `call'
+  actionpack (2.3.0) lib/action_controller/filters.rb:629:in `run_before_filters'
+  actionpack (2.3.0) lib/action_controller/filters.rb:615:in `call_filters'
+  actionpack (2.3.0) lib/action_controller/filters.rb:610:in `perform_action_without_benchmark'
+  actionpack (2.3.0) lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+  actionpack (2.3.0) lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+  actionpack (2.3.0) lib/action_controller/rescue.rb:154:in `perform_action_without_flash'
+  actionpack (2.3.0) lib/action_controller/flash.rb:141:in `perform_action'
+  actionpack (2.3.0) lib/action_controller/base.rb:523:in `send'
+  actionpack (2.3.0) lib/action_controller/base.rb:523:in `process_without_filters'
+  actionpack (2.3.0) lib/action_controller/filters.rb:606:in `process'
+  actionpack (2.3.0) lib/action_controller/base.rb:391:in `process'
+  actionpack (2.3.0) lib/action_controller/base.rb:386:in `call'
+  actionpack (2.3.0) lib/action_controller/routing/route_set.rb:433:in `call'
+  actionpack (2.3.0) lib/action_controller/dispatcher.rb:65:in `dispatch'
+  actionpack (2.3.0) lib/action_controller/dispatcher.rb:88:in `_call'
+  actionpack (2.3.0) lib/action_controller/dispatcher.rb:59:in `initialize'
+  activerecord (2.3.0) lib/active_record/query_cache.rb:29:in `call'
+  activerecord (2.3.0) lib/active_record/query_cache.rb:29:in `call'
+  activerecord (2.3.0) lib/active_record/connection_adapters/abstract/query_cache.rb:34:in `cache'
+  activerecord (2.3.0) lib/active_record/query_cache.rb:9:in `cache'
+  activerecord (2.3.0) lib/active_record/query_cache.rb:28:in `call'
+  actionpack (2.3.0) lib/action_controller/params_parser.rb:15:in `call'
+  actionpack (2.3.0) lib/action_controller/rewindable_input.rb:25:in `call'
+  actionpack (2.3.0) lib/action_controller/session/cookie_store.rb:93:in `call'
+  actionpack (2.3.0) lib/action_controller/failsafe.rb:11:in `call'
+  actionpack (2.3.0) lib/action_controller/rack_ext/lock.rb:15:in `call'
+  actionpack (2.3.0) lib/action_controller/rack_ext/lock.rb:15:in `synchronize'
+  actionpack (2.3.0) lib/action_controller/rack_ext/lock.rb:15:in `call'
+  actionpack (2.3.0) lib/action_controller/dispatcher.rb:83:in `call'
+  rails (2.3.0) lib/rails/rack/static.rb:27:in `call'
+  rails (2.3.0) lib/rails/rack/log_tailer.rb:17:in `call'
+  rails (2.3.0) lib/commands/server.rb:100
+
+Rendered rescues/_trace (56.6ms)
+Rendered rescues/_request_and_response (0.9ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.7ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT version FROM schema_migrations[0m
+
+
+Processing ArticlesController#index (for 127.0.0.1 at 2009-02-27 00:33:27) [GET]
+  [4;36;1mArticle Load (0.5ms)[0m   [0;1mSELECT * FROM "articles" [0m
+Rendering template within layouts/articles
+Rendering articles/index
+Completed in 17ms (View: 10, DB: 1) | 200 OK [http://localhost/articles]
+
+
+Processing ArticlesController#index (for 127.0.0.1 at 2009-02-27 00:33:32) [GET]
+  [4;35;1mArticle Load (0.5ms)[0m   [0mSELECT * FROM "articles" [0m
+Rendering template within layouts/articles
+Rendering articles/index
+Completed in 16ms (View: 9, DB: 0) | 200 OK [http://localhost/articles]
+
+
+Processing ArticlesController#index (for 127.0.0.1 at 2009-02-27 00:33:32) [GET]
+  [4;36;1mArticle Load (0.5ms)[0m   [0;1mSELECT * FROM "articles" [0m
+Rendering template within layouts/articles
+Rendering articles/index
+Completed in 17ms (View: 10, DB: 0) | 200 OK [http://localhost/articles]
+
+
+Processing ArticlesController#index (for 127.0.0.1 at 2009-02-27 00:33:44) [GET]
+  Parameters: {"lang"=>"ja"}
+  [4;35;1mArticle Load (0.4ms)[0m   [0mSELECT * FROM "articles" [0m
+Rendering template within layouts/articles
+Rendering articles/index
+Completed in 16ms (View: 10, DB: 0) | 200 OK [http://localhost/articles?lang=ja]
+  [4;36;1mSQL (0.7ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT version FROM schema_migrations[0m
+
+
+Processing ArticlesController#index (for 127.0.0.1 at 2009-02-27 00:34:47) [GET]
+  Parameters: {"lang"=>"ja"}
+  [4;36;1mArticle Load (0.7ms)[0m   [0;1mSELECT * FROM "articles" [0m
+Rendering template within layouts/articles
+Rendering articles/index
+Completed in 27ms (View: 17, DB: 1) | 200 OK [http://localhost/articles?lang=ja]
+
+
+Processing ArticlesController#index (for 127.0.0.1 at 2009-02-27 00:34:48) [GET]
+  Parameters: {"lang"=>"ja"}
+  [4;35;1mArticle Load (0.7ms)[0m   [0mSELECT * FROM "articles" [0m
+Rendering template within layouts/articles
+Rendering articles/index
+Completed in 27ms (View: 17, DB: 1) | 200 OK [http://localhost/articles?lang=ja]
+  [4;36;1mSQL (0.6ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT version FROM schema_migrations[0m
+
+
+Processing ArticlesController#index (for 127.0.0.1 at 2009-02-27 00:35:19) [GET]
+  Parameters: {"lang"=>"ja"}
+  [4;36;1mArticle Load (0.5ms)[0m   [0;1mSELECT * FROM "articles" [0m
+Rendering template within layouts/articles
+Rendering articles/index
+Completed in 17ms (View: 10, DB: 0) | 200 OK [http://localhost/articles?lang=ja]
+  [4;36;1mSQL (0.6ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT version FROM schema_migrations[0m
+
+
+Processing ArticlesController#index (for 127.0.0.1 at 2009-02-27 00:35:40) [GET]
+  Parameters: {"lang"=>"ja"}
+  [4;36;1mArticle Load (0.5ms)[0m   [0;1mSELECT * FROM "articles" [0m
+Rendering template within layouts/articles
+Rendering articles/index
+Completed in 17ms (View: 10, DB: 0) | 200 OK [http://localhost/articles?lang=ja]
+  [4;36;1mSQL (0.6ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT version FROM schema_migrations[0m
+
+
+Processing ArticlesController#index (for 127.0.0.1 at 2009-02-27 00:44:00) [GET]
+  Parameters: {"lang"=>"ja"}
+  [4;36;1mArticle Load (0.5ms)[0m   [0;1mSELECT * FROM "articles" [0m
+Rendering template within layouts/articles
+Rendering articles/index
+Completed in 18ms (View: 11, DB: 1) | 200 OK [http://localhost/articles?lang=ja]
+
+
+Processing ArticlesController#index (for 127.0.0.1 at 2009-02-27 00:44:02) [GET]
+  Parameters: {"lang"=>"ja"}
+  [4;35;1mArticle Load (0.6ms)[0m   [0mSELECT * FROM "articles" [0m
+Rendering template within layouts/articles
+Rendering articles/index
+Completed in 18ms (View: 11, DB: 1) | 200 OK [http://localhost/articles?lang=ja]
+
+
+Processing ArticlesController#index (for 127.0.0.1 at 2009-02-27 00:44:02) [GET]
+  Parameters: {"lang"=>"ja"}
+  [4;36;1mArticle Load (0.7ms)[0m   [0;1mSELECT * FROM "articles" [0m
+Rendering template within layouts/articles
+Rendering articles/index
+Completed in 27ms (View: 16, DB: 1) | 200 OK [http://localhost/articles?lang=ja]
+
+
+Processing ArticlesController#index (for 127.0.0.1 at 2009-02-27 00:44:02) [GET]
+  Parameters: {"lang"=>"ja"}
+  [4;35;1mArticle Load (0.5ms)[0m   [0mSELECT * FROM "articles" [0m
+Rendering template within layouts/articles
+Rendering articles/index
+Completed in 18ms (View: 11, DB: 1) | 200 OK [http://localhost/articles?lang=ja]
+
+
+Processing ArticlesController#index (for 127.0.0.1 at 2009-02-27 00:44:03) [GET]
+  Parameters: {"lang"=>"ja"}
+  [4;36;1mArticle Load (0.5ms)[0m   [0;1mSELECT * FROM "articles" [0m
+Rendering template within layouts/articles
+Rendering articles/index
+Completed in 19ms (View: 11, DB: 1) | 200 OK [http://localhost/articles?lang=ja]
+
+
+Processing ArticlesController#index (for 127.0.0.1 at 2009-02-27 00:44:03) [GET]
+  Parameters: {"lang"=>"ja"}
+  [4;35;1mArticle Load (0.5ms)[0m   [0mSELECT * FROM "articles" [0m
+Rendering template within layouts/articles
+Rendering articles/index
+Completed in 17ms (View: 10, DB: 0) | 200 OK [http://localhost/articles?lang=ja]
+  [4;36;1mSQL (0.7ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT version FROM schema_migrations[0m
+
+
+Processing ArticlesController#index (for 127.0.0.1 at 2009-02-27 00:45:29) [GET]
+  Parameters: {"lang"=>"ja"}
+  [4;36;1mArticle Load (0.5ms)[0m   [0;1mSELECT * FROM "articles" [0m
+Rendering template within layouts/articles
+Rendering articles/index
+Completed in 17ms (View: 11, DB: 0) | 200 OK [http://localhost/articles?lang=ja]
+
+
+Processing ArticlesController#index (for 127.0.0.1 at 2009-02-27 00:45:32) [GET]
+  Parameters: {"lang"=>"ja"}
+  [4;35;1mArticle Load (0.7ms)[0m   [0mSELECT * FROM "articles" [0m
+Rendering template within layouts/articles
+Rendering articles/index
+Completed in 27ms (View: 17, DB: 1) | 200 OK [http://localhost/articles?lang=ja]
+
+
+Processing ArticlesController#index (for 127.0.0.1 at 2009-02-27 00:45:33) [GET]
+  Parameters: {"lang"=>"ja"}
+  [4;36;1mArticle Load (0.7ms)[0m   [0;1mSELECT * FROM "articles" [0m
+Rendering template within layouts/articles
+Rendering articles/index
+Completed in 24ms (View: 13, DB: 1) | 200 OK [http://localhost/articles?lang=ja]
+
+
+Processing ArticlesController#index (for 127.0.0.1 at 2009-02-27 00:46:06) [GET]
+  [4;35;1mArticle Load (0.5ms)[0m   [0mSELECT * FROM "articles" [0m
+Rendering template within layouts/articles
+Rendering articles/index
+Completed in 16ms (View: 10, DB: 0) | 200 OK [http://localhost/articles]
+  [4;36;1mSQL (0.7ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT version FROM schema_migrations[0m
+
+
+Processing ArticlesController#index (for 127.0.0.1 at 2009-02-27 00:47:51) [GET]
+
+NoMethodError (undefined method `to_sym' for #<Locale::Tag::Rfc: pt-BR>):
+  /usr/lib/ruby/gems/1.8/gems/locale_rails-0.1.0/lib/locale_rails/i18n.rb:32:in `locale='
+  /usr/lib/ruby/gems/1.8/gems/locale_rails-0.1.0/lib/locale_rails/action_controller/base.rb:46:in `init_locale'
+  activesupport (2.3.0) lib/active_support/callbacks.rb:178:in `send'
+  activesupport (2.3.0) lib/active_support/callbacks.rb:178:in `evaluate_method'
+  activesupport (2.3.0) lib/active_support/callbacks.rb:166:in `call'
+  actionpack (2.3.0) lib/action_controller/filters.rb:225:in `call'
+  actionpack (2.3.0) lib/action_controller/filters.rb:629:in `run_before_filters'
+  actionpack (2.3.0) lib/action_controller/filters.rb:615:in `call_filters'
+  actionpack (2.3.0) lib/action_controller/filters.rb:610:in `perform_action_without_benchmark'
+  actionpack (2.3.0) lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+  actionpack (2.3.0) lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+  actionpack (2.3.0) lib/action_controller/rescue.rb:154:in `perform_action_without_flash'
+  actionpack (2.3.0) lib/action_controller/flash.rb:141:in `perform_action'
+  actionpack (2.3.0) lib/action_controller/base.rb:523:in `send'
+  actionpack (2.3.0) lib/action_controller/base.rb:523:in `process_without_filters'
+  actionpack (2.3.0) lib/action_controller/filters.rb:606:in `process'
+  actionpack (2.3.0) lib/action_controller/base.rb:391:in `process'
+  actionpack (2.3.0) lib/action_controller/base.rb:386:in `call'
+  actionpack (2.3.0) lib/action_controller/routing/route_set.rb:433:in `call'
+  actionpack (2.3.0) lib/action_controller/dispatcher.rb:65:in `dispatch'
+  actionpack (2.3.0) lib/action_controller/dispatcher.rb:88:in `_call'
+  actionpack (2.3.0) lib/action_controller/dispatcher.rb:59:in `initialize'
+  activerecord (2.3.0) lib/active_record/query_cache.rb:29:in `call'
+  activerecord (2.3.0) lib/active_record/query_cache.rb:29:in `call'
+  activerecord (2.3.0) lib/active_record/connection_adapters/abstract/query_cache.rb:34:in `cache'
+  activerecord (2.3.0) lib/active_record/query_cache.rb:9:in `cache'
+  activerecord (2.3.0) lib/active_record/query_cache.rb:28:in `call'
+  actionpack (2.3.0) lib/action_controller/params_parser.rb:15:in `call'
+  actionpack (2.3.0) lib/action_controller/rewindable_input.rb:25:in `call'
+  actionpack (2.3.0) lib/action_controller/session/cookie_store.rb:93:in `call'
+  actionpack (2.3.0) lib/action_controller/failsafe.rb:11:in `call'
+  actionpack (2.3.0) lib/action_controller/rack_ext/lock.rb:15:in `call'
+  actionpack (2.3.0) lib/action_controller/rack_ext/lock.rb:15:in `synchronize'
+  actionpack (2.3.0) lib/action_controller/rack_ext/lock.rb:15:in `call'
+  actionpack (2.3.0) lib/action_controller/dispatcher.rb:83:in `call'
+  rails (2.3.0) lib/rails/rack/static.rb:27:in `call'
+  rails (2.3.0) lib/rails/rack/log_tailer.rb:17:in `call'
+  rails (2.3.0) lib/commands/server.rb:100
+
+Rendered rescues/_trace (35.3ms)
+Rendered rescues/_request_and_response (0.6ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing ArticlesController#index (for 127.0.0.1 at 2009-02-27 00:48:05) [GET]
+
+NoMethodError (undefined method `to_sym' for #<Locale::Tag::Rfc: pt-BR>):
+  /usr/lib/ruby/gems/1.8/gems/locale_rails-0.1.0/lib/locale_rails/i18n.rb:32:in `locale='
+  /usr/lib/ruby/gems/1.8/gems/locale_rails-0.1.0/lib/locale_rails/action_controller/base.rb:46:in `init_locale'
+  activesupport (2.3.0) lib/active_support/callbacks.rb:178:in `send'
+  activesupport (2.3.0) lib/active_support/callbacks.rb:178:in `evaluate_method'
+  activesupport (2.3.0) lib/active_support/callbacks.rb:166:in `call'
+  actionpack (2.3.0) lib/action_controller/filters.rb:225:in `call'
+  actionpack (2.3.0) lib/action_controller/filters.rb:629:in `run_before_filters'
+  actionpack (2.3.0) lib/action_controller/filters.rb:615:in `call_filters'
+  actionpack (2.3.0) lib/action_controller/filters.rb:610:in `perform_action_without_benchmark'
+  actionpack (2.3.0) lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+  actionpack (2.3.0) lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+  actionpack (2.3.0) lib/action_controller/rescue.rb:154:in `perform_action_without_flash'
+  actionpack (2.3.0) lib/action_controller/flash.rb:141:in `perform_action'
+  actionpack (2.3.0) lib/action_controller/base.rb:523:in `send'
+  actionpack (2.3.0) lib/action_controller/base.rb:523:in `process_without_filters'
+  actionpack (2.3.0) lib/action_controller/filters.rb:606:in `process'
+  actionpack (2.3.0) lib/action_controller/base.rb:391:in `process'
+  actionpack (2.3.0) lib/action_controller/base.rb:386:in `call'
+  actionpack (2.3.0) lib/action_controller/routing/route_set.rb:433:in `call'
+  actionpack (2.3.0) lib/action_controller/dispatcher.rb:65:in `dispatch'
+  actionpack (2.3.0) lib/action_controller/dispatcher.rb:88:in `_call'
+  actionpack (2.3.0) lib/action_controller/dispatcher.rb:59:in `initialize'
+  activerecord (2.3.0) lib/active_record/query_cache.rb:29:in `call'
+  activerecord (2.3.0) lib/active_record/query_cache.rb:29:in `call'
+  activerecord (2.3.0) lib/active_record/connection_adapters/abstract/query_cache.rb:34:in `cache'
+  activerecord (2.3.0) lib/active_record/query_cache.rb:9:in `cache'
+  activerecord (2.3.0) lib/active_record/query_cache.rb:28:in `call'
+  actionpack (2.3.0) lib/action_controller/params_parser.rb:15:in `call'
+  actionpack (2.3.0) lib/action_controller/rewindable_input.rb:25:in `call'
+  actionpack (2.3.0) lib/action_controller/session/cookie_store.rb:93:in `call'
+  actionpack (2.3.0) lib/action_controller/failsafe.rb:11:in `call'
+  actionpack (2.3.0) lib/action_controller/rack_ext/lock.rb:15:in `call'
+  actionpack (2.3.0) lib/action_controller/rack_ext/lock.rb:15:in `synchronize'
+  actionpack (2.3.0) lib/action_controller/rack_ext/lock.rb:15:in `call'
+  actionpack (2.3.0) lib/action_controller/dispatcher.rb:83:in `call'
+  rails (2.3.0) lib/rails/rack/static.rb:27:in `call'
+  rails (2.3.0) lib/rails/rack/log_tailer.rb:17:in `call'
+  rails (2.3.0) lib/commands/server.rb:100
+
+Rendered rescues/_trace (29.5ms)
+Rendered rescues/_request_and_response (0.4ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.6ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT version FROM schema_migrations[0m
+
+
+Processing ArticlesController#index (for 127.0.0.1 at 2009-02-27 00:48:12) [GET]
+
+NoMethodError (undefined method `to_sym' for #<Locale::Tag::Rfc: pt-BR>):
+  /usr/lib/ruby/gems/1.8/gems/locale_rails-0.1.0/lib/locale_rails/i18n.rb:32:in `locale='
+  /usr/lib/ruby/gems/1.8/gems/locale_rails-0.1.0/lib/locale_rails/action_controller/base.rb:46:in `init_locale'
+  activesupport (2.3.0) lib/active_support/callbacks.rb:178:in `send'
+  activesupport (2.3.0) lib/active_support/callbacks.rb:178:in `evaluate_method'
+  activesupport (2.3.0) lib/active_support/callbacks.rb:166:in `call'
+  actionpack (2.3.0) lib/action_controller/filters.rb:225:in `call'
+  actionpack (2.3.0) lib/action_controller/filters.rb:629:in `run_before_filters'
+  actionpack (2.3.0) lib/action_controller/filters.rb:615:in `call_filters'
+  actionpack (2.3.0) lib/action_controller/filters.rb:610:in `perform_action_without_benchmark'
+  actionpack (2.3.0) lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+  actionpack (2.3.0) lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+  actionpack (2.3.0) lib/action_controller/rescue.rb:154:in `perform_action_without_flash'
+  actionpack (2.3.0) lib/action_controller/flash.rb:141:in `perform_action'
+  actionpack (2.3.0) lib/action_controller/base.rb:523:in `send'
+  actionpack (2.3.0) lib/action_controller/base.rb:523:in `process_without_filters'
+  actionpack (2.3.0) lib/action_controller/filters.rb:606:in `process'
+  actionpack (2.3.0) lib/action_controller/base.rb:391:in `process'
+  actionpack (2.3.0) lib/action_controller/base.rb:386:in `call'
+  actionpack (2.3.0) lib/action_controller/routing/route_set.rb:433:in `call'
+  actionpack (2.3.0) lib/action_controller/dispatcher.rb:65:in `dispatch'
+  actionpack (2.3.0) lib/action_controller/dispatcher.rb:88:in `_call'
+  actionpack (2.3.0) lib/action_controller/dispatcher.rb:59:in `initialize'
+  activerecord (2.3.0) lib/active_record/query_cache.rb:29:in `call'
+  activerecord (2.3.0) lib/active_record/query_cache.rb:29:in `call'
+  activerecord (2.3.0) lib/active_record/connection_adapters/abstract/query_cache.rb:34:in `cache'
+  activerecord (2.3.0) lib/active_record/query_cache.rb:9:in `cache'
+  activerecord (2.3.0) lib/active_record/query_cache.rb:28:in `call'
+  actionpack (2.3.0) lib/action_controller/params_parser.rb:15:in `call'
+  actionpack (2.3.0) lib/action_controller/rewindable_input.rb:25:in `call'
+  actionpack (2.3.0) lib/action_controller/session/cookie_store.rb:93:in `call'
+  actionpack (2.3.0) lib/action_controller/failsafe.rb:11:in `call'
+  actionpack (2.3.0) lib/action_controller/rack_ext/lock.rb:15:in `call'
+  actionpack (2.3.0) lib/action_controller/rack_ext/lock.rb:15:in `synchronize'
+  actionpack (2.3.0) lib/action_controller/rack_ext/lock.rb:15:in `call'
+  actionpack (2.3.0) lib/action_controller/dispatcher.rb:83:in `call'
+  rails (2.3.0) lib/rails/rack/static.rb:27:in `call'
+  rails (2.3.0) lib/rails/rack/log_tailer.rb:17:in `call'
+  rails (2.3.0) lib/commands/server.rb:100
+
+Rendered rescues/_trace (29.3ms)
+Rendered rescues/_request_and_response (0.7ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing ArticlesController#index (for 127.0.0.1 at 2009-02-27 00:48:13) [GET]
+
+NoMethodError (undefined method `to_sym' for #<Locale::Tag::Rfc: pt-BR>):
+  /usr/lib/ruby/gems/1.8/gems/locale_rails-0.1.0/lib/locale_rails/i18n.rb:32:in `locale='
+  /usr/lib/ruby/gems/1.8/gems/locale_rails-0.1.0/lib/locale_rails/action_controller/base.rb:46:in `init_locale'
+  activesupport (2.3.0) lib/active_support/callbacks.rb:178:in `send'
+  activesupport (2.3.0) lib/active_support/callbacks.rb:178:in `evaluate_method'
+  activesupport (2.3.0) lib/active_support/callbacks.rb:166:in `call'
+  actionpack (2.3.0) lib/action_controller/filters.rb:225:in `call'
+  actionpack (2.3.0) lib/action_controller/filters.rb:629:in `run_before_filters'
+  actionpack (2.3.0) lib/action_controller/filters.rb:615:in `call_filters'
+  actionpack (2.3.0) lib/action_controller/filters.rb:610:in `perform_action_without_benchmark'
+  actionpack (2.3.0) lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+  actionpack (2.3.0) lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+  actionpack (2.3.0) lib/action_controller/rescue.rb:154:in `perform_action_without_flash'
+  actionpack (2.3.0) lib/action_controller/flash.rb:141:in `perform_action'
+  actionpack (2.3.0) lib/action_controller/base.rb:523:in `send'
+  actionpack (2.3.0) lib/action_controller/base.rb:523:in `process_without_filters'
+  actionpack (2.3.0) lib/action_controller/filters.rb:606:in `process'
+  actionpack (2.3.0) lib/action_controller/base.rb:391:in `process'
+  actionpack (2.3.0) lib/action_controller/base.rb:386:in `call'
+  actionpack (2.3.0) lib/action_controller/routing/route_set.rb:433:in `call'
+  actionpack (2.3.0) lib/action_controller/dispatcher.rb:65:in `dispatch'
+  actionpack (2.3.0) lib/action_controller/dispatcher.rb:88:in `_call'
+  actionpack (2.3.0) lib/action_controller/dispatcher.rb:59:in `initialize'
+  activerecord (2.3.0) lib/active_record/query_cache.rb:29:in `call'
+  activerecord (2.3.0) lib/active_record/query_cache.rb:29:in `call'
+  activerecord (2.3.0) lib/active_record/connection_adapters/abstract/query_cache.rb:34:in `cache'
+  activerecord (2.3.0) lib/active_record/query_cache.rb:9:in `cache'
+  activerecord (2.3.0) lib/active_record/query_cache.rb:28:in `call'
+  actionpack (2.3.0) lib/action_controller/params_parser.rb:15:in `call'
+  actionpack (2.3.0) lib/action_controller/rewindable_input.rb:25:in `call'
+  actionpack (2.3.0) lib/action_controller/session/cookie_store.rb:93:in `call'
+  actionpack (2.3.0) lib/action_controller/failsafe.rb:11:in `call'
+  actionpack (2.3.0) lib/action_controller/rack_ext/lock.rb:15:in `call'
+  actionpack (2.3.0) lib/action_controller/rack_ext/lock.rb:15:in `synchronize'
+  actionpack (2.3.0) lib/action_controller/rack_ext/lock.rb:15:in `call'
+  actionpack (2.3.0) lib/action_controller/dispatcher.rb:83:in `call'
+  rails (2.3.0) lib/rails/rack/static.rb:27:in `call'
+  rails (2.3.0) lib/rails/rack/log_tailer.rb:17:in `call'
+  rails (2.3.0) lib/commands/server.rb:100
+
+Rendered rescues/_trace (52.7ms)
+Rendered rescues/_request_and_response (0.5ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.6ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.6ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT version FROM schema_migrations[0m
+
+
+Processing ArticlesController#index (for 127.0.0.1 at 2009-02-27 00:49:32) [GET]
+  [4;36;1mArticle Load (0.7ms)[0m   [0;1mSELECT * FROM "articles" [0m
+Rendering template within layouts/articles
+Rendering articles/index
+
+ActionView::TemplateError (undefined method `candidates' for :ja:Symbol) on line #3 of app/views/articles/index.html.erb:
+1: <h1>Listing articles</h1>
+2: 
+3: lang = <%= h I18n.locale.candidates.inspect %>
+4: <table>
+5:   <tr>
+6:     <th>Title</th>
+
+    app/views/articles/index.html.erb:3
+    actionpack (2.3.0) lib/action_view/renderable.rb:35:in `send'
+    actionpack (2.3.0) lib/action_view/renderable.rb:35:in `render'
+    actionpack (2.3.0) lib/action_view/template.rb:183:in `render_template'
+    actionpack (2.3.0) lib/action_view/base.rb:247:in `render'
+    actionpack (2.3.0) lib/action_view/base.rb:318:in `_render_with_layout'
+    actionpack (2.3.0) lib/action_view/base.rb:244:in `render'
+    actionpack (2.3.0) lib/action_controller/base.rb:1180:in `render_for_file'
+    actionpack (2.3.0) lib/action_controller/base.rb:912:in `render_without_benchmark'
+    actionpack (2.3.0) lib/action_controller/benchmarking.rb:51:in `render'
+    actionpack (2.3.0) lib/action_controller/benchmarking.rb:51:in `render'
+    actionpack (2.3.0) lib/action_controller/mime_responds.rb:135:in `send'
+    actionpack (2.3.0) lib/action_controller/mime_responds.rb:135:in `custom'
+    actionpack (2.3.0) lib/action_controller/mime_responds.rb:179:in `call'
+    actionpack (2.3.0) lib/action_controller/mime_responds.rb:179:in `respond'
+    actionpack (2.3.0) lib/action_controller/mime_responds.rb:173:in `each'
+    actionpack (2.3.0) lib/action_controller/mime_responds.rb:173:in `respond'
+    actionpack (2.3.0) lib/action_controller/mime_responds.rb:107:in `respond_to'
+    app/controllers/articles_controller.rb:19:in `index'
+    actionpack (2.3.0) lib/action_controller/base.rb:1261:in `send'
+    actionpack (2.3.0) lib/action_controller/base.rb:1261:in `perform_action_without_filters'
+    actionpack (2.3.0) lib/action_controller/filters.rb:617:in `call_filters'
+    actionpack (2.3.0) lib/action_controller/filters.rb:610:in `perform_action_without_benchmark'
+    actionpack (2.3.0) lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+    actionpack (2.3.0) lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+    actionpack (2.3.0) lib/action_controller/rescue.rb:154:in `perform_action_without_flash'
+    actionpack (2.3.0) lib/action_controller/flash.rb:141:in `perform_action'
+    actionpack (2.3.0) lib/action_controller/base.rb:523:in `send'
+    actionpack (2.3.0) lib/action_controller/base.rb:523:in `process_without_filters'
+    actionpack (2.3.0) lib/action_controller/filters.rb:606:in `process'
+    actionpack (2.3.0) lib/action_controller/base.rb:391:in `process'
+    actionpack (2.3.0) lib/action_controller/base.rb:386:in `call'
+    actionpack (2.3.0) lib/action_controller/routing/route_set.rb:433:in `call'
+    actionpack (2.3.0) lib/action_controller/dispatcher.rb:65:in `dispatch'
+    actionpack (2.3.0) lib/action_controller/dispatcher.rb:88:in `_call'
+    actionpack (2.3.0) lib/action_controller/dispatcher.rb:59:in `initialize'
+    activerecord (2.3.0) lib/active_record/query_cache.rb:29:in `call'
+    activerecord (2.3.0) lib/active_record/query_cache.rb:29:in `call'
+    activerecord (2.3.0) lib/active_record/connection_adapters/abstract/query_cache.rb:34:in `cache'
+    activerecord (2.3.0) lib/active_record/query_cache.rb:9:in `cache'
+    activerecord (2.3.0) lib/active_record/query_cache.rb:28:in `call'
+    actionpack (2.3.0) lib/action_controller/params_parser.rb:15:in `call'
+    actionpack (2.3.0) lib/action_controller/rewindable_input.rb:25:in `call'
+    actionpack (2.3.0) lib/action_controller/session/cookie_store.rb:93:in `call'
+    actionpack (2.3.0) lib/action_controller/failsafe.rb:11:in `call'
+    actionpack (2.3.0) lib/action_controller/rack_ext/lock.rb:15:in `call'
+    actionpack (2.3.0) lib/action_controller/rack_ext/lock.rb:15:in `synchronize'
+    actionpack (2.3.0) lib/action_controller/rack_ext/lock.rb:15:in `call'
+    actionpack (2.3.0) lib/action_controller/dispatcher.rb:83:in `call'
+    rails (2.3.0) lib/rails/rack/static.rb:27:in `call'
+    rails (2.3.0) lib/rails/rack/log_tailer.rb:17:in `call'
+    rails (2.3.0) lib/commands/server.rb:100
+
+Rendered rescues/_trace (59.9ms)
+Rendered rescues/_request_and_response (0.7ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.6ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT version FROM schema_migrations[0m
+
+
+Processing ArticlesController#index (for 127.0.0.1 at 2009-02-27 00:53:10) [GET]
+  [4;36;1mArticle Load (0.5ms)[0m   [0;1mSELECT * FROM "articles" [0m
+Rendering template within layouts/articles
+Rendering articles/index
+
+ActionView::TemplateError (undefined method `candidates' for "ja":String) on line #3 of app/views/articles/index.html.erb:
+1: <h1>Listing articles</h1>
+2: 
+3: lang = <%= h I18n.locale.candidates.inspect %>
+4: <table>
+5:   <tr>
+6:     <th>Title</th>
+
+    app/views/articles/index.html.erb:3
+    actionpack (2.3.0) lib/action_view/renderable.rb:35:in `send'
+    actionpack (2.3.0) lib/action_view/renderable.rb:35:in `render'
+    actionpack (2.3.0) lib/action_view/template.rb:183:in `render_template'
+    actionpack (2.3.0) lib/action_view/base.rb:247:in `render'
+    actionpack (2.3.0) lib/action_view/base.rb:318:in `_render_with_layout'
+    actionpack (2.3.0) lib/action_view/base.rb:244:in `render'
+    actionpack (2.3.0) lib/action_controller/base.rb:1180:in `render_for_file'
+    actionpack (2.3.0) lib/action_controller/base.rb:912:in `render_without_benchmark'
+    actionpack (2.3.0) lib/action_controller/benchmarking.rb:51:in `render'
+    actionpack (2.3.0) lib/action_controller/benchmarking.rb:51:in `render'
+    actionpack (2.3.0) lib/action_controller/mime_responds.rb:135:in `send'
+    actionpack (2.3.0) lib/action_controller/mime_responds.rb:135:in `custom'
+    actionpack (2.3.0) lib/action_controller/mime_responds.rb:179:in `call'
+    actionpack (2.3.0) lib/action_controller/mime_responds.rb:179:in `respond'
+    actionpack (2.3.0) lib/action_controller/mime_responds.rb:173:in `each'
+    actionpack (2.3.0) lib/action_controller/mime_responds.rb:173:in `respond'
+    actionpack (2.3.0) lib/action_controller/mime_responds.rb:107:in `respond_to'
+    app/controllers/articles_controller.rb:19:in `index'
+    actionpack (2.3.0) lib/action_controller/base.rb:1261:in `send'
+    actionpack (2.3.0) lib/action_controller/base.rb:1261:in `perform_action_without_filters'
+    actionpack (2.3.0) lib/action_controller/filters.rb:617:in `call_filters'
+    actionpack (2.3.0) lib/action_controller/filters.rb:610:in `perform_action_without_benchmark'
+    actionpack (2.3.0) lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+    actionpack (2.3.0) lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+    actionpack (2.3.0) lib/action_controller/rescue.rb:154:in `perform_action_without_flash'
+    actionpack (2.3.0) lib/action_controller/flash.rb:141:in `perform_action'
+    actionpack (2.3.0) lib/action_controller/base.rb:523:in `send'
+    actionpack (2.3.0) lib/action_controller/base.rb:523:in `process_without_filters'
+    actionpack (2.3.0) lib/action_controller/filters.rb:606:in `process'
+    actionpack (2.3.0) lib/action_controller/base.rb:391:in `process'
+    actionpack (2.3.0) lib/action_controller/base.rb:386:in `call'
+    actionpack (2.3.0) lib/action_controller/routing/route_set.rb:433:in `call'
+    actionpack (2.3.0) lib/action_controller/dispatcher.rb:65:in `dispatch'
+    actionpack (2.3.0) lib/action_controller/dispatcher.rb:88:in `_call'
+    actionpack (2.3.0) lib/action_controller/dispatcher.rb:59:in `initialize'
+    activerecord (2.3.0) lib/active_record/query_cache.rb:29:in `call'
+    activerecord (2.3.0) lib/active_record/query_cache.rb:29:in `call'
+    activerecord (2.3.0) lib/active_record/connection_adapters/abstract/query_cache.rb:34:in `cache'
+    activerecord (2.3.0) lib/active_record/query_cache.rb:9:in `cache'
+    activerecord (2.3.0) lib/active_record/query_cache.rb:28:in `call'
+    actionpack (2.3.0) lib/action_controller/params_parser.rb:15:in `call'
+    actionpack (2.3.0) lib/action_controller/rewindable_input.rb:25:in `call'
+    actionpack (2.3.0) lib/action_controller/session/cookie_store.rb:93:in `call'
+    actionpack (2.3.0) lib/action_controller/failsafe.rb:11:in `call'
+    actionpack (2.3.0) lib/action_controller/rack_ext/lock.rb:15:in `call'
+    actionpack (2.3.0) lib/action_controller/rack_ext/lock.rb:15:in `synchronize'
+    actionpack (2.3.0) lib/action_controller/rack_ext/lock.rb:15:in `call'
+    actionpack (2.3.0) lib/action_controller/dispatcher.rb:83:in `call'
+    rails (2.3.0) lib/rails/rack/static.rb:27:in `call'
+    rails (2.3.0) lib/rails/rack/log_tailer.rb:17:in `call'
+    rails (2.3.0) lib/commands/server.rb:100
+
+Rendered rescues/_trace (36.8ms)
+Rendered rescues/_request_and_response (0.7ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing ArticlesController#index (for 127.0.0.1 at 2009-02-27 00:53:11) [GET]
+  [4;35;1mArticle Load (0.7ms)[0m   [0mSELECT * FROM "articles" [0m
+Rendering template within layouts/articles
+Rendering articles/index
+
+ActionView::TemplateError (undefined method `candidates' for "ja":String) on line #3 of app/views/articles/index.html.erb:
+1: <h1>Listing articles</h1>
+2: 
+3: lang = <%= h I18n.locale.candidates.inspect %>
+4: <table>
+5:   <tr>
+6:     <th>Title</th>
+
+    app/views/articles/index.html.erb:3
+    actionpack (2.3.0) lib/action_view/renderable.rb:35:in `send'
+    actionpack (2.3.0) lib/action_view/renderable.rb:35:in `render'
+    actionpack (2.3.0) lib/action_view/template.rb:183:in `render_template'
+    actionpack (2.3.0) lib/action_view/base.rb:247:in `render'
+    actionpack (2.3.0) lib/action_view/base.rb:318:in `_render_with_layout'
+    actionpack (2.3.0) lib/action_view/base.rb:244:in `render'
+    actionpack (2.3.0) lib/action_controller/base.rb:1180:in `render_for_file'
+    actionpack (2.3.0) lib/action_controller/base.rb:912:in `render_without_benchmark'
+    actionpack (2.3.0) lib/action_controller/benchmarking.rb:51:in `render'
+    actionpack (2.3.0) lib/action_controller/benchmarking.rb:51:in `render'
+    actionpack (2.3.0) lib/action_controller/mime_responds.rb:135:in `send'
+    actionpack (2.3.0) lib/action_controller/mime_responds.rb:135:in `custom'
+    actionpack (2.3.0) lib/action_controller/mime_responds.rb:179:in `call'
+    actionpack (2.3.0) lib/action_controller/mime_responds.rb:179:in `respond'
+    actionpack (2.3.0) lib/action_controller/mime_responds.rb:173:in `each'
+    actionpack (2.3.0) lib/action_controller/mime_responds.rb:173:in `respond'
+    actionpack (2.3.0) lib/action_controller/mime_responds.rb:107:in `respond_to'
+    app/controllers/articles_controller.rb:19:in `index'
+    actionpack (2.3.0) lib/action_controller/base.rb:1261:in `send'
+    actionpack (2.3.0) lib/action_controller/base.rb:1261:in `perform_action_without_filters'
+    actionpack (2.3.0) lib/action_controller/filters.rb:617:in `call_filters'
+    actionpack (2.3.0) lib/action_controller/filters.rb:610:in `perform_action_without_benchmark'
+    actionpack (2.3.0) lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+    actionpack (2.3.0) lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+    actionpack (2.3.0) lib/action_controller/rescue.rb:154:in `perform_action_without_flash'
+    actionpack (2.3.0) lib/action_controller/flash.rb:141:in `perform_action'
+    actionpack (2.3.0) lib/action_controller/base.rb:523:in `send'
+    actionpack (2.3.0) lib/action_controller/base.rb:523:in `process_without_filters'
+    actionpack (2.3.0) lib/action_controller/filters.rb:606:in `process'
+    actionpack (2.3.0) lib/action_controller/base.rb:391:in `process'
+    actionpack (2.3.0) lib/action_controller/base.rb:386:in `call'
+    actionpack (2.3.0) lib/action_controller/routing/route_set.rb:433:in `call'
+    actionpack (2.3.0) lib/action_controller/dispatcher.rb:65:in `dispatch'
+    actionpack (2.3.0) lib/action_controller/dispatcher.rb:88:in `_call'
+    actionpack (2.3.0) lib/action_controller/dispatcher.rb:59:in `initialize'
+    activerecord (2.3.0) lib/active_record/query_cache.rb:29:in `call'
+    activerecord (2.3.0) lib/active_record/query_cache.rb:29:in `call'
+    activerecord (2.3.0) lib/active_record/connection_adapters/abstract/query_cache.rb:34:in `cache'
+    activerecord (2.3.0) lib/active_record/query_cache.rb:9:in `cache'
+    activerecord (2.3.0) lib/active_record/query_cache.rb:28:in `call'
+    actionpack (2.3.0) lib/action_controller/params_parser.rb:15:in `call'
+    actionpack (2.3.0) lib/action_controller/rewindable_input.rb:25:in `call'
+    actionpack (2.3.0) lib/action_controller/session/cookie_store.rb:93:in `call'
+    actionpack (2.3.0) lib/action_controller/failsafe.rb:11:in `call'
+    actionpack (2.3.0) lib/action_controller/rack_ext/lock.rb:15:in `call'
+    actionpack (2.3.0) lib/action_controller/rack_ext/lock.rb:15:in `synchronize'
+    actionpack (2.3.0) lib/action_controller/rack_ext/lock.rb:15:in `call'
+    actionpack (2.3.0) lib/action_controller/dispatcher.rb:83:in `call'
+    rails (2.3.0) lib/rails/rack/static.rb:27:in `call'
+    rails (2.3.0) lib/rails/rack/log_tailer.rb:17:in `call'
+    rails (2.3.0) lib/commands/server.rb:100
+
+Rendered rescues/_trace (163.4ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing ArticlesController#index (for 127.0.0.1 at 2009-02-27 00:53:19) [GET]
+  [4;36;1mArticle Load (0.5ms)[0m   [0;1mSELECT * FROM "articles" [0m
+Rendering template within layouts/articles
+Rendering articles/index
+
+ActionView::TemplateError (undefined method `candidates' for "ja":String) on line #3 of app/views/articles/index.html.erb:
+1: <h1>Listing articles</h1>
+2: 
+3: lang = <%= h I18n.locale.candidates.inspect %>
+4: <table>
+5:   <tr>
+6:     <th>Title</th>
+
+    app/views/articles/index.html.erb:3
+    actionpack (2.3.0) lib/action_view/renderable.rb:35:in `send'
+    actionpack (2.3.0) lib/action_view/renderable.rb:35:in `render'
+    actionpack (2.3.0) lib/action_view/template.rb:183:in `render_template'
+    actionpack (2.3.0) lib/action_view/base.rb:247:in `render'
+    actionpack (2.3.0) lib/action_view/base.rb:318:in `_render_with_layout'
+    actionpack (2.3.0) lib/action_view/base.rb:244:in `render'
+    actionpack (2.3.0) lib/action_controller/base.rb:1180:in `render_for_file'
+    actionpack (2.3.0) lib/action_controller/base.rb:912:in `render_without_benchmark'
+    actionpack (2.3.0) lib/action_controller/benchmarking.rb:51:in `render'
+    actionpack (2.3.0) lib/action_controller/benchmarking.rb:51:in `render'
+    actionpack (2.3.0) lib/action_controller/mime_responds.rb:135:in `send'
+    actionpack (2.3.0) lib/action_controller/mime_responds.rb:135:in `custom'
+    actionpack (2.3.0) lib/action_controller/mime_responds.rb:179:in `call'
+    actionpack (2.3.0) lib/action_controller/mime_responds.rb:179:in `respond'
+    actionpack (2.3.0) lib/action_controller/mime_responds.rb:173:in `each'
+    actionpack (2.3.0) lib/action_controller/mime_responds.rb:173:in `respond'
+    actionpack (2.3.0) lib/action_controller/mime_responds.rb:107:in `respond_to'
+    app/controllers/articles_controller.rb:19:in `index'
+    actionpack (2.3.0) lib/action_controller/base.rb:1261:in `send'
+    actionpack (2.3.0) lib/action_controller/base.rb:1261:in `perform_action_without_filters'
+    actionpack (2.3.0) lib/action_controller/filters.rb:617:in `call_filters'
+    actionpack (2.3.0) lib/action_controller/filters.rb:610:in `perform_action_without_benchmark'
+    actionpack (2.3.0) lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+    actionpack (2.3.0) lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+    actionpack (2.3.0) lib/action_controller/rescue.rb:154:in `perform_action_without_flash'
+    actionpack (2.3.0) lib/action_controller/flash.rb:141:in `perform_action'
+    actionpack (2.3.0) lib/action_controller/base.rb:523:in `send'
+    actionpack (2.3.0) lib/action_controller/base.rb:523:in `process_without_filters'
+    actionpack (2.3.0) lib/action_controller/filters.rb:606:in `process'
+    actionpack (2.3.0) lib/action_controller/base.rb:391:in `process'
+    actionpack (2.3.0) lib/action_controller/base.rb:386:in `call'
+    actionpack (2.3.0) lib/action_controller/routing/route_set.rb:433:in `call'
+    actionpack (2.3.0) lib/action_controller/dispatcher.rb:65:in `dispatch'
+    actionpack (2.3.0) lib/action_controller/dispatcher.rb:88:in `_call'
+    actionpack (2.3.0) lib/action_controller/dispatcher.rb:59:in `initialize'
+    activerecord (2.3.0) lib/active_record/query_cache.rb:29:in `call'
+    activerecord (2.3.0) lib/active_record/query_cache.rb:29:in `call'
+    activerecord (2.3.0) lib/active_record/connection_adapters/abstract/query_cache.rb:34:in `cache'
+    activerecord (2.3.0) lib/active_record/query_cache.rb:9:in `cache'
+    activerecord (2.3.0) lib/active_record/query_cache.rb:28:in `call'
+    actionpack (2.3.0) lib/action_controller/params_parser.rb:15:in `call'
+    actionpack (2.3.0) lib/action_controller/rewindable_input.rb:25:in `call'
+    actionpack (2.3.0) lib/action_controller/session/cookie_store.rb:93:in `call'
+    actionpack (2.3.0) lib/action_controller/failsafe.rb:11:in `call'
+    actionpack (2.3.0) lib/action_controller/rack_ext/lock.rb:15:in `call'
+    actionpack (2.3.0) lib/action_controller/rack_ext/lock.rb:15:in `synchronize'
+    actionpack (2.3.0) lib/action_controller/rack_ext/lock.rb:15:in `call'
+    actionpack (2.3.0) lib/action_controller/dispatcher.rb:83:in `call'
+    rails (2.3.0) lib/rails/rack/static.rb:27:in `call'
+    rails (2.3.0) lib/rails/rack/log_tailer.rb:17:in `call'
+    rails (2.3.0) lib/commands/server.rb:100
+
+Rendered rescues/_trace (35.9ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.7ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT version FROM schema_migrations[0m
+
+
+Processing ArticlesController#index (for 127.0.0.1 at 2009-02-27 00:53:24) [GET]
+  [4;36;1mArticle Load (0.5ms)[0m   [0;1mSELECT * FROM "articles" [0m
+Rendering template within layouts/articles
+Rendering articles/index
+Completed in 19ms (View: 10, DB: 0) | 200 OK [http://localhost/articles]
+
+
+Processing ArticlesController#index (for 127.0.0.1 at 2009-02-27 00:53:38) [GET]
+  [4;35;1mArticle Load (0.7ms)[0m   [0mSELECT * FROM "articles" [0m
+Rendering template within layouts/articles
+Rendering articles/index
+Completed in 38ms (View: 25, DB: 1) | 200 OK [http://localhost/articles]
+  [4;36;1mSQL (0.6ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT version FROM schema_migrations[0m
+
+
+Processing ArticlesController#index (for 127.0.0.1 at 2009-02-27 00:53:44) [GET]
+  [4;36;1mArticle Load (0.5ms)[0m   [0;1mSELECT * FROM "articles" [0m
+Rendering template within layouts/articles
+Rendering articles/index
+
+ActionView::TemplateError (undefined method `candidates' for "ja":String) on line #3 of app/views/articles/index.html.erb:
+1: <h1>Listing articles</h1>
+2: 
+3: lang = <%= h I18n.locale.candidates.inspect %>
+4: <table>
+5:   <tr>
+6:     <th>Title</th>
+
+    app/views/articles/index.html.erb:3
+    actionpack (2.3.0) lib/action_view/renderable.rb:35:in `send'
+    actionpack (2.3.0) lib/action_view/renderable.rb:35:in `render'
+    actionpack (2.3.0) lib/action_view/template.rb:183:in `render_template'
+    actionpack (2.3.0) lib/action_view/base.rb:247:in `render'
+    actionpack (2.3.0) lib/action_view/base.rb:318:in `_render_with_layout'
+    actionpack (2.3.0) lib/action_view/base.rb:244:in `render'
+    actionpack (2.3.0) lib/action_controller/base.rb:1180:in `render_for_file'
+    actionpack (2.3.0) lib/action_controller/base.rb:912:in `render_without_benchmark'
+    actionpack (2.3.0) lib/action_controller/benchmarking.rb:51:in `render'
+    actionpack (2.3.0) lib/action_controller/benchmarking.rb:51:in `render'
+    actionpack (2.3.0) lib/action_controller/mime_responds.rb:135:in `send'
+    actionpack (2.3.0) lib/action_controller/mime_responds.rb:135:in `custom'
+    actionpack (2.3.0) lib/action_controller/mime_responds.rb:179:in `call'
+    actionpack (2.3.0) lib/action_controller/mime_responds.rb:179:in `respond'
+    actionpack (2.3.0) lib/action_controller/mime_responds.rb:173:in `each'
+    actionpack (2.3.0) lib/action_controller/mime_responds.rb:173:in `respond'
+    actionpack (2.3.0) lib/action_controller/mime_responds.rb:107:in `respond_to'
+    app/controllers/articles_controller.rb:19:in `index'
+    actionpack (2.3.0) lib/action_controller/base.rb:1261:in `send'
+    actionpack (2.3.0) lib/action_controller/base.rb:1261:in `perform_action_without_filters'
+    actionpack (2.3.0) lib/action_controller/filters.rb:617:in `call_filters'
+    actionpack (2.3.0) lib/action_controller/filters.rb:610:in `perform_action_without_benchmark'
+    actionpack (2.3.0) lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+    actionpack (2.3.0) lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+    actionpack (2.3.0) lib/action_controller/rescue.rb:154:in `perform_action_without_flash'
+    actionpack (2.3.0) lib/action_controller/flash.rb:141:in `perform_action'
+    actionpack (2.3.0) lib/action_controller/base.rb:523:in `send'
+    actionpack (2.3.0) lib/action_controller/base.rb:523:in `process_without_filters'
+    actionpack (2.3.0) lib/action_controller/filters.rb:606:in `process'
+    actionpack (2.3.0) lib/action_controller/base.rb:391:in `process'
+    actionpack (2.3.0) lib/action_controller/base.rb:386:in `call'
+    actionpack (2.3.0) lib/action_controller/routing/route_set.rb:433:in `call'
+    actionpack (2.3.0) lib/action_controller/dispatcher.rb:65:in `dispatch'
+    actionpack (2.3.0) lib/action_controller/dispatcher.rb:88:in `_call'
+    actionpack (2.3.0) lib/action_controller/dispatcher.rb:59:in `initialize'
+    activerecord (2.3.0) lib/active_record/query_cache.rb:29:in `call'
+    activerecord (2.3.0) lib/active_record/query_cache.rb:29:in `call'
+    activerecord (2.3.0) lib/active_record/connection_adapters/abstract/query_cache.rb:34:in `cache'
+    activerecord (2.3.0) lib/active_record/query_cache.rb:9:in `cache'
+    activerecord (2.3.0) lib/active_record/query_cache.rb:28:in `call'
+    actionpack (2.3.0) lib/action_controller/params_parser.rb:15:in `call'
+    actionpack (2.3.0) lib/action_controller/rewindable_input.rb:25:in `call'
+    actionpack (2.3.0) lib/action_controller/session/cookie_store.rb:93:in `call'
+    actionpack (2.3.0) lib/action_controller/failsafe.rb:11:in `call'
+    actionpack (2.3.0) lib/action_controller/rack_ext/lock.rb:15:in `call'
+    actionpack (2.3.0) lib/action_controller/rack_ext/lock.rb:15:in `synchronize'
+    actionpack (2.3.0) lib/action_controller/rack_ext/lock.rb:15:in `call'
+    actionpack (2.3.0) lib/action_controller/dispatcher.rb:83:in `call'
+    rails (2.3.0) lib/rails/rack/static.rb:27:in `call'
+    rails (2.3.0) lib/rails/rack/log_tailer.rb:17:in `call'
+    rails (2.3.0) lib/commands/server.rb:100
+
+Rendered rescues/_trace (37.0ms)
+Rendered rescues/_request_and_response (0.7ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing ArticlesController#index (for 127.0.0.1 at 2009-02-27 00:56:34) [GET]
+  [4;36;1mArticle Load (0.6ms)[0m   [0;1mSELECT * FROM "articles" [0m
+Rendering template within layouts/articles
+Rendering articles/index
+
+ActionView::TemplateError (undefined method `candidates' for :en:Symbol) on line #3 of app/views/articles/index.html.erb:
+1: <h1>Listing articles</h1>
+2: 
+3: lang = <%= h I18n.locale.candidates.inspect %>
+4: <table>
+5:   <tr>
+6:     <th>Title</th>
+
+    app/views/articles/index.html.erb:3
+    actionpack (2.3.0) lib/action_view/renderable.rb:35:in `send'
+    actionpack (2.3.0) lib/action_view/renderable.rb:35:in `render'
+    actionpack (2.3.0) lib/action_view/template.rb:183:in `render_template'
+    actionpack (2.3.0) lib/action_view/base.rb:247:in `render'
+    actionpack (2.3.0) lib/action_view/base.rb:318:in `_render_with_layout'
+    actionpack (2.3.0) lib/action_view/base.rb:244:in `render'
+    actionpack (2.3.0) lib/action_controller/base.rb:1180:in `render_for_file'
+    actionpack (2.3.0) lib/action_controller/base.rb:912:in `render_without_benchmark'
+    actionpack (2.3.0) lib/action_controller/benchmarking.rb:51:in `render'
+    actionpack (2.3.0) lib/action_controller/benchmarking.rb:51:in `render'
+    actionpack (2.3.0) lib/action_controller/mime_responds.rb:135:in `send'
+    actionpack (2.3.0) lib/action_controller/mime_responds.rb:135:in `custom'
+    actionpack (2.3.0) lib/action_controller/mime_responds.rb:179:in `call'
+    actionpack (2.3.0) lib/action_controller/mime_responds.rb:179:in `respond'
+    actionpack (2.3.0) lib/action_controller/mime_responds.rb:173:in `each'
+    actionpack (2.3.0) lib/action_controller/mime_responds.rb:173:in `respond'
+    actionpack (2.3.0) lib/action_controller/mime_responds.rb:107:in `respond_to'
+    app/controllers/articles_controller.rb:19:in `index'
+    actionpack (2.3.0) lib/action_controller/base.rb:1261:in `send'
+    actionpack (2.3.0) lib/action_controller/base.rb:1261:in `perform_action_without_filters'
+    actionpack (2.3.0) lib/action_controller/filters.rb:617:in `call_filters'
+    actionpack (2.3.0) lib/action_controller/filters.rb:610:in `perform_action_without_benchmark'
+    actionpack (2.3.0) lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+    actionpack (2.3.0) lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+    actionpack (2.3.0) lib/action_controller/rescue.rb:154:in `perform_action_without_flash'
+    actionpack (2.3.0) lib/action_controller/flash.rb:141:in `perform_action'
+    actionpack (2.3.0) lib/action_controller/base.rb:523:in `send'
+    actionpack (2.3.0) lib/action_controller/base.rb:523:in `process_without_filters'
+    actionpack (2.3.0) lib/action_controller/filters.rb:606:in `process'
+    actionpack (2.3.0) lib/action_controller/base.rb:391:in `process'
+    actionpack (2.3.0) lib/action_controller/base.rb:386:in `call'
+    actionpack (2.3.0) lib/action_controller/routing/route_set.rb:433:in `call'
+    actionpack (2.3.0) lib/action_controller/dispatcher.rb:65:in `dispatch'
+    actionpack (2.3.0) lib/action_controller/dispatcher.rb:88:in `_call'
+    actionpack (2.3.0) lib/action_controller/dispatcher.rb:59:in `initialize'
+    activerecord (2.3.0) lib/active_record/query_cache.rb:29:in `call'
+    activerecord (2.3.0) lib/active_record/query_cache.rb:29:in `call'
+    activerecord (2.3.0) lib/active_record/connection_adapters/abstract/query_cache.rb:34:in `cache'
+    activerecord (2.3.0) lib/active_record/query_cache.rb:9:in `cache'
+    activerecord (2.3.0) lib/active_record/query_cache.rb:28:in `call'
+    actionpack (2.3.0) lib/action_controller/params_parser.rb:15:in `call'
+    actionpack (2.3.0) lib/action_controller/rewindable_input.rb:25:in `call'
+    actionpack (2.3.0) lib/action_controller/session/cookie_store.rb:93:in `call'
+    actionpack (2.3.0) lib/action_controller/failsafe.rb:11:in `call'
+    actionpack (2.3.0) lib/action_controller/rack_ext/lock.rb:15:in `call'
+    actionpack (2.3.0) lib/action_controller/rack_ext/lock.rb:15:in `synchronize'
+    actionpack (2.3.0) lib/action_controller/rack_ext/lock.rb:15:in `call'
+    actionpack (2.3.0) lib/action_controller/dispatcher.rb:83:in `call'
+    rails (2.3.0) lib/rails/rack/static.rb:27:in `call'
+    rails (2.3.0) lib/rails/rack/log_tailer.rb:17:in `call'
+    rails (2.3.0) lib/commands/server.rb:100
+
+Rendered rescues/_trace (38.3ms)
+Rendered rescues/_request_and_response (0.6ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing ArticlesController#index (for 127.0.0.1 at 2009-02-27 00:56:36) [GET]
+  [4;35;1mArticle Load (0.7ms)[0m   [0mSELECT * FROM "articles" [0m
+Rendering template within layouts/articles
+Rendering articles/index
+
+ActionView::TemplateError (undefined method `candidates' for :en:Symbol) on line #3 of app/views/articles/index.html.erb:
+1: <h1>Listing articles</h1>
+2: 
+3: lang = <%= h I18n.locale.candidates.inspect %>
+4: <table>
+5:   <tr>
+6:     <th>Title</th>
+
+    app/views/articles/index.html.erb:3
+    actionpack (2.3.0) lib/action_view/renderable.rb:35:in `send'
+    actionpack (2.3.0) lib/action_view/renderable.rb:35:in `render'
+    actionpack (2.3.0) lib/action_view/template.rb:183:in `render_template'
+    actionpack (2.3.0) lib/action_view/base.rb:247:in `render'
+    actionpack (2.3.0) lib/action_view/base.rb:318:in `_render_with_layout'
+    actionpack (2.3.0) lib/action_view/base.rb:244:in `render'
+    actionpack (2.3.0) lib/action_controller/base.rb:1180:in `render_for_file'
+    actionpack (2.3.0) lib/action_controller/base.rb:912:in `render_without_benchmark'
+    actionpack (2.3.0) lib/action_controller/benchmarking.rb:51:in `render'
+    actionpack (2.3.0) lib/action_controller/benchmarking.rb:51:in `render'
+    actionpack (2.3.0) lib/action_controller/mime_responds.rb:135:in `send'
+    actionpack (2.3.0) lib/action_controller/mime_responds.rb:135:in `custom'
+    actionpack (2.3.0) lib/action_controller/mime_responds.rb:179:in `call'
+    actionpack (2.3.0) lib/action_controller/mime_responds.rb:179:in `respond'
+    actionpack (2.3.0) lib/action_controller/mime_responds.rb:173:in `each'
+    actionpack (2.3.0) lib/action_controller/mime_responds.rb:173:in `respond'
+    actionpack (2.3.0) lib/action_controller/mime_responds.rb:107:in `respond_to'
+    app/controllers/articles_controller.rb:19:in `index'
+    actionpack (2.3.0) lib/action_controller/base.rb:1261:in `send'
+    actionpack (2.3.0) lib/action_controller/base.rb:1261:in `perform_action_without_filters'
+    actionpack (2.3.0) lib/action_controller/filters.rb:617:in `call_filters'
+    actionpack (2.3.0) lib/action_controller/filters.rb:610:in `perform_action_without_benchmark'
+    actionpack (2.3.0) lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+    actionpack (2.3.0) lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+    actionpack (2.3.0) lib/action_controller/rescue.rb:154:in `perform_action_without_flash'
+    actionpack (2.3.0) lib/action_controller/flash.rb:141:in `perform_action'
+    actionpack (2.3.0) lib/action_controller/base.rb:523:in `send'
+    actionpack (2.3.0) lib/action_controller/base.rb:523:in `process_without_filters'
+    actionpack (2.3.0) lib/action_controller/filters.rb:606:in `process'
+    actionpack (2.3.0) lib/action_controller/base.rb:391:in `process'
+    actionpack (2.3.0) lib/action_controller/base.rb:386:in `call'
+    actionpack (2.3.0) lib/action_controller/routing/route_set.rb:433:in `call'
+    actionpack (2.3.0) lib/action_controller/dispatcher.rb:65:in `dispatch'
+    actionpack (2.3.0) lib/action_controller/dispatcher.rb:88:in `_call'
+    actionpack (2.3.0) lib/action_controller/dispatcher.rb:59:in `initialize'
+    activerecord (2.3.0) lib/active_record/query_cache.rb:29:in `call'
+    activerecord (2.3.0) lib/active_record/query_cache.rb:29:in `call'
+    activerecord (2.3.0) lib/active_record/connection_adapters/abstract/query_cache.rb:34:in `cache'
+    activerecord (2.3.0) lib/active_record/query_cache.rb:9:in `cache'
+    activerecord (2.3.0) lib/active_record/query_cache.rb:28:in `call'
+    actionpack (2.3.0) lib/action_controller/params_parser.rb:15:in `call'
+    actionpack (2.3.0) lib/action_controller/rewindable_input.rb:25:in `call'
+    actionpack (2.3.0) lib/action_controller/session/cookie_store.rb:93:in `call'
+    actionpack (2.3.0) lib/action_controller/failsafe.rb:11:in `call'
+    actionpack (2.3.0) lib/action_controller/rack_ext/lock.rb:15:in `call'
+    actionpack (2.3.0) lib/action_controller/rack_ext/lock.rb:15:in `synchronize'
+    actionpack (2.3.0) lib/action_controller/rack_ext/lock.rb:15:in `call'
+    actionpack (2.3.0) lib/action_controller/dispatcher.rb:83:in `call'
+    rails (2.3.0) lib/rails/rack/static.rb:27:in `call'
+    rails (2.3.0) lib/rails/rack/log_tailer.rb:17:in `call'
+    rails (2.3.0) lib/commands/server.rb:100
+
+Rendered rescues/_trace (38.2ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing ArticlesController#index (for 127.0.0.1 at 2009-02-27 01:03:03) [GET]
+  [4;36;1mArticle Load (0.6ms)[0m   [0;1mSELECT * FROM "articles" [0m
+Rendering template within layouts/articles
+Rendering articles/index
+
+ActionView::TemplateError (undefined method `candidates' for :en:Symbol) on line #3 of app/views/articles/index.html.erb:
+1: <h1>Listing articles</h1>
+2: 
+3: lang = <%= h I18n.locale.candidates.inspect %>
+4: <table>
+5:   <tr>
+6:     <th>Title</th>
+
+    app/views/articles/index.html.erb:3
+    actionpack (2.3.0) lib/action_view/renderable.rb:35:in `send'
+    actionpack (2.3.0) lib/action_view/renderable.rb:35:in `render'
+    actionpack (2.3.0) lib/action_view/template.rb:183:in `render_template'
+    actionpack (2.3.0) lib/action_view/base.rb:247:in `render'
+    actionpack (2.3.0) lib/action_view/base.rb:318:in `_render_with_layout'
+    actionpack (2.3.0) lib/action_view/base.rb:244:in `render'
+    actionpack (2.3.0) lib/action_controller/base.rb:1180:in `render_for_file'
+    actionpack (2.3.0) lib/action_controller/base.rb:912:in `render_without_benchmark'
+    actionpack (2.3.0) lib/action_controller/benchmarking.rb:51:in `render'
+    actionpack (2.3.0) lib/action_controller/benchmarking.rb:51:in `render'
+    actionpack (2.3.0) lib/action_controller/mime_responds.rb:135:in `send'
+    actionpack (2.3.0) lib/action_controller/mime_responds.rb:135:in `custom'
+    actionpack (2.3.0) lib/action_controller/mime_responds.rb:179:in `call'
+    actionpack (2.3.0) lib/action_controller/mime_responds.rb:179:in `respond'
+    actionpack (2.3.0) lib/action_controller/mime_responds.rb:173:in `each'
+    actionpack (2.3.0) lib/action_controller/mime_responds.rb:173:in `respond'
+    actionpack (2.3.0) lib/action_controller/mime_responds.rb:107:in `respond_to'
+    app/controllers/articles_controller.rb:19:in `index'
+    actionpack (2.3.0) lib/action_controller/base.rb:1261:in `send'
+    actionpack (2.3.0) lib/action_controller/base.rb:1261:in `perform_action_without_filters'
+    actionpack (2.3.0) lib/action_controller/filters.rb:617:in `call_filters'
+    actionpack (2.3.0) lib/action_controller/filters.rb:610:in `perform_action_without_benchmark'
+    actionpack (2.3.0) lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+    actionpack (2.3.0) lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+    actionpack (2.3.0) lib/action_controller/rescue.rb:154:in `perform_action_without_flash'
+    actionpack (2.3.0) lib/action_controller/flash.rb:141:in `perform_action'
+    actionpack (2.3.0) lib/action_controller/base.rb:523:in `send'
+    actionpack (2.3.0) lib/action_controller/base.rb:523:in `process_without_filters'
+    actionpack (2.3.0) lib/action_controller/filters.rb:606:in `process'
+    actionpack (2.3.0) lib/action_controller/base.rb:391:in `process'
+    actionpack (2.3.0) lib/action_controller/base.rb:386:in `call'
+    actionpack (2.3.0) lib/action_controller/routing/route_set.rb:433:in `call'
+    actionpack (2.3.0) lib/action_controller/dispatcher.rb:65:in `dispatch'
+    actionpack (2.3.0) lib/action_controller/dispatcher.rb:88:in `_call'
+    actionpack (2.3.0) lib/action_controller/dispatcher.rb:59:in `initialize'
+    activerecord (2.3.0) lib/active_record/query_cache.rb:29:in `call'
+    activerecord (2.3.0) lib/active_record/query_cache.rb:29:in `call'
+    activerecord (2.3.0) lib/active_record/connection_adapters/abstract/query_cache.rb:34:in `cache'
+    activerecord (2.3.0) lib/active_record/query_cache.rb:9:in `cache'
+    activerecord (2.3.0) lib/active_record/query_cache.rb:28:in `call'
+    actionpack (2.3.0) lib/action_controller/params_parser.rb:15:in `call'
+    actionpack (2.3.0) lib/action_controller/rewindable_input.rb:25:in `call'
+    actionpack (2.3.0) lib/action_controller/session/cookie_store.rb:93:in `call'
+    actionpack (2.3.0) lib/action_controller/failsafe.rb:11:in `call'
+    actionpack (2.3.0) lib/action_controller/rack_ext/lock.rb:15:in `call'
+    actionpack (2.3.0) lib/action_controller/rack_ext/lock.rb:15:in `synchronize'
+    actionpack (2.3.0) lib/action_controller/rack_ext/lock.rb:15:in `call'
+    actionpack (2.3.0) lib/action_controller/dispatcher.rb:83:in `call'
+    rails (2.3.0) lib/rails/rack/static.rb:27:in `call'
+    rails (2.3.0) lib/rails/rack/log_tailer.rb:17:in `call'
+    rails (2.3.0) lib/commands/server.rb:100
+
+Rendered rescues/_trace (37.6ms)
+Rendered rescues/_request_and_response (0.6ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing ArticlesController#index (for 127.0.0.1 at 2009-02-27 01:03:05) [GET]
+  [4;35;1mArticle Load (0.7ms)[0m   [0mSELECT * FROM "articles" [0m
+Rendering template within layouts/articles
+Rendering articles/index
+
+ActionView::TemplateError (undefined method `candidates' for :en:Symbol) on line #3 of app/views/articles/index.html.erb:
+1: <h1>Listing articles</h1>
+2: 
+3: lang = <%= h I18n.locale.candidates.inspect %>
+4: <table>
+5:   <tr>
+6:     <th>Title</th>
+
+    app/views/articles/index.html.erb:3
+    actionpack (2.3.0) lib/action_view/renderable.rb:35:in `send'
+    actionpack (2.3.0) lib/action_view/renderable.rb:35:in `render'
+    actionpack (2.3.0) lib/action_view/template.rb:183:in `render_template'
+    actionpack (2.3.0) lib/action_view/base.rb:247:in `render'
+    actionpack (2.3.0) lib/action_view/base.rb:318:in `_render_with_layout'
+    actionpack (2.3.0) lib/action_view/base.rb:244:in `render'
+    actionpack (2.3.0) lib/action_controller/base.rb:1180:in `render_for_file'
+    actionpack (2.3.0) lib/action_controller/base.rb:912:in `render_without_benchmark'
+    actionpack (2.3.0) lib/action_controller/benchmarking.rb:51:in `render'
+    actionpack (2.3.0) lib/action_controller/benchmarking.rb:51:in `render'
+    actionpack (2.3.0) lib/action_controller/mime_responds.rb:135:in `send'
+    actionpack (2.3.0) lib/action_controller/mime_responds.rb:135:in `custom'
+    actionpack (2.3.0) lib/action_controller/mime_responds.rb:179:in `call'
+    actionpack (2.3.0) lib/action_controller/mime_responds.rb:179:in `respond'
+    actionpack (2.3.0) lib/action_controller/mime_responds.rb:173:in `each'
+    actionpack (2.3.0) lib/action_controller/mime_responds.rb:173:in `respond'
+    actionpack (2.3.0) lib/action_controller/mime_responds.rb:107:in `respond_to'
+    app/controllers/articles_controller.rb:19:in `index'
+    actionpack (2.3.0) lib/action_controller/base.rb:1261:in `send'
+    actionpack (2.3.0) lib/action_controller/base.rb:1261:in `perform_action_without_filters'
+    actionpack (2.3.0) lib/action_controller/filters.rb:617:in `call_filters'
+    actionpack (2.3.0) lib/action_controller/filters.rb:610:in `perform_action_without_benchmark'
+    actionpack (2.3.0) lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+    actionpack (2.3.0) lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+    actionpack (2.3.0) lib/action_controller/rescue.rb:154:in `perform_action_without_flash'
+    actionpack (2.3.0) lib/action_controller/flash.rb:141:in `perform_action'
+    actionpack (2.3.0) lib/action_controller/base.rb:523:in `send'
+    actionpack (2.3.0) lib/action_controller/base.rb:523:in `process_without_filters'
+    actionpack (2.3.0) lib/action_controller/filters.rb:606:in `process'
+    actionpack (2.3.0) lib/action_controller/base.rb:391:in `process'
+    actionpack (2.3.0) lib/action_controller/base.rb:386:in `call'
+    actionpack (2.3.0) lib/action_controller/routing/route_set.rb:433:in `call'
+    actionpack (2.3.0) lib/action_controller/dispatcher.rb:65:in `dispatch'
+    actionpack (2.3.0) lib/action_controller/dispatcher.rb:88:in `_call'
+    actionpack (2.3.0) lib/action_controller/dispatcher.rb:59:in `initialize'
+    activerecord (2.3.0) lib/active_record/query_cache.rb:29:in `call'
+    activerecord (2.3.0) lib/active_record/query_cache.rb:29:in `call'
+    activerecord (2.3.0) lib/active_record/connection_adapters/abstract/query_cache.rb:34:in `cache'
+    activerecord (2.3.0) lib/active_record/query_cache.rb:9:in `cache'
+    activerecord (2.3.0) lib/active_record/query_cache.rb:28:in `call'
+    actionpack (2.3.0) lib/action_controller/params_parser.rb:15:in `call'
+    actionpack (2.3.0) lib/action_controller/rewindable_input.rb:25:in `call'
+    actionpack (2.3.0) lib/action_controller/session/cookie_store.rb:93:in `call'
+    actionpack (2.3.0) lib/action_controller/failsafe.rb:11:in `call'
+    actionpack (2.3.0) lib/action_controller/rack_ext/lock.rb:15:in `call'
+    actionpack (2.3.0) lib/action_controller/rack_ext/lock.rb:15:in `synchronize'
+    actionpack (2.3.0) lib/action_controller/rack_ext/lock.rb:15:in `call'
+    actionpack (2.3.0) lib/action_controller/dispatcher.rb:83:in `call'
+    rails (2.3.0) lib/rails/rack/static.rb:27:in `call'
+    rails (2.3.0) lib/rails/rack/log_tailer.rb:17:in `call'
+    rails (2.3.0) lib/commands/server.rb:100
+
+Rendered rescues/_trace (67.1ms)
+Rendered rescues/_request_and_response (0.5ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing ArticlesController#index (for 127.0.0.1 at 2009-02-27 01:03:38) [GET]
+  [4;36;1mArticle Load (0.5ms)[0m   [0;1mSELECT * FROM "articles" [0m
+Rendering template within layouts/articles
+Rendering articles/index
+Completed in 14ms (View: 9, DB: 1) | 200 OK [http://localhost/articles]
+
+
+Processing ArticlesController#index (for 127.0.0.1 at 2009-02-27 01:05:03) [GET]
+  [4;36;1mArticle Load (0.5ms)[0m   [0;1mSELECT * FROM "articles" [0m
+Rendering template within layouts/articles
+Rendering articles/index
+Completed in 14ms (View: 9, DB: 1) | 200 OK [http://localhost/articles]
+
+
+Processing ArticlesController#index (for 127.0.0.1 at 2009-02-27 01:05:04) [GET]
+  [4;35;1mArticle Load (0.4ms)[0m   [0mSELECT * FROM "articles" [0m
+Rendering template within layouts/articles
+Rendering articles/index
+Completed in 15ms (View: 9, DB: 0) | 200 OK [http://localhost/articles]
+
+
+Processing ArticlesController#index (for 127.0.0.1 at 2009-02-27 01:05:15) [GET]
+  Parameters: {"locale"=>"ja"}
+  [4;36;1mArticle Load (0.6ms)[0m   [0;1mSELECT * FROM "articles" [0m
+Rendering template within layouts/articles
+Rendering articles/index
+Completed in 23ms (View: 10, DB: 1) | 200 OK [http://localhost/articles?locale=ja]
+
+
+Processing ArticlesController#index (for 127.0.0.1 at 2009-02-27 01:08:15) [GET]
+  Parameters: {"locale"=>"ja"}
+  [4;36;1mArticle Load (0.6ms)[0m   [0;1mSELECT * FROM "articles" [0m
+Rendering template within layouts/articles
+Rendering articles/index
+Completed in 14ms (View: 9, DB: 1) | 200 OK [http://localhost/articles?locale=ja]
+
+
+Processing ArticlesController#index (for 127.0.0.1 at 2009-02-27 01:08:26) [GET]
+  Parameters: {"locale"=>"ja"}
+  [4;35;1mArticle Load (0.5ms)[0m   [0mSELECT * FROM "articles" [0m
+Rendering template within layouts/articles
+Rendering articles/index
+Completed in 17ms (View: 10, DB: 0) | 200 OK [http://localhost/articles?locale=ja]
+
+
+Processing ArticlesController#index (for 127.0.0.1 at 2009-02-27 01:12:27) [GET]
+  Parameters: {"locale"=>"ja"}
+  [4;36;1mArticle Load (0.6ms)[0m   [0;1mSELECT * FROM "articles" [0m
+Rendering template within layouts/articles
+Rendering articles/index
+Completed in 14ms (View: 9, DB: 1) | 200 OK [http://localhost/articles?locale=ja]
+
+
+Processing ArticlesController#index (for 127.0.0.1 at 2009-02-27 01:13:46) [GET]
+  Parameters: {"locale"=>"ja"}
+  [4;36;1mArticle Load (0.6ms)[0m   [0;1mSELECT * FROM "articles" [0m
+Rendering template within layouts/articles
+Rendering articles/index
+Completed in 19ms (View: 13, DB: 1) | 200 OK [http://localhost/articles?locale=ja]
+
+
+Processing ArticlesController#index (for 127.0.0.1 at 2009-02-27 01:24:16) [GET]
+  Parameters: {"locale"=>"ja"}
+  [4;36;1mArticle Load (0.6ms)[0m   [0;1mSELECT * FROM "articles" [0m
+Rendering template within layouts/articles
+Rendering articles/index
+Completed in 22ms (View: 16, DB: 1) | 200 OK [http://localhost/articles?locale=ja]
+
+
+Processing ArticlesController#index (for 127.0.0.1 at 2009-02-27 01:27:05) [GET]
+  Parameters: {"locale"=>"ja"}
+  [4;36;1mArticle Load (0.6ms)[0m   [0;1mSELECT * FROM "articles" [0m
+Rendering template within layouts/articles
+Rendering articles/index
+Completed in 15ms (View: 10, DB: 1) | 200 OK [http://localhost/articles?locale=ja]
+
+
+Processing ArticlesController#index (for 127.0.0.1 at 2009-02-27 01:27:51) [GET]
+  Parameters: {"locale"=>"ja"}
+  [4;36;1mArticle Load (0.7ms)[0m   [0;1mSELECT * FROM "articles" [0m
+Rendering template within layouts/articles
+Rendering articles/index
+Completed in 20ms (View: 14, DB: 1) | 200 OK [http://localhost/articles?locale=ja]
+
+
+Processing ArticlesController#index (for 127.0.0.1 at 2009-02-27 01:30:06) [GET]
+  Parameters: {"locale"=>"ja"}
+  [4;36;1mArticle Load (0.6ms)[0m   [0;1mSELECT * FROM "articles" [0m
+Rendering template within layouts/articles
+Rendering articles/index
+Completed in 22ms (View: 17, DB: 1) | 200 OK [http://localhost/articles?locale=ja]
+
+
+Processing ArticlesController#index (for 127.0.0.1 at 2009-02-27 01:30:23) [GET]
+  Parameters: {"locale"=>"ja"}
+  [4;35;1mArticle Load (0.5ms)[0m   [0mSELECT * FROM "articles" [0m
+Rendering template within layouts/articles
+Rendering articles/index
+Completed in 26ms (View: 19, DB: 0) | 200 OK [http://localhost/articles?locale=ja]
+  [4;36;1mSQL (0.6ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.6ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.6ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.6ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.7ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.7ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.6ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (1.2ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.6ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.6ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.6ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.6ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.6ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (1.1ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.6ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.7ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT version FROM schema_migrations[0m
+
+
+Processing ActionController::Base#index (for 127.0.0.1 at 2009-02-27 02:22:05) [GET]
+  Parameters: {"locale"=>"ja"}
+
+NoMethodError (undefined method `charset=' for #<GetText::TextDomain:0x7f38335e2758>):
+  /usr/lib/ruby/gems/1.8/gems/gettext_rails-1.93.0/lib/gettext_rails/action_controller.rb:78:in `init_gettext'
+  app/controllers/application_controller.rb:25
+  activesupport (2.3.0) lib/active_support/dependencies.rb:380:in `load_without_new_constant_marking'
+  activesupport (2.3.0) lib/active_support/dependencies.rb:380:in `load_file'
+  activesupport (2.3.0) lib/active_support/dependencies.rb:521:in `new_constants_in'
+  activesupport (2.3.0) lib/active_support/dependencies.rb:379:in `load_file'
+  activesupport (2.3.0) lib/active_support/dependencies.rb:259:in `require_or_load'
+  activesupport (2.3.0) lib/active_support/dependencies.rb:425:in `load_missing_constant'
+  activesupport (2.3.0) lib/active_support/dependencies.rb:80:in `const_missing'
+  activesupport (2.3.0) lib/active_support/dependencies.rb:92:in `const_missing'
+  app/controllers/articles_controller.rb:8
+  activesupport (2.3.0) lib/active_support/dependencies.rb:380:in `load_without_new_constant_marking'
+  activesupport (2.3.0) lib/active_support/dependencies.rb:380:in `load_file'
+  activesupport (2.3.0) lib/active_support/dependencies.rb:521:in `new_constants_in'
+  activesupport (2.3.0) lib/active_support/dependencies.rb:379:in `load_file'
+  activesupport (2.3.0) lib/active_support/dependencies.rb:259:in `require_or_load'
+  activesupport (2.3.0) lib/active_support/dependencies.rb:425:in `load_missing_constant'
+  activesupport (2.3.0) lib/active_support/dependencies.rb:80:in `const_missing'
+  activesupport (2.3.0) lib/active_support/dependencies.rb:92:in `const_missing'
+  activesupport (2.3.0) lib/active_support/inflector.rb:359:in `constantize'
+  activesupport (2.3.0) lib/active_support/inflector.rb:358:in `each'
+  activesupport (2.3.0) lib/active_support/inflector.rb:358:in `constantize'
+  activesupport (2.3.0) lib/active_support/core_ext/string/inflections.rb:162:in `constantize'
+  actionpack (2.3.0) lib/action_controller/routing/route_set.rb:439:in `recognize'
+  actionpack (2.3.0) lib/action_controller/routing/route_set.rb:432:in `call'
+  actionpack (2.3.0) lib/action_controller/dispatcher.rb:65:in `dispatch'
+  actionpack (2.3.0) lib/action_controller/dispatcher.rb:88:in `_call'
+  actionpack (2.3.0) lib/action_controller/dispatcher.rb:59:in `initialize'
+  activerecord (2.3.0) lib/active_record/query_cache.rb:29:in `call'
+  activerecord (2.3.0) lib/active_record/query_cache.rb:29:in `call'
+  activerecord (2.3.0) lib/active_record/connection_adapters/abstract/query_cache.rb:34:in `cache'
+  activerecord (2.3.0) lib/active_record/query_cache.rb:9:in `cache'
+  activerecord (2.3.0) lib/active_record/query_cache.rb:28:in `call'
+  actionpack (2.3.0) lib/action_controller/params_parser.rb:15:in `call'
+  actionpack (2.3.0) lib/action_controller/rewindable_input.rb:25:in `call'
+  actionpack (2.3.0) lib/action_controller/session/cookie_store.rb:93:in `call'
+  actionpack (2.3.0) lib/action_controller/failsafe.rb:11:in `call'
+  actionpack (2.3.0) lib/action_controller/rack_ext/lock.rb:15:in `call'
+  actionpack (2.3.0) lib/action_controller/rack_ext/lock.rb:15:in `synchronize'
+  actionpack (2.3.0) lib/action_controller/rack_ext/lock.rb:15:in `call'
+  actionpack (2.3.0) lib/action_controller/dispatcher.rb:83:in `call'
+  rails (2.3.0) lib/rails/rack/static.rb:27:in `call'
+  rails (2.3.0) lib/rails/rack/log_tailer.rb:17:in `call'
+  rails (2.3.0) lib/commands/server.rb:100
+
+Rendered rescues/_trace (37.3ms)
+Rendered rescues/_request_and_response (0.7ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.8ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSELECT version FROM schema_migrations[0m
+
+
+Processing ActionController::Base#index (for 127.0.0.1 at 2009-02-28 00:53:50) [GET]
+
+NoMethodError (undefined method `charset=' for #<GetText::TextDomain:0x7fa3f0cb8b58>):
+  /usr/lib/ruby/gems/1.8/gems/gettext_rails-1.93.0/lib/gettext_rails/action_controller.rb:78:in `init_gettext'
+  app/controllers/application_controller.rb:25
+  activesupport (2.3.0) lib/active_support/dependencies.rb:380:in `load_without_new_constant_marking'
+  activesupport (2.3.0) lib/active_support/dependencies.rb:380:in `load_file'
+  activesupport (2.3.0) lib/active_support/dependencies.rb:521:in `new_constants_in'
+  activesupport (2.3.0) lib/active_support/dependencies.rb:379:in `load_file'
+  activesupport (2.3.0) lib/active_support/dependencies.rb:259:in `require_or_load'
+  activesupport (2.3.0) lib/active_support/dependencies.rb:425:in `load_missing_constant'
+  activesupport (2.3.0) lib/active_support/dependencies.rb:80:in `const_missing'
+  activesupport (2.3.0) lib/active_support/dependencies.rb:92:in `const_missing'
+  app/controllers/articles_controller.rb:8
+  activesupport (2.3.0) lib/active_support/dependencies.rb:380:in `load_without_new_constant_marking'
+  activesupport (2.3.0) lib/active_support/dependencies.rb:380:in `load_file'
+  activesupport (2.3.0) lib/active_support/dependencies.rb:521:in `new_constants_in'
+  activesupport (2.3.0) lib/active_support/dependencies.rb:379:in `load_file'
+  activesupport (2.3.0) lib/active_support/dependencies.rb:259:in `require_or_load'
+  activesupport (2.3.0) lib/active_support/dependencies.rb:425:in `load_missing_constant'
+  activesupport (2.3.0) lib/active_support/dependencies.rb:80:in `const_missing'
+  activesupport (2.3.0) lib/active_support/dependencies.rb:92:in `const_missing'
+  activesupport (2.3.0) lib/active_support/inflector.rb:359:in `constantize'
+  activesupport (2.3.0) lib/active_support/inflector.rb:358:in `each'
+  activesupport (2.3.0) lib/active_support/inflector.rb:358:in `constantize'
+  activesupport (2.3.0) lib/active_support/core_ext/string/inflections.rb:162:in `constantize'
+  actionpack (2.3.0) lib/action_controller/routing/route_set.rb:439:in `recognize'
+  actionpack (2.3.0) lib/action_controller/routing/route_set.rb:432:in `call'
+  actionpack (2.3.0) lib/action_controller/dispatcher.rb:65:in `dispatch'
+  actionpack (2.3.0) lib/action_controller/dispatcher.rb:88:in `_call'
+  actionpack (2.3.0) lib/action_controller/dispatcher.rb:59:in `initialize'
+  activerecord (2.3.0) lib/active_record/query_cache.rb:29:in `call'
+  activerecord (2.3.0) lib/active_record/query_cache.rb:29:in `call'
+  activerecord (2.3.0) lib/active_record/connection_adapters/abstract/query_cache.rb:34:in `cache'
+  activerecord (2.3.0) lib/active_record/query_cache.rb:9:in `cache'
+  activerecord (2.3.0) lib/active_record/query_cache.rb:28:in `call'
+  actionpack (2.3.0) lib/action_controller/params_parser.rb:15:in `call'
+  actionpack (2.3.0) lib/action_controller/rewindable_input.rb:25:in `call'
+  actionpack (2.3.0) lib/action_controller/session/cookie_store.rb:93:in `call'
+  actionpack (2.3.0) lib/action_controller/failsafe.rb:11:in `call'
+  actionpack (2.3.0) lib/action_controller/rack_ext/lock.rb:15:in `call'
+  actionpack (2.3.0) lib/action_controller/rack_ext/lock.rb:15:in `synchronize'
+  actionpack (2.3.0) lib/action_controller/rack_ext/lock.rb:15:in `call'
+  actionpack (2.3.0) lib/action_controller/dispatcher.rb:83:in `call'
+  rails (2.3.0) lib/rails/rack/static.rb:27:in `call'
+  rails (2.3.0) lib/rails/rack/log_tailer.rb:17:in `call'
+  rails (2.3.0) lib/commands/server.rb:100
+
+Rendered rescues/_trace (31.4ms)
+Rendered rescues/_request_and_response (0.8ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.6ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT version FROM schema_migrations[0m
+
+
+Processing ActionController::Base#index (for 127.0.0.1 at 2009-02-28 01:06:28) [GET]
+
+NoMethodError (undefined method `charset=' for #<GetText::TextDomain:0x7f261afbba70>):
+  /usr/lib/ruby/gems/1.8/gems/gettext_rails-1.93.0/lib/gettext_rails/action_controller.rb:78:in `init_gettext'
+  app/controllers/application_controller.rb:25
+  activesupport (2.3.0) lib/active_support/dependencies.rb:380:in `load_without_new_constant_marking'
+  activesupport (2.3.0) lib/active_support/dependencies.rb:380:in `load_file'
+  activesupport (2.3.0) lib/active_support/dependencies.rb:521:in `new_constants_in'
+  activesupport (2.3.0) lib/active_support/dependencies.rb:379:in `load_file'
+  activesupport (2.3.0) lib/active_support/dependencies.rb:259:in `require_or_load'
+  activesupport (2.3.0) lib/active_support/dependencies.rb:425:in `load_missing_constant'
+  activesupport (2.3.0) lib/active_support/dependencies.rb:80:in `const_missing'
+  activesupport (2.3.0) lib/active_support/dependencies.rb:92:in `const_missing'
+  app/controllers/articles_controller.rb:8
+  activesupport (2.3.0) lib/active_support/dependencies.rb:380:in `load_without_new_constant_marking'
+  activesupport (2.3.0) lib/active_support/dependencies.rb:380:in `load_file'
+  activesupport (2.3.0) lib/active_support/dependencies.rb:521:in `new_constants_in'
+  activesupport (2.3.0) lib/active_support/dependencies.rb:379:in `load_file'
+  activesupport (2.3.0) lib/active_support/dependencies.rb:259:in `require_or_load'
+  activesupport (2.3.0) lib/active_support/dependencies.rb:425:in `load_missing_constant'
+  activesupport (2.3.0) lib/active_support/dependencies.rb:80:in `const_missing'
+  activesupport (2.3.0) lib/active_support/dependencies.rb:92:in `const_missing'
+  activesupport (2.3.0) lib/active_support/inflector.rb:359:in `constantize'
+  activesupport (2.3.0) lib/active_support/inflector.rb:358:in `each'
+  activesupport (2.3.0) lib/active_support/inflector.rb:358:in `constantize'
+  activesupport (2.3.0) lib/active_support/core_ext/string/inflections.rb:162:in `constantize'
+  actionpack (2.3.0) lib/action_controller/routing/route_set.rb:439:in `recognize'
+  actionpack (2.3.0) lib/action_controller/routing/route_set.rb:432:in `call'
+  actionpack (2.3.0) lib/action_controller/dispatcher.rb:65:in `dispatch'
+  actionpack (2.3.0) lib/action_controller/dispatcher.rb:88:in `_call'
+  actionpack (2.3.0) lib/action_controller/dispatcher.rb:59:in `initialize'
+  activerecord (2.3.0) lib/active_record/query_cache.rb:29:in `call'
+  activerecord (2.3.0) lib/active_record/query_cache.rb:29:in `call'
+  activerecord (2.3.0) lib/active_record/connection_adapters/abstract/query_cache.rb:34:in `cache'
+  activerecord (2.3.0) lib/active_record/query_cache.rb:9:in `cache'
+  activerecord (2.3.0) lib/active_record/query_cache.rb:28:in `call'
+  actionpack (2.3.0) lib/action_controller/params_parser.rb:15:in `call'
+  actionpack (2.3.0) lib/action_controller/rewindable_input.rb:25:in `call'
+  actionpack (2.3.0) lib/action_controller/session/cookie_store.rb:93:in `call'
+  actionpack (2.3.0) lib/action_controller/failsafe.rb:11:in `call'
+  actionpack (2.3.0) lib/action_controller/rack_ext/lock.rb:15:in `call'
+  actionpack (2.3.0) lib/action_controller/rack_ext/lock.rb:15:in `synchronize'
+  actionpack (2.3.0) lib/action_controller/rack_ext/lock.rb:15:in `call'
+  actionpack (2.3.0) lib/action_controller/dispatcher.rb:83:in `call'
+  rails (2.3.0) lib/rails/rack/static.rb:27:in `call'
+  rails (2.3.0) lib/rails/rack/log_tailer.rb:17:in `call'
+  rails (2.3.0) lib/commands/server.rb:100
+
+Rendered rescues/_trace (35.6ms)
+Rendered rescues/_request_and_response (0.7ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.6ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT version FROM schema_migrations[0m
+
+
+Processing ActionController::Base#index (for 127.0.0.1 at 2009-02-28 01:08:05) [GET]
+
+NoMethodError (undefined method `charset=' for #<GetText::TextDomain:0x7f1f38eae210>):
+  /usr/lib/ruby/gems/1.8/gems/gettext_rails-1.93.0/lib/gettext_rails/action_controller.rb:78:in `init_gettext'
+  app/controllers/application_controller.rb:25
+  activesupport (2.3.0) lib/active_support/dependencies.rb:380:in `load_without_new_constant_marking'
+  activesupport (2.3.0) lib/active_support/dependencies.rb:380:in `load_file'
+  activesupport (2.3.0) lib/active_support/dependencies.rb:521:in `new_constants_in'
+  activesupport (2.3.0) lib/active_support/dependencies.rb:379:in `load_file'
+  activesupport (2.3.0) lib/active_support/dependencies.rb:259:in `require_or_load'
+  activesupport (2.3.0) lib/active_support/dependencies.rb:425:in `load_missing_constant'
+  activesupport (2.3.0) lib/active_support/dependencies.rb:80:in `const_missing'
+  activesupport (2.3.0) lib/active_support/dependencies.rb:92:in `const_missing'
+  app/controllers/articles_controller.rb:8
+  activesupport (2.3.0) lib/active_support/dependencies.rb:380:in `load_without_new_constant_marking'
+  activesupport (2.3.0) lib/active_support/dependencies.rb:380:in `load_file'
+  activesupport (2.3.0) lib/active_support/dependencies.rb:521:in `new_constants_in'
+  activesupport (2.3.0) lib/active_support/dependencies.rb:379:in `load_file'
+  activesupport (2.3.0) lib/active_support/dependencies.rb:259:in `require_or_load'
+  activesupport (2.3.0) lib/active_support/dependencies.rb:425:in `load_missing_constant'
+  activesupport (2.3.0) lib/active_support/dependencies.rb:80:in `const_missing'
+  activesupport (2.3.0) lib/active_support/dependencies.rb:92:in `const_missing'
+  activesupport (2.3.0) lib/active_support/inflector.rb:359:in `constantize'
+  activesupport (2.3.0) lib/active_support/inflector.rb:358:in `each'
+  activesupport (2.3.0) lib/active_support/inflector.rb:358:in `constantize'
+  activesupport (2.3.0) lib/active_support/core_ext/string/inflections.rb:162:in `constantize'
+  actionpack (2.3.0) lib/action_controller/routing/route_set.rb:439:in `recognize'
+  actionpack (2.3.0) lib/action_controller/routing/route_set.rb:432:in `call'
+  actionpack (2.3.0) lib/action_controller/dispatcher.rb:65:in `dispatch'
+  actionpack (2.3.0) lib/action_controller/dispatcher.rb:88:in `_call'
+  actionpack (2.3.0) lib/action_controller/dispatcher.rb:59:in `initialize'
+  activerecord (2.3.0) lib/active_record/query_cache.rb:29:in `call'
+  activerecord (2.3.0) lib/active_record/query_cache.rb:29:in `call'
+  activerecord (2.3.0) lib/active_record/connection_adapters/abstract/query_cache.rb:34:in `cache'
+  activerecord (2.3.0) lib/active_record/query_cache.rb:9:in `cache'
+  activerecord (2.3.0) lib/active_record/query_cache.rb:28:in `call'
+  actionpack (2.3.0) lib/action_controller/params_parser.rb:15:in `call'
+  actionpack (2.3.0) lib/action_controller/rewindable_input.rb:25:in `call'
+  actionpack (2.3.0) lib/action_controller/session/cookie_store.rb:93:in `call'
+  actionpack (2.3.0) lib/action_controller/failsafe.rb:11:in `call'
+  actionpack (2.3.0) lib/action_controller/rack_ext/lock.rb:15:in `call'
+  actionpack (2.3.0) lib/action_controller/rack_ext/lock.rb:15:in `synchronize'
+  actionpack (2.3.0) lib/action_controller/rack_ext/lock.rb:15:in `call'
+  actionpack (2.3.0) lib/action_controller/dispatcher.rb:83:in `call'
+  rails (2.3.0) lib/rails/rack/static.rb:27:in `call'
+  rails (2.3.0) lib/rails/rack/log_tailer.rb:17:in `call'
+  rails (2.3.0) lib/commands/server.rb:100
+
+Rendered rescues/_trace (57.0ms)
+Rendered rescues/_request_and_response (1.1ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.6ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT version FROM schema_migrations[0m
+
+
+Processing ActionController::Base#index (for 127.0.0.1 at 2009-02-28 01:08:59) [GET]
+
+NoMethodError (undefined method `charset=' for #<GetText::TextDomain:0x7fc44be67b68>):
+  /usr/lib/ruby/gems/1.8/gems/gettext_rails-1.93.0/lib/gettext_rails/action_controller.rb:78:in `init_gettext'
+  app/controllers/application_controller.rb:25
+  activesupport (2.3.0) lib/active_support/dependencies.rb:380:in `load_without_new_constant_marking'
+  activesupport (2.3.0) lib/active_support/dependencies.rb:380:in `load_file'
+  activesupport (2.3.0) lib/active_support/dependencies.rb:521:in `new_constants_in'
+  activesupport (2.3.0) lib/active_support/dependencies.rb:379:in `load_file'
+  activesupport (2.3.0) lib/active_support/dependencies.rb:259:in `require_or_load'
+  activesupport (2.3.0) lib/active_support/dependencies.rb:425:in `load_missing_constant'
+  activesupport (2.3.0) lib/active_support/dependencies.rb:80:in `const_missing'
+  activesupport (2.3.0) lib/active_support/dependencies.rb:92:in `const_missing'
+  app/controllers/articles_controller.rb:8
+  activesupport (2.3.0) lib/active_support/dependencies.rb:380:in `load_without_new_constant_marking'
+  activesupport (2.3.0) lib/active_support/dependencies.rb:380:in `load_file'
+  activesupport (2.3.0) lib/active_support/dependencies.rb:521:in `new_constants_in'
+  activesupport (2.3.0) lib/active_support/dependencies.rb:379:in `load_file'
+  activesupport (2.3.0) lib/active_support/dependencies.rb:259:in `require_or_load'
+  activesupport (2.3.0) lib/active_support/dependencies.rb:425:in `load_missing_constant'
+  activesupport (2.3.0) lib/active_support/dependencies.rb:80:in `const_missing'
+  activesupport (2.3.0) lib/active_support/dependencies.rb:92:in `const_missing'
+  activesupport (2.3.0) lib/active_support/inflector.rb:359:in `constantize'
+  activesupport (2.3.0) lib/active_support/inflector.rb:358:in `each'
+  activesupport (2.3.0) lib/active_support/inflector.rb:358:in `constantize'
+  activesupport (2.3.0) lib/active_support/core_ext/string/inflections.rb:162:in `constantize'
+  actionpack (2.3.0) lib/action_controller/routing/route_set.rb:439:in `recognize'
+  actionpack (2.3.0) lib/action_controller/routing/route_set.rb:432:in `call'
+  actionpack (2.3.0) lib/action_controller/dispatcher.rb:65:in `dispatch'
+  actionpack (2.3.0) lib/action_controller/dispatcher.rb:88:in `_call'
+  actionpack (2.3.0) lib/action_controller/dispatcher.rb:59:in `initialize'
+  activerecord (2.3.0) lib/active_record/query_cache.rb:29:in `call'
+  activerecord (2.3.0) lib/active_record/query_cache.rb:29:in `call'
+  activerecord (2.3.0) lib/active_record/connection_adapters/abstract/query_cache.rb:34:in `cache'
+  activerecord (2.3.0) lib/active_record/query_cache.rb:9:in `cache'
+  activerecord (2.3.0) lib/active_record/query_cache.rb:28:in `call'
+  actionpack (2.3.0) lib/action_controller/params_parser.rb:15:in `call'
+  actionpack (2.3.0) lib/action_controller/rewindable_input.rb:25:in `call'
+  actionpack (2.3.0) lib/action_controller/session/cookie_store.rb:93:in `call'
+  actionpack (2.3.0) lib/action_controller/failsafe.rb:11:in `call'
+  actionpack (2.3.0) lib/action_controller/rack_ext/lock.rb:15:in `call'
+  actionpack (2.3.0) lib/action_controller/rack_ext/lock.rb:15:in `synchronize'
+  actionpack (2.3.0) lib/action_controller/rack_ext/lock.rb:15:in `call'
+  actionpack (2.3.0) lib/action_controller/dispatcher.rb:83:in `call'
+  rails (2.3.0) lib/rails/rack/static.rb:27:in `call'
+  rails (2.3.0) lib/rails/rack/log_tailer.rb:17:in `call'
+  rails (2.3.0) lib/commands/server.rb:100
+
+Rendered rescues/_trace (56.7ms)
+Rendered rescues/_request_and_response (0.9ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.6ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT version FROM schema_migrations[0m
+
+
+Processing ActionController::Base#index (for 127.0.0.1 at 2009-02-28 01:10:01) [GET]
+
+NoMethodError (undefined method `charset=' for #<GetText::TextDomain:0x7fc41956ea70>):
+  /usr/lib/ruby/gems/1.8/gems/gettext_rails-1.93.0/lib/gettext_rails/action_controller.rb:78:in `init_gettext'
+  app/controllers/application_controller.rb:25
+  activesupport (2.3.0) lib/active_support/dependencies.rb:380:in `load_without_new_constant_marking'
+  activesupport (2.3.0) lib/active_support/dependencies.rb:380:in `load_file'
+  activesupport (2.3.0) lib/active_support/dependencies.rb:521:in `new_constants_in'
+  activesupport (2.3.0) lib/active_support/dependencies.rb:379:in `load_file'
+  activesupport (2.3.0) lib/active_support/dependencies.rb:259:in `require_or_load'
+  activesupport (2.3.0) lib/active_support/dependencies.rb:425:in `load_missing_constant'
+  activesupport (2.3.0) lib/active_support/dependencies.rb:80:in `const_missing'
+  activesupport (2.3.0) lib/active_support/dependencies.rb:92:in `const_missing'
+  app/controllers/articles_controller.rb:8
+  activesupport (2.3.0) lib/active_support/dependencies.rb:380:in `load_without_new_constant_marking'
+  activesupport (2.3.0) lib/active_support/dependencies.rb:380:in `load_file'
+  activesupport (2.3.0) lib/active_support/dependencies.rb:521:in `new_constants_in'
+  activesupport (2.3.0) lib/active_support/dependencies.rb:379:in `load_file'
+  activesupport (2.3.0) lib/active_support/dependencies.rb:259:in `require_or_load'
+  activesupport (2.3.0) lib/active_support/dependencies.rb:425:in `load_missing_constant'
+  activesupport (2.3.0) lib/active_support/dependencies.rb:80:in `const_missing'
+  activesupport (2.3.0) lib/active_support/dependencies.rb:92:in `const_missing'
+  activesupport (2.3.0) lib/active_support/inflector.rb:359:in `constantize'
+  activesupport (2.3.0) lib/active_support/inflector.rb:358:in `each'
+  activesupport (2.3.0) lib/active_support/inflector.rb:358:in `constantize'
+  activesupport (2.3.0) lib/active_support/core_ext/string/inflections.rb:162:in `constantize'
+  actionpack (2.3.0) lib/action_controller/routing/route_set.rb:439:in `recognize'
+  actionpack (2.3.0) lib/action_controller/routing/route_set.rb:432:in `call'
+  actionpack (2.3.0) lib/action_controller/dispatcher.rb:65:in `dispatch'
+  actionpack (2.3.0) lib/action_controller/dispatcher.rb:88:in `_call'
+  actionpack (2.3.0) lib/action_controller/dispatcher.rb:59:in `initialize'
+  activerecord (2.3.0) lib/active_record/query_cache.rb:29:in `call'
+  activerecord (2.3.0) lib/active_record/query_cache.rb:29:in `call'
+  activerecord (2.3.0) lib/active_record/connection_adapters/abstract/query_cache.rb:34:in `cache'
+  activerecord (2.3.0) lib/active_record/query_cache.rb:9:in `cache'
+  activerecord (2.3.0) lib/active_record/query_cache.rb:28:in `call'
+  actionpack (2.3.0) lib/action_controller/params_parser.rb:15:in `call'
+  actionpack (2.3.0) lib/action_controller/rewindable_input.rb:25:in `call'
+  actionpack (2.3.0) lib/action_controller/session/cookie_store.rb:93:in `call'
+  actionpack (2.3.0) lib/action_controller/failsafe.rb:11:in `call'
+  actionpack (2.3.0) lib/action_controller/rack_ext/lock.rb:15:in `call'
+  actionpack (2.3.0) lib/action_controller/rack_ext/lock.rb:15:in `synchronize'
+  actionpack (2.3.0) lib/action_controller/rack_ext/lock.rb:15:in `call'
+  actionpack (2.3.0) lib/action_controller/dispatcher.rb:83:in `call'
+  rails (2.3.0) lib/rails/rack/static.rb:27:in `call'
+  rails (2.3.0) lib/rails/rack/log_tailer.rb:17:in `call'
+  rails (2.3.0) lib/commands/server.rb:100
+
+Rendered rescues/_trace (47.2ms)
+Rendered rescues/_request_and_response (0.6ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.6ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSELECT version FROM schema_migrations[0m
+
+
+Processing ActionController::Base#index (for 127.0.0.1 at 2009-02-28 01:11:44) [GET]
+
+NoMethodError (undefined method `charset=' for #<GetText::TextDomain:0x7f152cc5ba78>):
+  /usr/lib/ruby/gems/1.8/gems/gettext_rails-1.93.0/lib/gettext_rails/action_controller.rb:78:in `init_gettext'
+  app/controllers/application_controller.rb:25
+  activesupport (2.3.0) lib/active_support/dependencies.rb:380:in `load_without_new_constant_marking'
+  activesupport (2.3.0) lib/active_support/dependencies.rb:380:in `load_file'
+  activesupport (2.3.0) lib/active_support/dependencies.rb:521:in `new_constants_in'
+  activesupport (2.3.0) lib/active_support/dependencies.rb:379:in `load_file'
+  activesupport (2.3.0) lib/active_support/dependencies.rb:259:in `require_or_load'
+  activesupport (2.3.0) lib/active_support/dependencies.rb:425:in `load_missing_constant'
+  activesupport (2.3.0) lib/active_support/dependencies.rb:80:in `const_missing'
+  activesupport (2.3.0) lib/active_support/dependencies.rb:92:in `const_missing'
+  app/controllers/articles_controller.rb:8
+  activesupport (2.3.0) lib/active_support/dependencies.rb:380:in `load_without_new_constant_marking'
+  activesupport (2.3.0) lib/active_support/dependencies.rb:380:in `load_file'
+  activesupport (2.3.0) lib/active_support/dependencies.rb:521:in `new_constants_in'
+  activesupport (2.3.0) lib/active_support/dependencies.rb:379:in `load_file'
+  activesupport (2.3.0) lib/active_support/dependencies.rb:259:in `require_or_load'
+  activesupport (2.3.0) lib/active_support/dependencies.rb:425:in `load_missing_constant'
+  activesupport (2.3.0) lib/active_support/dependencies.rb:80:in `const_missing'
+  activesupport (2.3.0) lib/active_support/dependencies.rb:92:in `const_missing'
+  activesupport (2.3.0) lib/active_support/inflector.rb:359:in `constantize'
+  activesupport (2.3.0) lib/active_support/inflector.rb:358:in `each'
+  activesupport (2.3.0) lib/active_support/inflector.rb:358:in `constantize'
+  activesupport (2.3.0) lib/active_support/core_ext/string/inflections.rb:162:in `constantize'
+  actionpack (2.3.0) lib/action_controller/routing/route_set.rb:439:in `recognize'
+  actionpack (2.3.0) lib/action_controller/routing/route_set.rb:432:in `call'
+  actionpack (2.3.0) lib/action_controller/dispatcher.rb:65:in `dispatch'
+  actionpack (2.3.0) lib/action_controller/dispatcher.rb:88:in `_call'
+  actionpack (2.3.0) lib/action_controller/dispatcher.rb:59:in `initialize'
+  activerecord (2.3.0) lib/active_record/query_cache.rb:29:in `call'
+  activerecord (2.3.0) lib/active_record/query_cache.rb:29:in `call'
+  activerecord (2.3.0) lib/active_record/connection_adapters/abstract/query_cache.rb:34:in `cache'
+  activerecord (2.3.0) lib/active_record/query_cache.rb:9:in `cache'
+  activerecord (2.3.0) lib/active_record/query_cache.rb:28:in `call'
+  actionpack (2.3.0) lib/action_controller/params_parser.rb:15:in `call'
+  actionpack (2.3.0) lib/action_controller/rewindable_input.rb:25:in `call'
+  actionpack (2.3.0) lib/action_controller/session/cookie_store.rb:93:in `call'
+  actionpack (2.3.0) lib/action_controller/failsafe.rb:11:in `call'
+  actionpack (2.3.0) lib/action_controller/rack_ext/lock.rb:15:in `call'
+  actionpack (2.3.0) lib/action_controller/rack_ext/lock.rb:15:in `synchronize'
+  actionpack (2.3.0) lib/action_controller/rack_ext/lock.rb:15:in `call'
+  actionpack (2.3.0) lib/action_controller/dispatcher.rb:83:in `call'
+  rails (2.3.0) lib/rails/rack/static.rb:27:in `call'
+  rails (2.3.0) lib/rails/rack/log_tailer.rb:17:in `call'
+  rails (2.3.0) lib/commands/server.rb:100
+
+Rendered rescues/_trace (56.7ms)
+Rendered rescues/_request_and_response (0.7ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.6ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT version FROM schema_migrations[0m
+
+
+Processing ActionController::Base#index (for 127.0.0.1 at 2009-02-28 01:16:14) [GET]
+
+NoMethodError (undefined method `charset=' for #<GetText::TextDomain:0x7f55a3c7aba0>):
+  /usr/lib/ruby/gems/1.8/gems/gettext_rails-1.93.0/lib/gettext_rails/action_controller.rb:78:in `init_gettext'
+  app/controllers/application_controller.rb:25
+  activesupport (2.3.0) lib/active_support/dependencies.rb:380:in `load_without_new_constant_marking'
+  activesupport (2.3.0) lib/active_support/dependencies.rb:380:in `load_file'
+  activesupport (2.3.0) lib/active_support/dependencies.rb:521:in `new_constants_in'
+  activesupport (2.3.0) lib/active_support/dependencies.rb:379:in `load_file'
+  activesupport (2.3.0) lib/active_support/dependencies.rb:259:in `require_or_load'
+  activesupport (2.3.0) lib/active_support/dependencies.rb:425:in `load_missing_constant'
+  activesupport (2.3.0) lib/active_support/dependencies.rb:80:in `const_missing'
+  activesupport (2.3.0) lib/active_support/dependencies.rb:92:in `const_missing'
+  app/controllers/articles_controller.rb:8
+  activesupport (2.3.0) lib/active_support/dependencies.rb:380:in `load_without_new_constant_marking'
+  activesupport (2.3.0) lib/active_support/dependencies.rb:380:in `load_file'
+  activesupport (2.3.0) lib/active_support/dependencies.rb:521:in `new_constants_in'
+  activesupport (2.3.0) lib/active_support/dependencies.rb:379:in `load_file'
+  activesupport (2.3.0) lib/active_support/dependencies.rb:259:in `require_or_load'
+  activesupport (2.3.0) lib/active_support/dependencies.rb:425:in `load_missing_constant'
+  activesupport (2.3.0) lib/active_support/dependencies.rb:80:in `const_missing'
+  activesupport (2.3.0) lib/active_support/dependencies.rb:92:in `const_missing'
+  activesupport (2.3.0) lib/active_support/inflector.rb:359:in `constantize'
+  activesupport (2.3.0) lib/active_support/inflector.rb:358:in `each'
+  activesupport (2.3.0) lib/active_support/inflector.rb:358:in `constantize'
+  activesupport (2.3.0) lib/active_support/core_ext/string/inflections.rb:162:in `constantize'
+  actionpack (2.3.0) lib/action_controller/routing/route_set.rb:439:in `recognize'
+  actionpack (2.3.0) lib/action_controller/routing/route_set.rb:432:in `call'
+  actionpack (2.3.0) lib/action_controller/dispatcher.rb:65:in `dispatch'
+  actionpack (2.3.0) lib/action_controller/dispatcher.rb:88:in `_call'
+  actionpack (2.3.0) lib/action_controller/dispatcher.rb:59:in `initialize'
+  activerecord (2.3.0) lib/active_record/query_cache.rb:29:in `call'
+  activerecord (2.3.0) lib/active_record/query_cache.rb:29:in `call'
+  activerecord (2.3.0) lib/active_record/connection_adapters/abstract/query_cache.rb:34:in `cache'
+  activerecord (2.3.0) lib/active_record/query_cache.rb:9:in `cache'
+  activerecord (2.3.0) lib/active_record/query_cache.rb:28:in `call'
+  actionpack (2.3.0) lib/action_controller/params_parser.rb:15:in `call'
+  actionpack (2.3.0) lib/action_controller/rewindable_input.rb:25:in `call'
+  actionpack (2.3.0) lib/action_controller/session/cookie_store.rb:93:in `call'
+  actionpack (2.3.0) lib/action_controller/failsafe.rb:11:in `call'
+  actionpack (2.3.0) lib/action_controller/rack_ext/lock.rb:15:in `call'
+  actionpack (2.3.0) lib/action_controller/rack_ext/lock.rb:15:in `synchronize'
+  actionpack (2.3.0) lib/action_controller/rack_ext/lock.rb:15:in `call'
+  actionpack (2.3.0) lib/action_controller/dispatcher.rb:83:in `call'
+  rails (2.3.0) lib/rails/rack/static.rb:27:in `call'
+  rails (2.3.0) lib/rails/rack/log_tailer.rb:17:in `call'
+  rails (2.3.0) lib/commands/server.rb:100
+
+Rendered rescues/_trace (31.5ms)
+Rendered rescues/_request_and_response (0.6ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing ActionController::Base#index (for 127.0.0.1 at 2009-02-28 01:16:16) [GET]
+
+NoMethodError (undefined method `charset=' for #<GetText::TextDomain:0x7f55a3c7aba0>):
+  /usr/lib/ruby/gems/1.8/gems/gettext_rails-1.93.0/lib/gettext_rails/action_controller.rb:78:in `init_gettext'
+  app/controllers/application_controller.rb:25
+  activesupport (2.3.0) lib/active_support/dependencies.rb:380:in `load_without_new_constant_marking'
+  activesupport (2.3.0) lib/active_support/dependencies.rb:380:in `load_file'
+  activesupport (2.3.0) lib/active_support/dependencies.rb:521:in `new_constants_in'
+  activesupport (2.3.0) lib/active_support/dependencies.rb:379:in `load_file'
+  activesupport (2.3.0) lib/active_support/dependencies.rb:259:in `require_or_load'
+  activesupport (2.3.0) lib/active_support/dependencies.rb:425:in `load_missing_constant'
+  activesupport (2.3.0) lib/active_support/dependencies.rb:80:in `const_missing'
+  activesupport (2.3.0) lib/active_support/dependencies.rb:92:in `const_missing'
+  app/controllers/articles_controller.rb:8
+  activesupport (2.3.0) lib/active_support/dependencies.rb:380:in `load_without_new_constant_marking'
+  activesupport (2.3.0) lib/active_support/dependencies.rb:380:in `load_file'
+  activesupport (2.3.0) lib/active_support/dependencies.rb:521:in `new_constants_in'
+  activesupport (2.3.0) lib/active_support/dependencies.rb:379:in `load_file'
+  activesupport (2.3.0) lib/active_support/dependencies.rb:259:in `require_or_load'
+  activesupport (2.3.0) lib/active_support/dependencies.rb:425:in `load_missing_constant'
+  activesupport (2.3.0) lib/active_support/dependencies.rb:80:in `const_missing'
+  activesupport (2.3.0) lib/active_support/dependencies.rb:92:in `const_missing'
+  activesupport (2.3.0) lib/active_support/inflector.rb:359:in `constantize'
+  activesupport (2.3.0) lib/active_support/inflector.rb:358:in `each'
+  activesupport (2.3.0) lib/active_support/inflector.rb:358:in `constantize'
+  activesupport (2.3.0) lib/active_support/core_ext/string/inflections.rb:162:in `constantize'
+  actionpack (2.3.0) lib/action_controller/routing/route_set.rb:439:in `recognize'
+  actionpack (2.3.0) lib/action_controller/routing/route_set.rb:432:in `call'
+  actionpack (2.3.0) lib/action_controller/dispatcher.rb:65:in `dispatch'
+  actionpack (2.3.0) lib/action_controller/dispatcher.rb:88:in `_call'
+  actionpack (2.3.0) lib/action_controller/dispatcher.rb:59:in `initialize'
+  activerecord (2.3.0) lib/active_record/query_cache.rb:29:in `call'
+  activerecord (2.3.0) lib/active_record/query_cache.rb:29:in `call'
+  activerecord (2.3.0) lib/active_record/connection_adapters/abstract/query_cache.rb:34:in `cache'
+  activerecord (2.3.0) lib/active_record/query_cache.rb:9:in `cache'
+  activerecord (2.3.0) lib/active_record/query_cache.rb:28:in `call'
+  actionpack (2.3.0) lib/action_controller/params_parser.rb:15:in `call'
+  actionpack (2.3.0) lib/action_controller/rewindable_input.rb:25:in `call'
+  actionpack (2.3.0) lib/action_controller/session/cookie_store.rb:93:in `call'
+  actionpack (2.3.0) lib/action_controller/failsafe.rb:11:in `call'
+  actionpack (2.3.0) lib/action_controller/rack_ext/lock.rb:15:in `call'
+  actionpack (2.3.0) lib/action_controller/rack_ext/lock.rb:15:in `synchronize'
+  actionpack (2.3.0) lib/action_controller/rack_ext/lock.rb:15:in `call'
+  actionpack (2.3.0) lib/action_controller/dispatcher.rb:83:in `call'
+  rails (2.3.0) lib/rails/rack/static.rb:27:in `call'
+  rails (2.3.0) lib/rails/rack/log_tailer.rb:17:in `call'
+  rails (2.3.0) lib/commands/server.rb:100
+
+Rendered rescues/_trace (133.6ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.6ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT version FROM schema_migrations[0m
+
+
+Processing ArticlesController#index (for 127.0.0.1 at 2009-02-28 01:17:51) [GET]
+  [4;36;1mArticle Load (0.5ms)[0m   [0;1mSELECT * FROM "articles" [0m
+Rendering template within layouts/articles
+Rendering articles/index
+Completed in 94ms (View: 73, DB: 1) | 200 OK [http://localhost/articles]
+
+
+Processing ArticlesController#new (for 127.0.0.1 at 2009-02-28 01:17:53) [GET]
+Rendering template within layouts/articles
+Rendering articles/new
+Completed in 69ms (View: 46, DB: 0) | 200 OK [http://localhost/articles/new]
+
+
+Processing ArticlesController#index (for 127.0.0.1 at 2009-02-28 01:17:56) [GET]
+  [4;35;1mArticle Load (0.7ms)[0m   [0mSELECT * FROM "articles" [0m
+Rendering template within layouts/articles
+Rendering articles/index
+Completed in 27ms (View: 16, DB: 1) | 200 OK [http://localhost/articles]
+
+
+Processing ArticlesController#new (for 127.0.0.1 at 2009-02-28 01:17:58) [GET]
+Rendering template within layouts/articles
+Rendering articles/new
+Completed in 121ms (View: 17, DB: 0) | 200 OK [http://localhost/articles/new]
+
+
+Processing ArticlesController#index (for 127.0.0.1 at 2009-02-28 01:18:02) [GET]
+  [4;36;1mArticle Load (0.4ms)[0m   [0;1mSELECT * FROM "articles" [0m
+Rendering template within layouts/articles
+Rendering articles/index
+Completed in 17ms (View: 9, DB: 0) | 200 OK [http://localhost/articles]
+
+
+Processing ArticlesController#index (for 127.0.0.1 at 2009-02-28 01:18:10) [GET]
+  Parameters: {"lang"=>"en"}
+  [4;35;1mArticle Load (0.5ms)[0m   [0mSELECT * FROM "articles" [0m
+Rendering template within layouts/articles
+Rendering articles/index
+Completed in 16ms (View: 10, DB: 1) | 200 OK [http://localhost/articles?lang=en]
+  [4;36;1mSQL (0.7ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.6ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT version FROM schema_migrations[0m
+
+
+Processing ArticlesController#index (for 127.0.0.1 at 2009-02-28 01:47:19) [GET]
+  Parameters: {"lang"=>"en"}
+  [4;36;1mArticle Load (0.7ms)[0m   [0;1mSELECT * FROM "articles" [0m
+Rendering template within layouts/articles
+Rendering articles/index
+Completed in 27ms (View: 16, DB: 1) | 200 OK [http://localhost/articles?lang=en]
+
+
+Processing ArticlesController#index (for 127.0.0.1 at 2009-02-28 01:47:23) [GET]
+  [4;35;1mArticle Load (0.5ms)[0m   [0mSELECT * FROM "articles" [0m
+Rendering template within layouts/articles
+Rendering articles/index
+Completed in 17ms (View: 9, DB: 1) | 200 OK [http://localhost/articles?]
+
+
+Processing ArticlesController#index (for 127.0.0.1 at 2009-02-28 01:47:27) [GET]
+  Parameters: {"lang"=>""}
+  [4;36;1mArticle Load (0.5ms)[0m   [0;1mSELECT * FROM "articles" [0m
+Rendering template within layouts/articles
+Rendering articles/index
+Completed in 18ms (View: 10, DB: 0) | 200 OK [http://localhost/articles?lang=]
+
+
+Processing ArticlesController#index (for 127.0.0.1 at 2009-02-28 01:47:34) [GET]
+  [4;35;1mArticle Load (0.5ms)[0m   [0mSELECT * FROM "articles" [0m
+Rendering template within layouts/articles
+Rendering articles/index
+Completed in 19ms (View: 10, DB: 0) | 200 OK [http://localhost/articles]
+
+
+Processing ArticlesController#new (for 127.0.0.1 at 2009-02-28 01:47:36) [GET]
+Rendering template within layouts/articles
+Rendering articles/new
+Completed in 26ms (View: 18, DB: 0) | 200 OK [http://localhost/articles/new]
+  [4;36;1mSQL (0.8ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT version FROM schema_migrations[0m
+
+
+Processing ArticlesController#create (for 127.0.0.1 at 2009-02-28 01:47:57) [POST]
+  Parameters: {"article"=>{"lastupdate"=>"", "title"=>"", "description"=>""}, "commit"=>"Create", "authenticity_token"=>"mpKTu/LShCMVL+5N9S9kwjcFcDaRiotaxM4LFf6LqDc="}
+Rendering template within layouts/articles
+Rendering articles/new
+Completed in 47ms (View: 24, DB: 0) | 200 OK [http://localhost/articles]
+  [4;36;1mSQL (1.0ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.6ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT version FROM schema_migrations[0m
+
+
+Processing ArticlesController#create (for 127.0.0.1 at 2009-02-28 01:51:26) [POST]
+  Parameters: {"article"=>{"lastupdate"=>"", "title"=>"", "description"=>""}, "commit"=>"Create", "authenticity_token"=>"mpKTu/LShCMVL+5N9S9kwjcFcDaRiotaxM4LFf6LqDc="}
+Rendering template within layouts/articles
+Rendering articles/new
+Completed in 156ms (View: 129, DB: 0) | 200 OK [http://localhost/articles]
+  [4;36;1mSQL (0.6ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT version FROM schema_migrations[0m
+
+
+Processing ArticlesController#create (for 127.0.0.1 at 2009-02-28 02:14:47) [POST]
+  Parameters: {"article"=>{"lastupdate"=>"", "title"=>"", "description"=>""}, "commit"=>"Create", "authenticity_token"=>"mpKTu/LShCMVL+5N9S9kwjcFcDaRiotaxM4LFf6LqDc="}
+Rendering template within layouts/articles
+Rendering articles/new
+
+ActionView::TemplateError (undefined method `charset' for #<Locale::Tag::Simple: ja>) on line #6 of app/views/layouts/articles.html.erb:
+3: 
+4: <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="<%= locale.language %>" lang="<%= locale.language %>">
+5: <head>
+6:   <meta http-equiv="content-type" content="text/html;charset=<%= locale.charset %>" />
+7:   <title><%= _('GetText Sample Blog on RoR') %>: <%= controller.action_name %></title>
+8:   <%= stylesheet_link_tag 'scaffold' %>
+9:   <%= stylesheet_link_tag 'blog' %>
+
+    app/views/layouts/articles.html.erb:6
+    actionpack (2.3.0) lib/action_view/renderable.rb:35:in `send'
+    actionpack (2.3.0) lib/action_view/renderable.rb:35:in `render'
+    actionpack (2.3.0) lib/action_view/template.rb:182:in `render_template'
+    actionpack (2.3.0) lib/action_view/base.rb:247:in `render'
+    actionpack (2.3.0) lib/action_view/base.rb:322:in `_render_with_layout'
+    actionpack (2.3.0) lib/action_view/base.rb:244:in `render'
+    actionpack (2.3.0) lib/action_controller/base.rb:1180:in `render_for_file'
+    actionpack (2.3.0) lib/action_controller/base.rb:912:in `render_without_benchmark'
+    actionpack (2.3.0) lib/action_controller/benchmarking.rb:51:in `render'
+    actionpack (2.3.0) lib/action_controller/benchmarking.rb:51:in `render'
+    app/controllers/articles_controller.rb:63:in `create'
+    actionpack (2.3.0) lib/action_controller/mime_responds.rb:135:in `call'
+    actionpack (2.3.0) lib/action_controller/mime_responds.rb:135:in `custom'
+    actionpack (2.3.0) lib/action_controller/mime_responds.rb:179:in `call'
+    actionpack (2.3.0) lib/action_controller/mime_responds.rb:179:in `respond'
+    actionpack (2.3.0) lib/action_controller/mime_responds.rb:173:in `each'
+    actionpack (2.3.0) lib/action_controller/mime_responds.rb:173:in `respond'
+    actionpack (2.3.0) lib/action_controller/mime_responds.rb:107:in `respond_to'
+    app/controllers/articles_controller.rb:57:in `create'
+    actionpack (2.3.0) lib/action_controller/base.rb:1261:in `send'
+    actionpack (2.3.0) lib/action_controller/base.rb:1261:in `perform_action_without_filters'
+    actionpack (2.3.0) lib/action_controller/filters.rb:617:in `call_filters'
+    actionpack (2.3.0) lib/action_controller/filters.rb:610:in `perform_action_without_benchmark'
+    actionpack (2.3.0) lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+    actionpack (2.3.0) lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+    actionpack (2.3.0) lib/action_controller/rescue.rb:154:in `perform_action_without_flash'
+    actionpack (2.3.0) lib/action_controller/flash.rb:141:in `perform_action'
+    actionpack (2.3.0) lib/action_controller/base.rb:523:in `send'
+    actionpack (2.3.0) lib/action_controller/base.rb:523:in `process_without_filters'
+    actionpack (2.3.0) lib/action_controller/filters.rb:606:in `process'
+    actionpack (2.3.0) lib/action_controller/base.rb:391:in `process'
+    actionpack (2.3.0) lib/action_controller/base.rb:386:in `call'
+    actionpack (2.3.0) lib/action_controller/routing/route_set.rb:433:in `call'
+    actionpack (2.3.0) lib/action_controller/dispatcher.rb:65:in `dispatch'
+    actionpack (2.3.0) lib/action_controller/dispatcher.rb:88:in `_call'
+    actionpack (2.3.0) lib/action_controller/dispatcher.rb:59:in `initialize'
+    activerecord (2.3.0) lib/active_record/query_cache.rb:29:in `call'
+    activerecord (2.3.0) lib/active_record/query_cache.rb:29:in `call'
+    activerecord (2.3.0) lib/active_record/connection_adapters/abstract/query_cache.rb:34:in `cache'
+    activerecord (2.3.0) lib/active_record/query_cache.rb:9:in `cache'
+    activerecord (2.3.0) lib/active_record/query_cache.rb:28:in `call'
+    actionpack (2.3.0) lib/action_controller/params_parser.rb:15:in `call'
+    actionpack (2.3.0) lib/action_controller/rewindable_input.rb:25:in `call'
+    actionpack (2.3.0) lib/action_controller/session/cookie_store.rb:93:in `call'
+    actionpack (2.3.0) lib/action_controller/failsafe.rb:11:in `call'
+    actionpack (2.3.0) lib/action_controller/rack_ext/lock.rb:15:in `call'
+    actionpack (2.3.0) lib/action_controller/rack_ext/lock.rb:15:in `synchronize'
+    actionpack (2.3.0) lib/action_controller/rack_ext/lock.rb:15:in `call'
+    actionpack (2.3.0) lib/action_controller/dispatcher.rb:83:in `call'
+    rails (2.3.0) lib/rails/rack/static.rb:27:in `call'
+    rails (2.3.0) lib/rails/rack/log_tailer.rb:17:in `call'
+    rails (2.3.0) lib/commands/server.rb:100
+
+Rendered rescues/_trace (143.0ms)
+Rendered rescues/_request_and_response (0.7ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.6ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT version FROM schema_migrations[0m
+
+
+Processing ArticlesController#create (for 127.0.0.1 at 2009-02-28 02:15:51) [POST]
+  Parameters: {"article"=>{"lastupdate"=>"", "title"=>"", "description"=>""}, "commit"=>"Create", "authenticity_token"=>"mpKTu/LShCMVL+5N9S9kwjcFcDaRiotaxM4LFf6LqDc="}
+Rendering template within layouts/articles
+Rendering articles/new
+
+ActionView::TemplateError (undefined local variable or method `show_navigation' for #<ActionView::Base:0x7fd225a26698>) on line #23 of app/views/layouts/articles.html.erb:
+20: 
+21: </div>
+22: 
+23: <%= show_navigation %>
+24: 
+25: </body>
+26: </html>
+
+    app/views/layouts/articles.html.erb:23
+    actionpack (2.3.0) lib/action_view/renderable.rb:35:in `send'
+    actionpack (2.3.0) lib/action_view/renderable.rb:35:in `render'
+    actionpack (2.3.0) lib/action_view/template.rb:182:in `render_template'
+    actionpack (2.3.0) lib/action_view/base.rb:247:in `render'
+    actionpack (2.3.0) lib/action_view/base.rb:322:in `_render_with_layout'
+    actionpack (2.3.0) lib/action_view/base.rb:244:in `render'
+    actionpack (2.3.0) lib/action_controller/base.rb:1180:in `render_for_file'
+    actionpack (2.3.0) lib/action_controller/base.rb:912:in `render_without_benchmark'
+    actionpack (2.3.0) lib/action_controller/benchmarking.rb:51:in `render'
+    actionpack (2.3.0) lib/action_controller/benchmarking.rb:51:in `render'
+    app/controllers/articles_controller.rb:63:in `create'
+    actionpack (2.3.0) lib/action_controller/mime_responds.rb:135:in `call'
+    actionpack (2.3.0) lib/action_controller/mime_responds.rb:135:in `custom'
+    actionpack (2.3.0) lib/action_controller/mime_responds.rb:179:in `call'
+    actionpack (2.3.0) lib/action_controller/mime_responds.rb:179:in `respond'
+    actionpack (2.3.0) lib/action_controller/mime_responds.rb:173:in `each'
+    actionpack (2.3.0) lib/action_controller/mime_responds.rb:173:in `respond'
+    actionpack (2.3.0) lib/action_controller/mime_responds.rb:107:in `respond_to'
+    app/controllers/articles_controller.rb:57:in `create'
+    actionpack (2.3.0) lib/action_controller/base.rb:1261:in `send'
+    actionpack (2.3.0) lib/action_controller/base.rb:1261:in `perform_action_without_filters'
+    actionpack (2.3.0) lib/action_controller/filters.rb:617:in `call_filters'
+    actionpack (2.3.0) lib/action_controller/filters.rb:610:in `perform_action_without_benchmark'
+    actionpack (2.3.0) lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+    actionpack (2.3.0) lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+    actionpack (2.3.0) lib/action_controller/rescue.rb:154:in `perform_action_without_flash'
+    actionpack (2.3.0) lib/action_controller/flash.rb:141:in `perform_action'
+    actionpack (2.3.0) lib/action_controller/base.rb:523:in `send'
+    actionpack (2.3.0) lib/action_controller/base.rb:523:in `process_without_filters'
+    actionpack (2.3.0) lib/action_controller/filters.rb:606:in `process'
+    actionpack (2.3.0) lib/action_controller/base.rb:391:in `process'
+    actionpack (2.3.0) lib/action_controller/base.rb:386:in `call'
+    actionpack (2.3.0) lib/action_controller/routing/route_set.rb:433:in `call'
+    actionpack (2.3.0) lib/action_controller/dispatcher.rb:65:in `dispatch'
+    actionpack (2.3.0) lib/action_controller/dispatcher.rb:88:in `_call'
+    actionpack (2.3.0) lib/action_controller/dispatcher.rb:59:in `initialize'
+    activerecord (2.3.0) lib/active_record/query_cache.rb:29:in `call'
+    activerecord (2.3.0) lib/active_record/query_cache.rb:29:in `call'
+    activerecord (2.3.0) lib/active_record/connection_adapters/abstract/query_cache.rb:34:in `cache'
+    activerecord (2.3.0) lib/active_record/query_cache.rb:9:in `cache'
+    activerecord (2.3.0) lib/active_record/query_cache.rb:28:in `call'
+    actionpack (2.3.0) lib/action_controller/params_parser.rb:15:in `call'
+    actionpack (2.3.0) lib/action_controller/rewindable_input.rb:25:in `call'
+    actionpack (2.3.0) lib/action_controller/session/cookie_store.rb:93:in `call'
+    actionpack (2.3.0) lib/action_controller/failsafe.rb:11:in `call'
+    actionpack (2.3.0) lib/action_controller/rack_ext/lock.rb:15:in `call'
+    actionpack (2.3.0) lib/action_controller/rack_ext/lock.rb:15:in `synchronize'
+    actionpack (2.3.0) lib/action_controller/rack_ext/lock.rb:15:in `call'
+    actionpack (2.3.0) lib/action_controller/dispatcher.rb:83:in `call'
+    rails (2.3.0) lib/rails/rack/static.rb:27:in `call'
+    rails (2.3.0) lib/rails/rack/log_tailer.rb:17:in `call'
+    rails (2.3.0) lib/commands/server.rb:100
+
+Rendered rescues/_trace (134.4ms)
+Rendered rescues/_request_and_response (0.7ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.6ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT version FROM schema_migrations[0m
+
+
+Processing ArticlesController#create (for 127.0.0.1 at 2009-02-28 02:17:59) [POST]
+  Parameters: {"article"=>{"lastupdate"=>"", "title"=>"", "description"=>""}, "commit"=>"Create", "authenticity_token"=>"mpKTu/LShCMVL+5N9S9kwjcFcDaRiotaxM4LFf6LqDc="}
+Rendering template within layouts/articles
+Rendering articles/new
+  [4;36;1mArticle Load (0.3ms)[0m   [0;1mSELECT * FROM "articles" ORDER BY lastupdate desc, id desc[0m
+
+ActionView::TemplateError (You have a nil object when you didn't expect it!
+You might have expected an instance of Array.
+The error occurred while evaluating nil.sort) on line #23 of app/views/layouts/articles.html.erb:
+20: 
+21: </div>
+22: 
+23: <%= show_navigation %>
+24: 
+25: </body>
+26: </html>
+
+    app/helpers/articles_helper.rb:39:in `show_navigation'
+    app/views/layouts/articles.html.erb:23
+    actionpack (2.3.0) lib/action_view/renderable.rb:35:in `send'
+    actionpack (2.3.0) lib/action_view/renderable.rb:35:in `render'
+    actionpack (2.3.0) lib/action_view/template.rb:182:in `render_template'
+    actionpack (2.3.0) lib/action_view/base.rb:247:in `render'
+    actionpack (2.3.0) lib/action_view/base.rb:322:in `_render_with_layout'
+    actionpack (2.3.0) lib/action_view/base.rb:244:in `render'
+    actionpack (2.3.0) lib/action_controller/base.rb:1180:in `render_for_file'
+    actionpack (2.3.0) lib/action_controller/base.rb:912:in `render_without_benchmark'
+    actionpack (2.3.0) lib/action_controller/benchmarking.rb:51:in `render'
+    actionpack (2.3.0) lib/action_controller/benchmarking.rb:51:in `render'
+    app/controllers/articles_controller.rb:63:in `create'
+    actionpack (2.3.0) lib/action_controller/mime_responds.rb:135:in `call'
+    actionpack (2.3.0) lib/action_controller/mime_responds.rb:135:in `custom'
+    actionpack (2.3.0) lib/action_controller/mime_responds.rb:179:in `call'
+    actionpack (2.3.0) lib/action_controller/mime_responds.rb:179:in `respond'
+    actionpack (2.3.0) lib/action_controller/mime_responds.rb:173:in `each'
+    actionpack (2.3.0) lib/action_controller/mime_responds.rb:173:in `respond'
+    actionpack (2.3.0) lib/action_controller/mime_responds.rb:107:in `respond_to'
+    app/controllers/articles_controller.rb:57:in `create'
+    actionpack (2.3.0) lib/action_controller/base.rb:1261:in `send'
+    actionpack (2.3.0) lib/action_controller/base.rb:1261:in `perform_action_without_filters'
+    actionpack (2.3.0) lib/action_controller/filters.rb:617:in `call_filters'
+    actionpack (2.3.0) lib/action_controller/filters.rb:610:in `perform_action_without_benchmark'
+    actionpack (2.3.0) lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+    actionpack (2.3.0) lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+    actionpack (2.3.0) lib/action_controller/rescue.rb:154:in `perform_action_without_flash'
+    actionpack (2.3.0) lib/action_controller/flash.rb:141:in `perform_action'
+    actionpack (2.3.0) lib/action_controller/base.rb:523:in `send'
+    actionpack (2.3.0) lib/action_controller/base.rb:523:in `process_without_filters'
+    actionpack (2.3.0) lib/action_controller/filters.rb:606:in `process'
+    actionpack (2.3.0) lib/action_controller/base.rb:391:in `process'
+    actionpack (2.3.0) lib/action_controller/base.rb:386:in `call'
+    actionpack (2.3.0) lib/action_controller/routing/route_set.rb:433:in `call'
+    actionpack (2.3.0) lib/action_controller/dispatcher.rb:65:in `dispatch'
+    actionpack (2.3.0) lib/action_controller/dispatcher.rb:88:in `_call'
+    actionpack (2.3.0) lib/action_controller/dispatcher.rb:59:in `initialize'
+    activerecord (2.3.0) lib/active_record/query_cache.rb:29:in `call'
+    activerecord (2.3.0) lib/active_record/query_cache.rb:29:in `call'
+    activerecord (2.3.0) lib/active_record/connection_adapters/abstract/query_cache.rb:34:in `cache'
+    activerecord (2.3.0) lib/active_record/query_cache.rb:9:in `cache'
+    activerecord (2.3.0) lib/active_record/query_cache.rb:28:in `call'
+    actionpack (2.3.0) lib/action_controller/params_parser.rb:15:in `call'
+    actionpack (2.3.0) lib/action_controller/rewindable_input.rb:25:in `call'
+    actionpack (2.3.0) lib/action_controller/session/cookie_store.rb:93:in `call'
+    actionpack (2.3.0) lib/action_controller/failsafe.rb:11:in `call'
+    actionpack (2.3.0) lib/action_controller/rack_ext/lock.rb:15:in `call'
+    actionpack (2.3.0) lib/action_controller/rack_ext/lock.rb:15:in `synchronize'
+    actionpack (2.3.0) lib/action_controller/rack_ext/lock.rb:15:in `call'
+    actionpack (2.3.0) lib/action_controller/dispatcher.rb:83:in `call'
+    rails (2.3.0) lib/rails/rack/static.rb:27:in `call'
+    rails (2.3.0) lib/rails/rack/log_tailer.rb:17:in `call'
+    rails (2.3.0) lib/commands/server.rb:100
+
+Rendered rescues/_trace (129.9ms)
+Rendered rescues/_request_and_response (0.7ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.6ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT version FROM schema_migrations[0m
+
+
+Processing ArticlesController#create (for 127.0.0.1 at 2009-02-28 02:20:37) [POST]
+  Parameters: {"article"=>{"lastupdate"=>"", "title"=>"", "description"=>""}, "commit"=>"Create", "authenticity_token"=>"mpKTu/LShCMVL+5N9S9kwjcFcDaRiotaxM4LFf6LqDc="}
+Rendering template within layouts/articles
+Rendering articles/new
+  [4;36;1mArticle Load (0.4ms)[0m   [0;1mSELECT * FROM "articles" ORDER BY lastupdate desc, id desc[0m
+Completed in 47ms (View: 30, DB: 0) | 200 OK [http://localhost/articles]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-02-28 02:20:37) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/blog.css" with {:method=>:get}):
+  actionpack (2.3.0) lib/action_controller/routing/recognition_optimisation.rb:66:in `recognize_path'
+  actionpack (2.3.0) lib/action_controller/routing/route_set.rb:437:in `recognize'
+  actionpack (2.3.0) lib/action_controller/routing/route_set.rb:432:in `call'
+  actionpack (2.3.0) lib/action_controller/dispatcher.rb:65:in `dispatch'
+  actionpack (2.3.0) lib/action_controller/dispatcher.rb:88:in `_call'
+  actionpack (2.3.0) lib/action_controller/dispatcher.rb:59:in `initialize'
+  activerecord (2.3.0) lib/active_record/query_cache.rb:29:in `call'
+  activerecord (2.3.0) lib/active_record/query_cache.rb:29:in `call'
+  activerecord (2.3.0) lib/active_record/connection_adapters/abstract/query_cache.rb:34:in `cache'
+  activerecord (2.3.0) lib/active_record/query_cache.rb:9:in `cache'
+  activerecord (2.3.0) lib/active_record/query_cache.rb:28:in `call'
+  actionpack (2.3.0) lib/action_controller/params_parser.rb:15:in `call'
+  actionpack (2.3.0) lib/action_controller/rewindable_input.rb:25:in `call'
+  actionpack (2.3.0) lib/action_controller/session/cookie_store.rb:93:in `call'
+  actionpack (2.3.0) lib/action_controller/failsafe.rb:11:in `call'
+  actionpack (2.3.0) lib/action_controller/rack_ext/lock.rb:15:in `call'
+  actionpack (2.3.0) lib/action_controller/rack_ext/lock.rb:15:in `synchronize'
+  actionpack (2.3.0) lib/action_controller/rack_ext/lock.rb:15:in `call'
+  actionpack (2.3.0) lib/action_controller/dispatcher.rb:83:in `call'
+  rails (2.3.0) lib/rails/rack/static.rb:27:in `call'
+  rails (2.3.0) lib/rails/rack/log_tailer.rb:17:in `call'
+  rails (2.3.0) lib/commands/server.rb:100
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.6ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT version FROM schema_migrations[0m
+
+
+Processing ArticlesController#create (for 127.0.0.1 at 2009-02-28 02:23:39) [POST]
+  Parameters: {"article"=>{"lastupdate"=>"", "title"=>"", "description"=>""}, "commit"=>"Create", "authenticity_token"=>"mpKTu/LShCMVL+5N9S9kwjcFcDaRiotaxM4LFf6LqDc="}
+Rendering template within layouts/articles
+Rendering articles/new
+  [4;36;1mArticle Load (0.3ms)[0m   [0;1mSELECT * FROM "articles" ORDER BY lastupdate desc, id desc[0m
+Completed in 51ms (View: 33, DB: 0) | 200 OK [http://localhost/articles]
+
+
+Processing ArticlesController#index (for 127.0.0.1 at 2009-02-28 02:24:55) [GET]
+  [4;35;1mArticle Load (0.7ms)[0m   [0mSELECT * FROM "articles" [0m
+Rendering template within layouts/articles
+Rendering articles/index
+  [4;36;1mArticle Load (0.3ms)[0m   [0;1mSELECT * FROM "articles" ORDER BY lastupdate desc, id desc[0m
+Completed in 144ms (View: 124, DB: 1) | 200 OK [http://localhost/articles]
+  [4;36;1mSQL (0.6ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT version FROM schema_migrations[0m
+
+
+Processing ArticlesController#index (for 127.0.0.1 at 2009-02-28 02:27:05) [GET]
+  [4;36;1mArticle Load (0.7ms)[0m   [0;1mSELECT * FROM "articles" [0m
+Rendering template within layouts/articles
+Rendering articles/index
+  [4;35;1mArticle Load (0.5ms)[0m   [0mSELECT * FROM "articles" ORDER BY lastupdate desc, id desc[0m
+Completed in 55ms (View: 36, DB: 1) | 200 OK [http://localhost/articles]
+
+
+Processing ArticlesController#new (for 127.0.0.1 at 2009-02-28 02:27:07) [GET]
+Rendering template within layouts/articles
+Rendering articles/new
+
+ActionView::TemplateError (can't convert Symbol into String) on line #8 of app/views/articles/new.html.erb:
+5: <% form_for(@article) do |f| %>
+6:   <p>
+7:    <p><%= f.label :lastupdate %></p>
+8:    <p><%= f.date_select :lastupdate, :use_month_numbers => true %></p>
+9:    <p><%= f.label :title, _("Title: Required.") %></p>
+10:    <p><%= f.text_field :title %></p>
+11:    <p><%= f.label :title, _("Description: More than 10 characters.") %></p>
+
+    actionpack (2.3.0) lib/action_view/helpers/date_helper.rb:620:in `include?'
+    actionpack (2.3.0) lib/action_view/helpers/date_helper.rb:620:in `select_date'
+    actionpack (2.3.0) lib/action_view/helpers/date_helper.rb:907:in `to_date_select_tag_without_error_wrapping'
+    actionpack (2.3.0) lib/action_view/helpers/active_record_helper.rb:268:in `to_date_select_tag'
+    actionpack (2.3.0) lib/action_view/helpers/date_helper.rb:186:in `date_select'
+    actionpack (2.3.0) lib/action_view/helpers/date_helper.rb:964:in `date_select'
+    app/views/articles/new.html.erb:8
+    actionpack (2.3.0) lib/action_view/helpers/form_helper.rb:461:in `fields_for'
+    actionpack (2.3.0) lib/action_view/helpers/form_helper.rb:253:in `form_for'
+    app/views/articles/new.html.erb:5
+    actionpack (2.3.0) lib/action_view/renderable.rb:35:in `send'
+    actionpack (2.3.0) lib/action_view/renderable.rb:35:in `render'
+    actionpack (2.3.0) lib/action_view/template.rb:182:in `render_template'
+    actionpack (2.3.0) lib/action_view/base.rb:247:in `render'
+    actionpack (2.3.0) lib/action_view/base.rb:318:in `_render_with_layout'
+    actionpack (2.3.0) lib/action_view/base.rb:244:in `render'
+    actionpack (2.3.0) lib/action_controller/base.rb:1180:in `render_for_file'
+    actionpack (2.3.0) lib/action_controller/base.rb:912:in `render_without_benchmark'
+    actionpack (2.3.0) lib/action_controller/benchmarking.rb:51:in `render'
+    actionpack (2.3.0) lib/action_controller/benchmarking.rb:51:in `render'
+    actionpack (2.3.0) lib/action_controller/mime_responds.rb:135:in `send'
+    actionpack (2.3.0) lib/action_controller/mime_responds.rb:135:in `custom'
+    actionpack (2.3.0) lib/action_controller/mime_responds.rb:179:in `call'
+    actionpack (2.3.0) lib/action_controller/mime_responds.rb:179:in `respond'
+    actionpack (2.3.0) lib/action_controller/mime_responds.rb:173:in `each'
+    actionpack (2.3.0) lib/action_controller/mime_responds.rb:173:in `respond'
+    actionpack (2.3.0) lib/action_controller/mime_responds.rb:107:in `respond_to'
+    app/controllers/articles_controller.rb:41:in `new'
+    actionpack (2.3.0) lib/action_controller/base.rb:1261:in `send'
+    actionpack (2.3.0) lib/action_controller/base.rb:1261:in `perform_action_without_filters'
+    actionpack (2.3.0) lib/action_controller/filters.rb:617:in `call_filters'
+    actionpack (2.3.0) lib/action_controller/filters.rb:610:in `perform_action_without_benchmark'
+    actionpack (2.3.0) lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+    actionpack (2.3.0) lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+    actionpack (2.3.0) lib/action_controller/rescue.rb:154:in `perform_action_without_flash'
+    actionpack (2.3.0) lib/action_controller/flash.rb:141:in `perform_action'
+    actionpack (2.3.0) lib/action_controller/base.rb:523:in `send'
+    actionpack (2.3.0) lib/action_controller/base.rb:523:in `process_without_filters'
+    actionpack (2.3.0) lib/action_controller/filters.rb:606:in `process'
+    actionpack (2.3.0) lib/action_controller/base.rb:391:in `process'
+    actionpack (2.3.0) lib/action_controller/base.rb:386:in `call'
+    actionpack (2.3.0) lib/action_controller/routing/route_set.rb:433:in `call'
+    actionpack (2.3.0) lib/action_controller/dispatcher.rb:65:in `dispatch'
+    actionpack (2.3.0) lib/action_controller/dispatcher.rb:88:in `_call'
+    actionpack (2.3.0) lib/action_controller/dispatcher.rb:59:in `initialize'
+    activerecord (2.3.0) lib/active_record/query_cache.rb:29:in `call'
+    activerecord (2.3.0) lib/active_record/query_cache.rb:29:in `call'
+    activerecord (2.3.0) lib/active_record/connection_adapters/abstract/query_cache.rb:34:in `cache'
+    activerecord (2.3.0) lib/active_record/query_cache.rb:9:in `cache'
+    activerecord (2.3.0) lib/active_record/query_cache.rb:28:in `call'
+    actionpack (2.3.0) lib/action_controller/params_parser.rb:15:in `call'
+    actionpack (2.3.0) lib/action_controller/rewindable_input.rb:25:in `call'
+    actionpack (2.3.0) lib/action_controller/session/cookie_store.rb:93:in `call'
+    actionpack (2.3.0) lib/action_controller/failsafe.rb:11:in `call'
+    actionpack (2.3.0) lib/action_controller/rack_ext/lock.rb:15:in `call'
+    actionpack (2.3.0) lib/action_controller/rack_ext/lock.rb:15:in `synchronize'
+    actionpack (2.3.0) lib/action_controller/rack_ext/lock.rb:15:in `call'
+    actionpack (2.3.0) lib/action_controller/dispatcher.rb:83:in `call'
+    rails (2.3.0) lib/rails/rack/static.rb:27:in `call'
+    rails (2.3.0) lib/rails/rack/log_tailer.rb:17:in `call'
+    rails (2.3.0) lib/commands/server.rb:100
+
+Rendered rescues/_trace (41.4ms)
+Rendered rescues/_request_and_response (0.8ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.4ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mselect sqlite_version(*)[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (9.1ms)[0m   [0mCREATE TABLE "articles" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "title" varchar(255) DEFAULT '' NOT NULL, "description" text NOT NULL, "lastupdate" date) [0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (5.0ms)[0m   [0mCREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) [0m
+  [4;36;1mSQL (6.2ms)[0m   [0;1mCREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")[0m
+  [4;35;1mSQL (0.3ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSELECT version FROM "schema_migrations"[0m
+  [4;35;1mSQL (8.1ms)[0m   [0mINSERT INTO "schema_migrations" (version) VALUES ('1')[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.2ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mselect sqlite_version(*)[0m
+  [4;35;1mSQL (4.8ms)[0m   [0mCREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) [0m
+  [4;36;1mSQL (5.4ms)[0m   [0;1mCREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")[0m
+  [4;35;1mSQL (0.2ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mselect sqlite_version(*)[0m
+  [4;35;1mSQL (6.4ms)[0m   [0mCREATE TABLE "articles" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "title" varchar(255) DEFAULT '' NOT NULL, "description" text DEFAULT '' NOT NULL, "lastupdate" date, "created_at" datetime, "updated_at" datetime) [0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT version FROM "schema_migrations"[0m
+  [4;36;1mSQL (5.2ms)[0m   [0;1mINSERT INTO "schema_migrations" (version) VALUES ('1')[0m
+  [4;36;1mSQL (0.6ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT version FROM schema_migrations[0m
+
+
+Processing ArticlesController#new (for 127.0.0.1 at 2009-02-28 02:36:23) [GET]
+Rendering template within layouts/articles
+Rendering articles/new
+  [4;36;1mArticle Load (0.3ms)[0m   [0;1mSELECT * FROM "articles" ORDER BY lastupdate desc, id desc[0m
+Completed in 167ms (View: 153, DB: 0) | 200 OK [http://localhost/articles/new]

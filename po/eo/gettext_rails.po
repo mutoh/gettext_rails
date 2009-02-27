@@ -1,0 +1,90 @@
+#
+# a po-file for Ruby-GetText-Package and Ruby on Rails.
+#
+# Copyright (C) 2005-2008 Masao Mutoh
+#
+# This file is distributed under the same license as the Ruby-GetText-Package.
+#
+# Malte Milatz <malte@gmx-topmail.de>, 2006-2008.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: gettext_rails 1.93.0\n"
+"POT-Creation-Date: 2009-02-20 20:21+0900\n"
+"PO-Revision-Date: 2007-06-26 11:42+0200\n"
+"Last-Translator: Malte Milatz <malte@gmx-topmail.de>\n"
+"Language-Team: Esperanto\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: lib/gettext_rails/action_view/active_record_helper.rb:23
+msgid "%{num} error prohibited this %{record} from being saved"
+msgid_plural "%{num} errors prohibited this %{record} from being saved"
+msgstr[0] "Ĉi tiu %{record} ne konserviĝis pro %{num} eraro"
+msgstr[1] "Ĉi tiu %{record} ne konserviĝis pro %{num} eraroj"
+
+#: lib/gettext_rails/action_view/active_record_helper.rb:25
+msgid "There was a problem with the following field:"
+msgid_plural "There were problems with the following fields:"
+msgstr[0] "Jena datumo kaŭzis problemon:"
+msgstr[1] "Jenaj datumoj kaŭzis problemon:"
+
+#: lib/gettext_rails/action_view/date_helper.rb:24
+msgid "less than 5 seconds"
+msgstr "malpli ol 5 sekundoj"
+
+#: lib/gettext_rails/action_view/date_helper.rb:24
+msgid "less than 10 seconds"
+msgstr "malpli ol 10 sekundoj"
+
+#: lib/gettext_rails/action_view/date_helper.rb:24
+msgid "less than 20 seconds"
+msgstr "malpli ol 20 sekundoj"
+
+#: lib/gettext_rails/action_view/date_helper.rb:25
+msgid "half a minute"
+msgstr "duona minuto"
+
+#: lib/gettext_rails/action_view/date_helper.rb:25
+msgid "less than a minute"
+msgstr "malpli ol minuto"
+
+#: lib/gettext_rails/action_view/date_helper.rb:25
+msgid "about 1 month"
+msgstr "ĉirkaŭ 1 monato"
+
+#: lib/gettext_rails/action_view/date_helper.rb:26
+msgid "about 1 year"
+msgstr "ĉirkaŭ 1 jaro"
+
+#: lib/gettext_rails/action_view/date_helper.rb:27
+msgid "1 minute"
+msgid_plural "%{num} minutes"
+msgstr[0] "1 minuto"
+msgstr[1] "%{num} minutoj"
+
+#: lib/gettext_rails/action_view/date_helper.rb:28
+msgid "about 1 hour"
+msgid_plural "about %{num} hours"
+msgstr[0] "ĉirkaŭ 1 horo"
+msgstr[1] "ĉirkau %{num} horoj"
+
+#: lib/gettext_rails/action_view/date_helper.rb:29
+msgid "1 day"
+msgid_plural "%{num} days"
+msgstr[0] "1 tago"
+msgstr[1] "%{num} tagoj"
+
+#: lib/gettext_rails/action_view/date_helper.rb:30
+msgid "1 month"
+msgid_plural "%{num} months"
+msgstr[0] "1 monato"
+msgstr[1] "%{num} monatoj"
+
+#: lib/gettext_rails/action_view/date_helper.rb:31
+msgid "over 1 year"
+msgid_plural "over %{num} years"
+msgstr[0] "pli ol %{num} jaroj"
+msgstr[1] "pli ol %{num} jaroj"

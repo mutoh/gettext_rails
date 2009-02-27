@@ -1,0 +1,98 @@
+#
+# a po-file for Ruby-GetText-Package and Ruby on Rails.
+#
+# Copyright (C) 2005-2008 Masao Mutoh
+#
+# This file is distributed under the same license as the Ruby-GetText-Package.
+#
+# Slobodan Paunović <slobodan dot paunovic at gmail dot com>, 2008
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: gettext_rails 1.93.0\n"
+"POT-Creation-Date: 2009-02-20 20:21+0900\n"
+"PO-Revision-Date: 2008-07-13 08:52+0200\n"
+"Last-Translator: Slobodan Paunović <slobodan dot paunovic at gmail dot com>\n"
+"Language-Team: Serbian\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=3; plural=n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%"
+"10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
+
+#: lib/gettext_rails/action_view/active_record_helper.rb:23
+msgid "%{num} error prohibited this %{record} from being saved"
+msgid_plural "%{num} errors prohibited this %{record} from being saved"
+msgstr[0] "%{num} грешка је спречила да се %{record} сачува"
+msgstr[1] "%{num} грешке су спречиле да се %{record} сачува"
+msgstr[2] "%{num} грешака je спречило да се %{record} сачува"
+
+#: lib/gettext_rails/action_view/active_record_helper.rb:25
+msgid "There was a problem with the following field:"
+msgid_plural "There were problems with the following fields:"
+msgstr[0] "Постоји проблем са следећим пољем:"
+msgstr[1] "Постоје проблеми са следећим пољима:"
+msgstr[2] "Постоје проблеми са следећим пољима:"
+
+#: lib/gettext_rails/action_view/date_helper.rb:24
+msgid "less than 5 seconds"
+msgstr "мање од 5 секунди"
+
+#: lib/gettext_rails/action_view/date_helper.rb:24
+msgid "less than 10 seconds"
+msgstr "мање од 10 секунди"
+
+#: lib/gettext_rails/action_view/date_helper.rb:24
+msgid "less than 20 seconds"
+msgstr "мање од 20 секунди"
+
+#: lib/gettext_rails/action_view/date_helper.rb:25
+msgid "half a minute"
+msgstr "пола минута"
+
+#: lib/gettext_rails/action_view/date_helper.rb:25
+msgid "less than a minute"
+msgstr "мање од једног минута"
+
+#: lib/gettext_rails/action_view/date_helper.rb:25
+msgid "about 1 month"
+msgstr "око 1 месец"
+
+#: lib/gettext_rails/action_view/date_helper.rb:26
+msgid "about 1 year"
+msgstr "око 1 године"
+
+#: lib/gettext_rails/action_view/date_helper.rb:27
+msgid "1 minute"
+msgid_plural "%{num} minutes"
+msgstr[0] "1 минут"
+msgstr[1] "%{num} минута"
+msgstr[2] "%{num} минута"
+
+#: lib/gettext_rails/action_view/date_helper.rb:28
+msgid "about 1 hour"
+msgid_plural "about %{num} hours"
+msgstr[0] "око 1 сат"
+msgstr[1] "око %{num} сата"
+msgstr[2] "око %{num} сати"
+
+#: lib/gettext_rails/action_view/date_helper.rb:29
+msgid "1 day"
+msgid_plural "%{num} days"
+msgstr[0] "1 дан"
+msgstr[1] "%{num} дана"
+msgstr[2] "%{num} дана"
+
+#: lib/gettext_rails/action_view/date_helper.rb:30
+msgid "1 month"
+msgid_plural "%{num} months"
+msgstr[0] "1 месец"
+msgstr[1] "%{num} месеца"
+msgstr[2] "%{num} месеци"
+
+#: lib/gettext_rails/action_view/date_helper.rb:31
+msgid "over 1 year"
+msgid_plural "over %{num} years"
+msgstr[0] "више од 1 године"
+msgstr[1] "више од %{num} године"
+msgstr[2] "више од %{num} година"

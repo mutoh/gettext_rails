@@ -1,0 +1,86 @@
+#
+# a po-file for Ruby-GetText-Package and Ruby on Rails.
+#
+# Copyright (C) 2005-2008 Masao Mutoh
+#
+# This file is distributed under the same license as the Ruby-GetText-Package.
+#
+# Yang Bob <bob.yang.dev at gmail.com>, 2006-2008.
+# LIN CHUNG-YI <xmarsh at gmail.com>, 2006.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: gettext_rails 1.93.0\n"
+"POT-Creation-Date: 2009-02-20 20:21+0900\n"
+"PO-Revision-Date: 2006-08-21 09:27+0800\n"
+"Last-Translator: Yang Bob <bob.yang.dev at gmail.com>\n"
+"Language-Team: zh_TW <xmarsh at gmail.com>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Poedit-Language: Chinese\n"
+"X-Poedit-Country: TAIWAN\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+#: lib/gettext_rails/action_view/active_record_helper.rb:23
+msgid "%{num} error prohibited this %{record} from being saved"
+msgid_plural "%{num} errors prohibited this %{record} from being saved"
+msgstr[0] "有%{num}個錯誤發生，“%{record}”無法儲存"
+
+#: lib/gettext_rails/action_view/active_record_helper.rb:25
+msgid "There was a problem with the following field:"
+msgid_plural "There were problems with the following fields:"
+msgstr[0] "下面欄位有問題:"
+
+#: lib/gettext_rails/action_view/date_helper.rb:24
+msgid "less than 5 seconds"
+msgstr "少於五秒"
+
+#: lib/gettext_rails/action_view/date_helper.rb:24
+msgid "less than 10 seconds"
+msgstr "少於十秒"
+
+#: lib/gettext_rails/action_view/date_helper.rb:24
+msgid "less than 20 seconds"
+msgstr "少於二十秒"
+
+#: lib/gettext_rails/action_view/date_helper.rb:25
+msgid "half a minute"
+msgstr "半分鐘"
+
+#: lib/gettext_rails/action_view/date_helper.rb:25
+msgid "less than a minute"
+msgstr "少於一分鐘"
+
+#: lib/gettext_rails/action_view/date_helper.rb:25
+msgid "about 1 month"
+msgstr "大約%{num}个月"
+
+#: lib/gettext_rails/action_view/date_helper.rb:26
+msgid "about 1 year"
+msgstr "大約%{num}年"
+
+#: lib/gettext_rails/action_view/date_helper.rb:27
+msgid "1 minute"
+msgid_plural "%{num} minutes"
+msgstr[0] "%{num}分鐘"
+
+#: lib/gettext_rails/action_view/date_helper.rb:28
+msgid "about 1 hour"
+msgid_plural "about %{num} hours"
+msgstr[0] "大約%{num}小時"
+
+#: lib/gettext_rails/action_view/date_helper.rb:29
+msgid "1 day"
+msgid_plural "%{num} days"
+msgstr[0] "%{num}天"
+
+#: lib/gettext_rails/action_view/date_helper.rb:30
+msgid "1 month"
+msgid_plural "%{num} months"
+msgstr[0] "%{num}个月"
+
+#: lib/gettext_rails/action_view/date_helper.rb:31
+msgid "over 1 year"
+msgid_plural "over %{num} years"
+msgstr[0] "超过%{num}年"
