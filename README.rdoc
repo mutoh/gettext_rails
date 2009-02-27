@@ -1,24 +1,30 @@
-= gettext_activerecord
+= gettext_rails
 
-gettext_activerecord provides the localization for ActiveRecord-2.2 or later
+gettext_rails provides the localization for ActiveRecord-2.2 or later
 using Ruby-GetText-Package.
 
-* Validation messages translation
-* Model translation
-  * extract messages from models with the rake task.
+* Autodetect client locale using locale/locale_rails.
+* Model translation using gettext_activerecord.
+* Localization of some helpers.
 
 == Website
 * homepage[http://www.yotabanana.com/hiki/ruby-gettext.html]
 * on rubyforge[http://gettext/rubyforge.org/]
-* on github[http://github.com/gettext_activerecord/]
+* on github[http://github.com/mutoh/gettext_rails/tree/master]
 
 == Requirements
 * {Ruby 1.8.3 or later}[http://www.ruby-lang.org]
 * {Rubygems}[http://www.rubygems.org/]
 * {locale gem}[http://rubyforge.org/projects/locale/]
   * $ gem install locale
+* {locale_rails gem}[http://rubyforge.org/projects/locale_rails/]
+  * $ gem install locale_rails
 * {gettext gem}[http://rubyforge.org/projects/gettext/]
   * $ gem install gettext
+* {gettext_activerecord gem}[http://rubyforge.org/projects/gettext/]
+  * $ gem install gettext_activerecord
+* {gettext_rails gem}[http://rubyforge.org/projects/gettext/]
+  * $ gem install gettext_rails
 
 == Install
     #Uninstall old gettext if exists.
@@ -27,65 +33,45 @@ using Ruby-GetText-Package.
 
     #from github (edge/unstable)
     (sudo/su on POSIX system)
-    gem install locale
-    gem install mutoh-gettext -s http://gems.github.com/
+    gem install gettext_activerecord
+    gem install mutoh-gettext_rails -s http://gems.github.com/
 
     #from rubyforge (stable)
     (sudo/su on POSIX system)
-    gem install locale
+    gem install gettext_activerecord
     gem install gettext
 
 == Usage
-=== without Rails
+See sample direcotries for more details.
+
 ==== Rakefile
   require 'rubygems'
   
   desc "Create mo files"
   task :makemo do
-    require 'gettext_activerecord/tools'
+    require 'gettext_rails/tools'
     GetText.create_mofiles
   end
   
   task :updatepo do
-    require 'gettext_activerecord/tools'
+    require 'gettext_rails/tools'
     # Need to access DB to find Model table/column names.
     # Use config/database.yml which is the same style with rails.
     GetText.update_pofiles("sample_ar", ["topic.rb"], "sample AR 1.0.0")
   end
 
-==== topic.rb   
-  class Topic < ActiveRecord::Base
-    validates_length_of :title, :minimum => 10
-  end
-
-==== sample.rb
-  require 'gettext_activerecord'
-  require 'topic'
-   
-  # Use config/database.yml which is the same style with rails.
-  config = YAML.load(IO.read("config/database.yml"))["development"]
-  ActiveRecord::Base.establish_connection(config)
-
-  GetText.bindtextdomain_to(ActiveRecord, "sample_ar", :path => "locale")
-   
-  GetText.set_locale "ja_JP.UTF-8"
-  a = Topic.new
-  a.title = "Foo"
-  a.save
-  puts a.errors.full_messages  #puts Japanese error message.
+==== config/environment.rb
+==== application_controller.rb   
 
 ==== Then ...
   $ rake updatepo
   $ cd po
   $ mkdir ja
-  $ msginit -l ja_JP.UTF-8 -i sample_ar.pot -o ja/sample_ar.po
-  $ Edit ja/sample_ar.po
+  $ msginit -l ja_JP.UTF-8 -i sample_ar.pot -o ja/sample.po
+  $ Edit ja/sample.po
   $ cd ../../
   $ rake makemo
   $ ruby sample.rb
-
-=== with Rails
-((* notyet*))
 
 == License
 This program is licenced under the same licence as Ruby.
@@ -166,4 +152,4 @@ This program is licenced under the same licence as Ruby.
 * Vietnamese(vi)            - 2.0.0pre1
 
 == Maintainer
-Masao Mutoh <mutoh at highway.ne.jp>
+Masao Mutoh <mutomasa at gmail.com>
