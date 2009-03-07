@@ -59,7 +59,7 @@ spec = Gem::Specification.new do |s|
   s.version = PKG_VERSION
   s.summary = 'Localization support for Ruby on Rails(>=2.3) by Ruby-GetText-Package.'
   s.author = 'Masao Mutoh'
-  s.email = 'mutoh@highway.ne.jp'
+  s.email = 'mutomasa at gmail.com'
   s.homepage = 'http://gettext.rubyforge.org/'
   s.rubyforge_project = "gettext"
   s.files = FileList['**/*'].to_a.select{|v| v !~ /pkg|git/}
