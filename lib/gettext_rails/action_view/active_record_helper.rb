@@ -12,19 +12,21 @@
 =end
 
 module ActionView #:nodoc:
-module Helpers  #:nodoc:
+  module Helpers  #:nodoc:
     module ActiveRecordHelper #:nodoc: all
       module L10n
         # Separate namespace for textdomain
         include GetText
 
-        bindtextdomain("rails")
+        bindtextdomain "gettext_rails"
 
-        @error_message_title = Nn_("%{num} error prohibited this %{record} from being saved", 
-                                   "%{num} errors prohibited this %{record} from being saved")
-        @error_message_explanation = Nn_("There was a problem with the following field:", 
-                                         "There were problems with the following fields:")
-
+        @@error_message_headers ={
+          :header => Nn_("%{num} error prohibited this %{record} from being saved", 
+                         "%{num} errors prohibited this %{record} from being saved"),
+          :body => Nn_("There was a problem with the following field:", 
+                     "There were problems with the following fields:")
+        }
+        
         module_function
         # call-seq:
         # set_error_message_title(msgs)
@@ -39,7 +41,7 @@ module Helpers  #:nodoc:
           else
             single_msg = msg
           end
-          @error_message_title = [single_msg, plural_msg]
+          @@error_message_headers[:header] = [single_msg, plural_msg]
         end
         
         # call-seq:
@@ -55,76 +57,54 @@ module Helpers  #:nodoc:
           else
             single_msg = msg
           end
-          @error_message_explanation = [single_msg, plural_msg]
+          @@error_message_headers[:body] = [single_msg, plural_msg]
         end
 
-        # 
-        def error_messages_for(instance, objects, object_names, count, options)
-          record = ActiveRecord::Base.human_attribute_table_name_for_error(options[:object_name] || object_names[0].to_s)
-
-          html = {}
-          [:id, :class].each do |key|
-            if options.include?(key)
-              value = options[key] 
-              html[key] = value unless value.blank?
-            else
-              html[key] = 'errorExplanation'
-            end
-          end
-
-          if options[:message_title]
-            header_message = instance.error_message(options[:message_title], count) % {:num => count, :record => record}
+        def error_message(key, model, count) #:nodoc:
+          return nil if key.nil?
+           
+          if key.kind_of? Symbol
+            msgids = @@error_message_headers[key]
           else
-            header_message = n_(@error_message_title, count) % {:num => count, :record => record}
-          end
-          if options[:message_explanation]
-            message_explanation = instance.error_message(options[:message_explanation], count) % {:num => count}
-          else
-            message_explanation = n_(@error_message_explanation, count) % {:num => count}
+            msgids = key
           end
 
-          error_messages = objects.map {|object| object.errors.full_messages.map {|msg| instance.content_tag(:li, msg) } }
-          
-          instance.content_tag(:div,
-                               instance.content_tag(options[:header_tag] || :h2, header_message) <<
-                               instance.content_tag(:p, message_explanation) <<
-                               instance.content_tag(:ul, error_messages),
-                               html
-                               )
+          model = _(model)
+          if msgids
+            ngettext(msgids, count) % {:num => count, :count => count, 
+              :record => model, :model => model} # :num, :record are for backward compatibility.
+          else
+            nil
+          end
         end
+
       end
 
-      def error_message(msg, count) #:nodoc:
-        ngettext(msg, count)
-      end
+      def error_messages_for_with_gettext_rails(*params) #:nodoc:
+        model = params[0]
+        options = params.extract_options!.symbolize_keys
 
-      alias error_messages_for_without_localize error_messages_for #:nodoc:
+        header_message = options[:header_message] || options[:message_title] || :header
+        message = options[:message] || options[:message_explanation] || :body
 
-      # error_messages_for overrides original method with localization.
-      # And also it extends to be able to replace the title/explanation of the header of the error dialog. (Since 1.90)
-      # If you want to override these messages in the whole application, 
-      #    use ActionView::Helpers::ActiveRecordHelper::L10n.set_error_message_(title|explanation) instead.
-      # * :message_title - the title of message. Use Nn_() to path the strings for singular/plural.
-      #                       e.g. Nn_("%{num} error prohibited this %{record} from being saved", 
-      # 			       "%{num} errors prohibited this %{record} from being saved")
-      # * :message_explanation - the explanation of message
-      #                       e.g. Nn_("There was a problem with the following field:", 
-      #                                "There were %{num} problems with the following fields:")
-      def error_messages_for(*params)
-        options = params.last.is_a?(Hash) ? params.pop.symbolize_keys : {}
-        if object = options.delete(:object)
+        object = options.delete(:object)
+        if object
           objects = [object].flatten
         else
           objects = params.collect {|object_name| instance_variable_get("@#{object_name}") }.compact
         end
-        object_names = params.dup
-        count   = objects.inject(0) {|sum, object| sum + object.errors.count }
-        if count.zero?
-          ''
-        else
-          L10n.error_messages_for(self, objects, object_names, count, options)
-        end
+        count  = objects.inject(0) {|sum, object| sum + object.errors.count }
+
+        options[:object_name] ||= params.first
+        normalized_model = options[:object_name].to_s.gsub('_', ' ')
+        
+        options[:header_message] = L10n.error_message(header_message, normalized_model, count)
+        options[:message] = L10n.error_message(message, normalized_model, count)
+
+        error_messages_for_without_gettext_rails(model, options)
       end
+      alias_method_chain :error_messages_for, :gettext_rails
+
     end
   end
 end

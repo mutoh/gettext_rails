@@ -11,6 +11,6 @@
   $Id$
 =end
 
-#require 'gettext_rails/action_view/active_record_helper'
+require 'gettext_rails/action_view/active_record_helper'
 require 'gettext_rails/action_view/date_helper'
 require 'gettext_rails/action_view/form_builder'

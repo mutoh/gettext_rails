@@ -29,7 +29,7 @@ msgstr[1] "%{record}に%{num}つのエラーが発生しました。"
 msgid "There was a problem with the following field:"
 msgid_plural "There were problems with the following fields:"
 msgstr[0] "次の項目を確認してください。"
-msgstr[1] "次の項目を確認してください。"
+msgstr[1] "次の全ての項目を確認してください。"
 
 #: lib/gettext_rails/action_view/date_helper.rb:24
 msgid "less than 5 seconds"
