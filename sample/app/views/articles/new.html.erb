@@ -5,7 +5,7 @@
 <% form_for(@article) do |f| %>
   <p>
    <p><%= f.label :lastupdate %></p>
-   <p><% #f.date_select :lastupdate, :use_month_numbers => true %></p>
+   <p><%= f.date_select :lastupdate, :use_month_numbers => true %></p>
    <p><%= f.label :title, _("Title: Required.") %></p>
    <p><%= f.text_field :title %></p>
    <p><%= f.label :title, _("Description: More than 10 characters.") %></p>

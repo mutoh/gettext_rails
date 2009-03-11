@@ -7,7 +7,8 @@
 module LangHelper
   include GetText
 
-  bindtextdomain("lang_helper", :path => File.join(RAILS_ROOT, "vendor/plugins/gettext_helper_sample/locale"))
+  bindtextdomain("lang_helper", 
+        :path => File.join(RAILS_ROOT, "vendor/plugins/lang_helper/locale"))
 
   def show_language
     langs = I18n.supported_locales.sort

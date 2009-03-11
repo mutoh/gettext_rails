@@ -1,11 +1,11 @@
 = gettext_rails
 
-gettext_rails provides the localization for ActiveRecord-2.2 or later
+gettext_rails provides the localization for Ruby on Rails-2.3 or later
 using Ruby-GetText-Package.
 
 * Autodetect client locale using locale/locale_rails.
 * Model translation using gettext_activerecord.
-* Localization of some helpers.
+* Localization for some helpers.
 
 == Website
 * homepage[http://www.yotabanana.com/hiki/ruby-gettext.html]
@@ -33,13 +33,16 @@ using Ruby-GetText-Package.
 
     #from github (edge/unstable)
     (sudo/su on POSIX system)
+    gem install gettext
     gem install gettext_activerecord
+    gem install gettext_rails
     gem install mutoh-gettext_rails -s http://gems.github.com/
 
     #from rubyforge (stable)
     (sudo/su on POSIX system)
-    gem install gettext_activerecord
     gem install gettext
+    gem install gettext_activerecord
+    gem install gettext_rails
 
 == Usage
 See sample direcotries for more details.
@@ -61,7 +64,18 @@ See sample direcotries for more details.
   end
 
 ==== config/environment.rb
+  Rails::Initializer.run do |config|
+    :
+    :
+    config.gem "locale_rails"
+    config.gem "gettext_activerecord"
+    config.gem "gettext_rails"
+  end
+
 ==== application_controller.rb   
+class ApplicationController < ActionController::Base
+    init_gettext "blog"  # replace "blog" to your textdomain name.
+end
 
 ==== Then ...
   $ rake updatepo

@@ -37,6 +37,14 @@ task :makemo do
   $stderr.puts "Create active_record mo files."
   require 'gettext/tools'
   GetText.create_mofiles
+
+  $stderr.puts "Create sample mo files."
+  GetText.create_mofiles(:po_root => "sample/po", 
+                         :mo_root => "sample/locale")
+
+  $stderr.puts "Create samples/rails plugin mo files."
+  GetText.create_mofiles(:po_root => "sample/vendor/plugins/lang_helper/po", 
+                         :mo_root => "sample/vendor/plugins/lang_helper/locale")
 end
 
 desc "Update pot/po files to match new version."

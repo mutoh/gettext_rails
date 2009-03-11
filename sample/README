@@ -12,6 +12,7 @@ gettext family gems:
 * locale_rails
 * gettext
 * gettext_activerecord
+* gettext_rails (= this library)
 
 Installation
 ------------
