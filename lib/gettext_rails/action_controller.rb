@@ -33,7 +33,9 @@ module ActionController #:nodoc:
     #     init_gettext "myapp"
     #     # ...
     #   end
-    alias :before_init_gettext :after_init_locale
+    def self.before_init_gettext(*filters, &block)
+      before_init_locale(*filters, &block)
+    end
 
     # Append a block which is called after initializing gettext on the each WWW request.
     #
@@ -48,7 +50,9 @@ module ActionController #:nodoc:
     #     init_gettext "foo"
     #     # ...
     #   end
-    alias :after_init_gettext :after_init_locale
+    def self.after_init_gettext(*filters, &block)
+      after_init_locale(*filters, &block)
+    end
 
     # Bind a 'textdomain' to all of the controllers/views/models. Call this instead of GetText.bindtextdomain.
     # * textdomain: the textdomain
