@@ -16,15 +16,10 @@ using Ruby-GetText-Package.
 * {Ruby 1.8.3 or later}[http://www.ruby-lang.org]
 * {Rubygems}[http://www.rubygems.org/]
 * {locale gem}[http://rubyforge.org/projects/locale/]
-  * $ gem install locale
 * {locale_rails gem}[http://rubyforge.org/projects/locale_rails/]
-  * $ gem install locale_rails
 * {gettext gem}[http://rubyforge.org/projects/gettext/]
-  * $ gem install gettext
 * {gettext_activerecord gem}[http://rubyforge.org/projects/gettext/]
-  * $ gem install gettext_activerecord
 * {gettext_rails gem}[http://rubyforge.org/projects/gettext/]
-  * $ gem install gettext_rails
 
 == Install
     #Uninstall old gettext if exists.
@@ -86,6 +81,8 @@ end
   $ cd ../../
   $ rake makemo
   $ ruby sample.rb
+
+See {Ruby-GetText-Package HOWTO for Ruby on Rails}[http://www.yotabanana.com/hiki/ruby-gettext-howto-rails.html] for more details.
 
 == License
 This program is licenced under the same licence as Ruby.
