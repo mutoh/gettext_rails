@@ -79,9 +79,8 @@ module ActionView #:nodoc:
         end
 
       end
-
       def error_messages_for_with_gettext_rails(*params) #:nodoc:
-        model = params[0]
+        models = params.select{|param| ! param.kind_of? Hash}
         options = params.extract_options!.symbolize_keys
 
         header_message = options[:header_message] || options[:message_title] || :header
@@ -101,10 +100,10 @@ module ActionView #:nodoc:
         options[:header_message] = L10n.error_message(header_message, normalized_model, count)
         options[:message] = L10n.error_message(message, normalized_model, count)
 
-        error_messages_for_without_gettext_rails(model, options)
+        new_params = models << options
+        error_messages_for_without_gettext_rails(*new_params)
       end
       alias_method_chain :error_messages_for, :gettext_rails
-
     end
   end
 end
