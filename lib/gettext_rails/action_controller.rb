@@ -90,13 +90,13 @@ module ActionController #:nodoc:
       bindtextdomain(domainname, {:path => locale_path})
 
       if defined? ActiveRecord::Base
-        bindtextdomain_to(ActiveRecord::Base, domainname) 
-        bindtextdomain_to(ActiveRecord::Validations, domainname)
+        textdomain_to(ActiveRecord::Base, domainname) 
+        textdomain_to(ActiveRecord::Validations, domainname)
       end
-      bindtextdomain_to(ActionView::Base, domainname) if defined? ActionView::Base
-      bindtextdomain_to(ApplicationHelper, domainname) if defined? ApplicationHelper
-      bindtextdomain_to(ActionMailer::Base, domainname) if defined? ActionMailer::Base
-      bindtextdomain_to(ActionView::Helpers, domainname) if defined? ActionView::Helpers
+      textdomain_to(ActionView::Base, domainname) if defined? ActionView::Base
+      textdomain_to(ApplicationHelper, domainname) if defined? ApplicationHelper
+      textdomain_to(ActionMailer::Base, domainname) if defined? ActionMailer::Base
+      textdomain_to(ActionView::Helpers, domainname) if defined? ActionView::Helpers
     end
 
   end
