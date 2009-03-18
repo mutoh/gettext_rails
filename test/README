@@ -1,0 +1,6 @@
+This directory is a test application for RoR.
+
+$ rake db:create
+$ rake db:schema:load
+$ rake makemo
+$ rake test
