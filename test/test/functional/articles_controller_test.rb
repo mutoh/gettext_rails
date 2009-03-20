@@ -29,7 +29,7 @@ class ArticlesControllerTest < ActionController::TestCase
     assert_response :success
     assert_not_nil assigns(:article)
 
-    get :new, :lang => "fr"
+    get :new, :lang => "fr"  # Localized View.
     assert_html("fr/new.html")
     assert_response :success
     assert_not_nil assigns(:article)
@@ -58,11 +58,23 @@ class ArticlesControllerTest < ActionController::TestCase
     assert_html("en/multi_error_messages_for.html")
   end
 
+  test "should be shown with custom error message title" do
+    get :change_title_error_messages_for, :lang => "ja"
+    assert_html("ja/change_title_error_messages_for.html")
 
+    get :change_title_error_messages_for, :lang => "en"
+    assert_html("en/change_title_error_messages_for.html")
+  end
 
   test "should show article" do
-    get :show, :id => articles(:one).id
+    get :show, :id => 1, :lang => "ja"
+
+    assert_html("ja/show.html")
     assert_response :success
+    assert_not_nil assigns(:article)
+    assert assigns(:article).valid?
+    get :show, :id => 1, :lang => "en"
+    assert_html("en/show.html")
   end
 
   test "should get edit" do

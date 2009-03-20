@@ -9,6 +9,9 @@ class UsersController < ApplicationController
     @user.lastupdate = "2007-01-01"
   end
 
+  def distance_of_time_in_words
+  end
+
   def foo
   end
   private :foo
