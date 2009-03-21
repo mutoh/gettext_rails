@@ -79,12 +79,6 @@ spec = Gem::Specification.new do |s|
   s.description = 'Localization support for Ruby on Rails(>=2.3.2) by Ruby-GetText-Package.'
 end
 
-Rake::PackageTask.new("gettext_rails", PKG_VERSION) do |o|
-  o.package_files = FileList['**/*'].to_a.select{|v| v !~ /pkg|git/}
-  o.need_tar_gz = true
-  o.need_zip = false
-end
-
 Rake::GemPackageTask.new(spec) do |p|
   p.gem_spec = spec
   p.need_tar_gz = false
@@ -110,10 +104,10 @@ task :release => [ :package ] do
   require 'rubyforge'
 
   rubyforge = RubyForge.new
+  rubyforge.configure
   rubyforge.login
-  rubyforge.add_release("gettext_rails", "gettext_rails", 
+  rubyforge.add_release("gettext", "gettext_rails", 
                         PKG_VERSION, 
-                        "pkg/gettext_rails-#{PKG_VERSION}.gem",
-                        "pkg/gettext_rails-#{PKG_VERSION}.tar.gz")
+                        "pkg/gettext_rails-#{PKG_VERSION}.gem")
 end
 

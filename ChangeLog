@@ -1,0 +1,4 @@
+= gettext_rails-2.0.0 (2009-03-22)
+
+* Support Rails-2.3.2.
+* Work with other I18n backends.
