@@ -7,7 +7,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: rails_test 1.2.0\n"
-"POT-Creation-Date: 2009-03-18 01:24+0900\n"
+"POT-Creation-Date: 2009-03-21 16:02+0900\n"
 "PO-Revision-Date: 2007-04-08 20:47+0900\n"
 "Last-Translator: Masao Mutoh <mutoh@highway.ne.jp>\n"
 "Language-Team: Japanese\n"
@@ -15,14 +15,6 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n == 1 ? 0 : 1;\n"
-
-#: app/models/user.rb:-
-msgid "session"
-msgstr ""
-
-#: app/models/user.rb:-
-msgid "activerecord::sessionstore::session"
-msgstr ""
 
 #: app/models/user.rb:-
 msgid "user"
@@ -88,11 +80,11 @@ msgstr "マルチパートテストメール"
 msgid "singlepart test mail"
 msgstr "シングルパートテストメール"
 
-#: app/controllers/articles_controller.rb:59
+#: app/controllers/articles_controller.rb:60
 msgid "Article was successfully created."
 msgstr "記事を生成しました。"
 
-#: app/controllers/articles_controller.rb:76
+#: app/controllers/articles_controller.rb:77
 msgid "Article was successfully updated."
 msgstr "記事を更新しました。"
 
@@ -111,7 +103,6 @@ msgstr[1] "複数形カスタムエラーメッセージ (%{num})"
 #: app/views/users/custom_error_message_fr.html.erb:7
 #: app/views/users/custom_error_message.html.erb:7
 #: app/views/articles/multi_error_messages_for.html.erb:13
-#: app/views/articles/change_title_error_messages_for.html.erb:15
 msgid "Name"
 msgstr "名前"
 
@@ -121,7 +112,6 @@ msgstr "名前"
 #: app/views/articles/multi_error_messages_for.html.erb:16
 #: app/views/articles/_form.html.erb:10
 #: app/views/articles/change_title_error_messages_for.html.erb:12
-#: app/views/articles/change_title_error_messages_for.html.erb:18
 msgid "Lastupdate"
 msgstr "最終更新日"
 
@@ -184,21 +174,12 @@ msgid "Are you sure?"
 msgstr "よろしいですか？"
 
 #: app/views/articles/list.html.erb:24 app/views/articles/new.html.erb:1
-#: app/views/articles/index.html.erb:4
 msgid "New article"
 msgstr "新しい記事"
 
 #: app/views/articles/new.html.erb:5
 msgid "Create"
 msgstr "作成"
-
-#: app/views/articles/index.html.erb:1
-msgid "GetText Sample Blog on RoR"
-msgstr ""
-
-#: app/views/articles/index.html.erb:7
-msgid "No articles were found."
-msgstr ""
 
 #: app/views/articles/change_title_error_messages_for.html.erb:1
 msgid "Message Title"

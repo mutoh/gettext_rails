@@ -71,9 +71,12 @@ spec = Gem::Specification.new do |s|
   s.homepage = 'http://gettext.rubyforge.org/'
   s.rubyforge_project = "gettext"
   s.files = FileList['**/*'].to_a.select{|v| v !~ /pkg|git/}
+  s.add_dependency('gettext', '>= 2.0.0')
+  s.add_dependency('gettext_activerecord', '>= 2.0.0')
+  s.add_dependency('rails', '>= 2.3.2')
   s.require_path = 'lib'
   s.has_rdoc = true
-  s.description = 'Localization support for Ruby on Rails(>=2.3) by Ruby-GetText-Package.'
+  s.description = 'Localization support for Ruby on Rails(>=2.3.2) by Ruby-GetText-Package.'
 end
 
 Rake::PackageTask.new("gettext_rails", PKG_VERSION) do |o|
@@ -109,7 +112,7 @@ task :release => [ :package ] do
   rubyforge = RubyForge.new
   rubyforge.login
   rubyforge.add_release("gettext_rails", "gettext_rails", 
-                        "gettext_rails #{PKG_VERSION}", 
+                        PKG_VERSION, 
                         "pkg/gettext_rails-#{PKG_VERSION}.gem",
                         "pkg/gettext_rails-#{PKG_VERSION}.tar.gz")
 end
