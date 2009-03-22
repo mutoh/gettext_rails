@@ -20,12 +20,14 @@ class ApplicationController < ActionController::Base
 
 =begin
   # You can set callback methods. These methods are called on the each WWW request.
-  def before_init_gettext(cgi)
+  def sample_before_init_gettext
     p "before_init_gettext"
   end
-  def after_init_gettext(cgi)
+  before_init_gettext :sample_before_init_gettext
+  def sample_after_init_gettext
     p "after_init_gettext"
   end
+  after_init_gettext :sample_after_init_gettext
 =end
 
 =begin
