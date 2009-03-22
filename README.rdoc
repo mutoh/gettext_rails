@@ -30,17 +30,12 @@ using Ruby-GetText-Package.
     (sudo/su on POSIX system)
     gem uninstall gettext
 
-    #from github (edge/unstable)
+    #from github (edge/unstable)  (not supported yet)
     (sudo/su on POSIX system)
-    gem install gettext
-    gem install gettext_activerecord
-    gem install gettext_rails
-    gem install mutoh-gettext_rails -s http://gems.github.com/
+    #gem install mutoh-gettext_rails -s http://gems.github.com/
 
     #from rubyforge (stable)
     (sudo/su on POSIX system)
-    gem install gettext
-    gem install gettext_activerecord
     gem install gettext_rails
 
 == Usage
@@ -89,7 +84,7 @@ end
 See {Ruby-GetText-Package HOWTO for Ruby on Rails}[http://www.yotabanana.com/hiki/ruby-gettext-howto-rails.html] for more details.
 
 == Support matrix
-* gettext_rails-0.1.0 - rails-2.3.2
+* gettext_rails-2.0.0 - rails-2.3.2
 
 == License
 This program is licenced under the same licence as Ruby.
