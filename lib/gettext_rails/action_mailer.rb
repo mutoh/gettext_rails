@@ -27,7 +27,7 @@ if defined? ActionMailer
       end
       
       def create_with_gettext!(*arg) #:nodoc:
-	create_bang_without_gettext(*arg)
+	create_without_gettext!(*arg)
 	if Locale.get.language == "ja"
 	  require 'nkf'
 	  @mail.subject = base64(@mail.subject)
