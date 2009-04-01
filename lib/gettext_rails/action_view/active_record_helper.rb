@@ -101,6 +101,7 @@ module ActionView #:nodoc:
         options[:object_name] ||= params.first
         normalized_model = options[:object_name].to_s.gsub('_', ' ')
         
+	#accept nil's as messages to hide message
         options[:header_message] = L10n.error_message(header_message, normalized_model, count)
         options[:message] = L10n.error_message(message, normalized_model, count)
 
