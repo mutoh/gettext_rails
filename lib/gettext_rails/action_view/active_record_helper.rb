@@ -66,6 +66,9 @@ module ActionView #:nodoc:
           if key.kind_of? Symbol
             msgids = @@error_message_headers[key]
           else
+	    key << key[0] if (key.is_a?(Array) && key.length==1) 
+	    key = [key, key] if key.is_a? String
+
             msgids = key
           end
 
@@ -79,14 +82,15 @@ module ActionView #:nodoc:
         end
 
       end
+
       def error_messages_for_with_gettext_rails(*params) #:nodoc:
         models = params.select{|param| ! param.kind_of? Hash}
         options = params.extract_options!.symbolize_keys
 
-        header_message = options[:header_message] || options[:message_title] || :header
-        message = options[:message] || options[:message_explanation] || :body
+        header_message = (options.has_key?(:header_message) || options.has_key?(:message_title)) ? (options[:header_message] || options[:message_title]) : (:header)
+        message = (options.has_key?(:message) || options.has_key?(:message_explanation)) ? (options[:message] || options[:message_explanation]) :  (:body)
 
-        object = options.delete(:object)
+        object = options[:object]
         if object
           objects = [object].flatten
         else
