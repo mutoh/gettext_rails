@@ -42,4 +42,3 @@ Rails::Initializer.run do |config|
   config.gem "gettext_activerecord"
   config.gem "gettext_rails"
 end
-

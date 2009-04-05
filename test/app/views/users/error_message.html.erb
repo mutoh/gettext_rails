@@ -1,0 +1,50 @@
+<h2>Singular message</h2>
+<%= error_messages_for 'user' %>
+
+<h2>Plural messages</h2>
+<%= error_messages_for 'article' %>
+
+<h2>Multi object</h2>
+<%= error_messages_for 'article', 'user' %>
+
+<h2>Multi object with :object_name</h2>
+<%= error_messages_for 'article', 'user', :object_name => _("Contents")  %>
+
+<h2>Multi object with :object</h2>
+<%= error_messages_for :object => [@article, @user] %>
+
+<h2>Change header with gettext options</h2>
+<%= error_messages_for 'user', {
+    :message_title => Nn_("Singular Custom Error message %{record}: %{num}", "Plural Custom Error message %{record}: %{num}"), 
+    :message_explanation => Nn_("Singular Custom Error explanation %{num}", "Plural Custom Error explanation %{num}")
+} %>
+
+<h2>Same result with Rails options</h2>
+<%= error_messages_for 'user', {
+    :header_message => Nn_("Singular Custom Error message %{record}: %{num}", "Plural Custom Error message %{record}: %{num}"), 
+    :message => Nn_("Singular Custom Error explanation %{num}", "Plural Custom Error explanation %{num}")
+} %>
+
+<h2>nil header</h2>
+<%= error_messages_for 'user', {
+    :header_message => nil,
+    :message => Nn_("Singular Custom Error explanation %{num}", "Plural Custom Error explanation %{num}")
+} %>
+
+<h2>nil message</h2>
+<%= error_messages_for 'user', {
+    :header_message => Nn_("Singular Custom Error message %{record}: %{num}", "Plural Custom Error message %{record}: %{num}"), 
+    :message => nil
+} %>
+
+<h2>nil header message and nil message</h2>
+<%= error_messages_for 'user', {
+    :header_message => nil,
+    :message => nil
+} %>
+
+<h2>String header message</h2>
+<%= error_messages_for 'user', {
+    :header_message => "String Header Message",
+    :message => "String Message"
+} %>

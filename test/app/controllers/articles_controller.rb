@@ -95,20 +95,4 @@ class ArticlesController < ApplicationController
       format.xml  { head :ok }
     end
   end
-
-  def multi_error_messages_for
-    @user = User.new
-    @user.lastupdate = Date.new(2007, 4, 1)
-    @article = Article.new
-    @article.lastupdate = Date.new(2007, 4, 1)
-    @user.valid?
-    @article.valid?
-  end
-
-  def change_title_error_messages_for
-    @article = Article.new
-    @article.lastupdate = Date.new(2007, 4, 1)
-    @article.valid?
-  end
-
 end

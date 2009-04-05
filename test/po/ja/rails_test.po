@@ -97,8 +97,8 @@ msgstr[1] "複数形カスタムエラーメッセージ (%{record}: %{num})"
 #: app/views/users/custom_error_message_fr.html.erb:3
 msgid "French: Singular Custom Error explanation %{num}"
 msgid_plural "French: Plural Custom Error explanation %{num}"
-msgstr[0] "単数形カスタムエラーメッセージ (%{num})"
-msgstr[1] "複数形カスタムエラーメッセージ (%{num})"
+msgstr[0] "単数形カスタムエラー説明 (%{num})"
+msgstr[1] "複数形カスタムエラー説明 (%{num})"
 
 #: app/views/users/custom_error_message_fr.html.erb:7
 #: app/views/users/custom_error_message.html.erb:7
@@ -124,8 +124,8 @@ msgstr[1] "複数形カスタムエラーメッセージ (%{record}: %{num})"
 #: app/views/users/custom_error_message.html.erb:3
 msgid "Singular Custom Error explanation %{num}"
 msgid_plural "Plural Custom Error explanation %{num}"
-msgstr[0] "単数形カスタムエラーメッセージ (%{num})"
-msgstr[1] "複数形カスタムエラーメッセージ (%{num})"
+msgstr[0] "単数形カスタムエラー説明 (%{num})"
+msgstr[1] "複数形カスタムエラー説明 (%{num})"
 
 #: app/views/articles/edit.html.erb:1
 msgid "Editing article"

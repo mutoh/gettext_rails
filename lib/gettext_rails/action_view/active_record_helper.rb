@@ -66,8 +66,8 @@ module ActionView #:nodoc:
           if key.kind_of? Symbol
             msgids = @@error_message_headers[key]
           else
-	    key << key[0] if (key.is_a?(Array) && key.length==1) 
-	    key = [key, key] if key.is_a? String
+            key << key[0] if (key.is_a?(Array) && key.length==1) 
+            key = [key, key] if key.is_a? String
 
             msgids = key
           end
@@ -101,7 +101,7 @@ module ActionView #:nodoc:
         options[:object_name] ||= params.first
         normalized_model = options[:object_name].to_s.gsub('_', ' ')
         
-	#accept nil's as messages to hide message
+        #accept nil's as messages to hide message
         options[:header_message] = L10n.error_message(header_message, normalized_model, count)
         options[:message] = L10n.error_message(message, normalized_model, count)
 

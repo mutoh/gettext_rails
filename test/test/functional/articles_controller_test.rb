@@ -50,22 +50,6 @@ class ArticlesControllerTest < ActionController::TestCase
     assert_html("en/create_error.html")
   end
 
-  test "should be shown multi error messages" do
-    post :multi_error_messages_for, :article => {:article_title => "", :article_description => "", :user_name => ""}, :lang => "ja"
-    assert_html("ja/multi_error_messages_for.html")
-
-    post :multi_error_messages_for, :article => {:article_title => "", :article_description => "", :user_name => ""}, :lang => "en"
-    assert_html("en/multi_error_messages_for.html")
-  end
-
-  test "should be shown with custom error message title" do
-    get :change_title_error_messages_for, :lang => "ja"
-    assert_html("ja/change_title_error_messages_for.html")
-
-    get :change_title_error_messages_for, :lang => "en"
-    assert_html("en/change_title_error_messages_for.html")
-  end
-
   test "should show article" do
     get :show, :id => 1, :lang => "ja"
 

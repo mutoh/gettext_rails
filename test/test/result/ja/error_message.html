@@ -1,0 +1,46 @@
+<html>
+<head>
+  <meta http-equiv="content-type" content="text/html;charset=UTF-8" />
+  <title>Ruby-GetText-Package Test Application</title>
+  <link href="/stylesheets/scaffold.css" media="screen" rel="Stylesheet" type="text/css" />
+</head>
+<body>
+<p style="color: green"></p>
+
+<h2>Singular message</h2>
+<div class="errorExplanation" id="errorExplanation"><h2>ユーザにエラーが発生しました。</h2><p>次の項目を確認してください。</p><ul><li>名前は10文字以上で入力してください。</li></ul></div>
+
+<h2>Plural messages</h2>
+<div class="errorExplanation" id="errorExplanation"><h2>記事に2つのエラーが発生しました。</h2><p>次の全ての項目を確認してください。</p><ul><li>タイトルを入力してください。</li><li>内容は3文字以上で入力してください。</li></ul></div>
+
+<h2>Multi object</h2>
+<div class="errorExplanation" id="errorExplanation"><h2>記事に3つのエラーが発生しました。</h2><p>次の全ての項目を確認してください。</p><ul><li>タイトルを入力してください。</li><li>内容は3文字以上で入力してください。</li><li>名前は10文字以上で入力してください。</li></ul></div>
+
+<h2>Multi object with :object_name</h2>
+<div class="errorExplanation" id="errorExplanation"><h2>内容に3つのエラーが発生しました。</h2><p>次の全ての項目を確認してください。</p><ul><li>タイトルを入力してください。</li><li>内容は3文字以上で入力してください。</li><li>名前は10文字以上で入力してください。</li></ul></div>
+
+<h2>Multi object with :object</h2>
+<div class="errorExplanation" id="errorExplanation"><h2>に3つのエラーが発生しました。</h2><p>次の全ての項目を確認してください。</p><ul><li>タイトルを入力してください。</li><li>内容は3文字以上で入力してください。</li><li>名前は10文字以上で入力してください。</li></ul></div>
+
+<h2>Change header with gettext options</h2>
+<div class="errorExplanation" id="errorExplanation"><h2>単数形カスタムエラーメッセージ (ユーザ: 1)</h2><p>単数形カスタムエラー説明 (1)</p><ul><li>名前は10文字以上で入力してください。</li></ul></div>
+
+<h2>Same result with Rails options</h2>
+<div class="errorExplanation" id="errorExplanation"><h2>単数形カスタムエラーメッセージ (ユーザ: 1)</h2><p>単数形カスタムエラー説明 (1)</p><ul><li>名前は10文字以上で入力してください。</li></ul></div>
+
+<h2>nil header</h2>
+<div class="errorExplanation" id="errorExplanation"><p>単数形カスタムエラー説明 (1)</p><ul><li>名前は10文字以上で入力してください。</li></ul></div>
+
+<h2>nil message</h2>
+<div class="errorExplanation" id="errorExplanation"><h2>単数形カスタムエラーメッセージ (ユーザ: 1)</h2><ul><li>名前は10文字以上で入力してください。</li></ul></div>
+
+<h2>nil header message and nil message</h2>
+<div class="errorExplanation" id="errorExplanation"><ul><li>名前は10文字以上で入力してください。</li></ul></div>
+
+<h2>String header message</h2>
+<div class="errorExplanation" id="errorExplanation"><h2>String Header Message</h2><p>String Message</p><ul><li>名前は10文字以上で入力してください。</li></ul></div>
+
+
+<a href="/">Back to Top</a>
+</body>
+</html>
