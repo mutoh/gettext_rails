@@ -84,6 +84,7 @@ end
 See {Ruby-GetText-Package HOWTO for Ruby on Rails}[http://www.yotabanana.com/hiki/ruby-gettext-howto-rails.html] for more details.
 
 == Support matrix
+* gettext_rails-2.0.1 - rails-2.3.2
 * gettext_rails-2.0.0 - rails-2.3.2
 
 == License
