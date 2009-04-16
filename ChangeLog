@@ -1,3 +1,12 @@
+= gettext_rails-2.0.1 (2009-04-18)
+ * Fix bugs
+    * ActionMailer didn't work.  [Reported by Simone Carletti]
+    * error_messages_for doesn't have compatibility with original method. [by
+    Adam Ilan]
+
+Thanks to:
+  Simone Carletti, Adam Ilan
+
 = gettext_rails-2.0.0 (2009-03-22)
 
 * Support Rails-2.3.2.
