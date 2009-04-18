@@ -18,10 +18,11 @@ class ApplicationController < ActionController::Base
 
   I18n.supported_locales = Dir[ File.join(RAILS_ROOT, 'locale/*') ].collect{|v| File.basename(v)}
 
-=begin
   # You can set callback methods. These methods are called on the each WWW request.
+=begin
   def sample_before_init_gettext
     p "before_init_gettext"
+    set_locale "zh"  # Set locale forcely.
   end
   before_init_gettext :sample_before_init_gettext
   def sample_after_init_gettext
@@ -29,7 +30,6 @@ class ApplicationController < ActionController::Base
   end
   after_init_gettext :sample_after_init_gettext
 =end
-
 =begin
    # you can redefined the title/explanation of the top of the error message.
   ActionView::Helpers::ActiveRecordHelper::L10n.set_error_message_title(N_("An error is occured on %{record}"), N_("%{num} errors are occured on %{record}"))
