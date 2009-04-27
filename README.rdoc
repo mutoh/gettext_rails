@@ -92,6 +92,7 @@ This program is licenced under the same licence as Ruby.
 (See the file 'COPYING'.)
 
 * Copyright (C) 2001-2009 Masao Mutoh <mutoh at highwhay.ne.jp>
+
 == Translators
 * Bosnian(bs)                - Sanjin Sehic <saserr at gmail.com>
 * Bulgarian(bg)              - Sava Chankov <sava.chankov at gmail.com>
@@ -104,7 +105,8 @@ This program is licenced under the same licence as Ruby.
   * LIN CHUNG-YI <xmarsh at gmail.com>
 * Croatian(hr)               - Sanjin Sehic <saserr at gmail.com>
 * Czech(cs)                  - Karel Miarka <kajism at yahoo.com>
-* Dutch(nl)                  - Menno Jonkers <ruby-gettext at jonkers.com>
+* Dutch(nl)                  - Bart ten Brinke<info at retrosync.com> (current)
+                               Menno Jonkers <ruby-gettext at jonkers.com>
 * Esperanto(eo)              - Malte Milatz <malte at gmx-topmail.de>
 * Estonian(et)               - Erkki Eilonen <erkki at itech.ee>
 * French(fr)
@@ -145,7 +147,7 @@ This program is licenced under the same licence as Ruby.
 * Chinese(zh_CN)            - 2.0.0
 * Chinese(zh_TW)            - 2.0.0
 * Czech(cs)                 - 1.9.0 (old)
-* Dutch(nl)                 - 1.90.0 (old)
+* Dutch(nl)                 - 2.0.2
 * English(default)          - 1.90.0 (old)
 * Esperanto(eo)             - 2.0.0
 * Estonian(et)              - 2.0.0
@@ -154,7 +156,7 @@ This program is licenced under the same licence as Ruby.
 * Greek(el)                 - 2.0.0
 * Hungarian(hu)             - 2.0.0
 * Italian(it)               - 1.6.0 (old)
-* Japanese(ja)              - 2.0.0
+* Japanese(ja)              - 2.0.2
 * Korean(ko)                - 1.9.0 (old)
 * Latvian(lv)               - 2.0.0 
 * Norwegian(nb)             - 2.0.0

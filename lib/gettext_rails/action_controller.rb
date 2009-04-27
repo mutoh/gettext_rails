@@ -86,8 +86,10 @@ module ActionController #:nodoc:
           locale_path = File.join(RAILS_ROOT, "locale")
         end
       end
+p "init_gettext"
+p      supported_locales = I18n.supported_locales if I18n.supported_locales
 
-      bindtextdomain(domainname, {:path => locale_path})
+      bindtextdomain(domainname, {:path => locale_path, :supported_language_tags => supported_locales})
 
       if defined? ActiveRecord::Base
         textdomain_to(ActiveRecord::Base, domainname) 
