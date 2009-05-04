@@ -20,16 +20,21 @@ module ActionController #:nodoc:
 
     # Append a block which is called before initializing gettext on the each WWW request.
     #
-    # (e.g.)
+    # (e.g.1)
     #   class ApplicationController < ActionController::Base
     #     before_init_gettext{|controller|
-    #       cookies = controller.cookies
-    #       if (cookies["lang"].nil? or cookies["lang"].empty?)
-    #         GetText.locale = "zh_CN"
-    #       else
-    #         GetText.locale = cookies["lang"]
-    #       end
+    #       p "before_init_gettext is called."
     #     }
+    #     init_gettext "myapp"
+    #     # ...
+    #   end
+    #
+    # (e.g.2)
+    #   class ApplicationController < ActionController::Base
+    #     def sample_foo
+    #       p "sample_foo is called."
+    #     end
+    #     before_init_gettext :sample_foo
     #     init_gettext "myapp"
     #     # ...
     #   end
@@ -42,11 +47,21 @@ module ActionController #:nodoc:
     # The GetText.locale is set the locale which bound to the textdomains
     # when gettext is initialized.
     #
-    # (e.g.)
+    # (e.g.1)
     #   class ApplicationController < ActionController::Base
     #     after_init_gettext {|controller|
     #       L10nClass.new(GetText.locale)
     #     }
+    #     init_gettext "foo"
+    #     # ...
+    #   end
+    #
+    # (e.g.2)
+    #   class ApplicationController < ActionController::Base
+    #     def sample_foo
+    #       L10nClass.new(GetText.locale)
+    #     end
+    #     after_init_gettext :sample_foo
     #     init_gettext "foo"
     #     # ...
     #   end

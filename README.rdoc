@@ -61,15 +61,17 @@ See sample direcotries for more details.
   Rails::Initializer.run do |config|
     :
     :
+    config.gem "locale"
     config.gem "locale_rails"
+    config.gem "gettext"
     config.gem "gettext_activerecord"
     config.gem "gettext_rails"
   end
 
 ==== application_controller.rb   
-class ApplicationController < ActionController::Base
+  class ApplicationController < ActionController::Base
     init_gettext "blog"  # replace "blog" to your textdomain name.
-end
+  end
 
 ==== Then ...
   $ rake updatepo
@@ -84,6 +86,7 @@ end
 See {Ruby-GetText-Package HOWTO for Ruby on Rails}[http://www.yotabanana.com/hiki/ruby-gettext-howto-rails.html] for more details.
 
 == Support matrix
+* gettext_rails-2.0.2 - rails-2.3.2
 * gettext_rails-2.0.1 - rails-2.3.2
 * gettext_rails-2.0.0 - rails-2.3.2
 
