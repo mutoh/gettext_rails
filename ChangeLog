@@ -1,3 +1,8 @@
+= gettext_rails-2.0.2 (2009-05-07)
+ * Update Dutch translation [by Bart ten Brinke]
+ * Apply the gettext-2.0.2 changes((don't use bindtextdomain with :supported_language_tags)
+ * Fix the bug of sample.
+
 = gettext_rails-2.0.1 (2009-04-18)
  * Fix bugs
     * ActionMailer didn't work.  [Reported by Simone Carletti]
