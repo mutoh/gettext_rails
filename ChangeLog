@@ -1,3 +1,6 @@
+= gettext_rails-2.0.3 (2009-05-09)
+ * Fixed the dependencies. [Reported by Hans de Graaff]
+
 = gettext_rails-2.0.2 (2009-05-07)
  * Update Dutch translation [by Bart ten Brinke]
  * Apply the gettext-2.0.2 changes((don't use bindtextdomain with :supported_language_tags)
