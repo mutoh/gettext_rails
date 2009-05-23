@@ -85,6 +85,8 @@ Rake::GemPackageTask.new(spec) do |p|
   p.need_zip = false
 end
 
+task :package => [:makemo]
+
 ############################################################
 # Misc tasks
 ############################################################
