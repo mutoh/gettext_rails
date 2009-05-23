@@ -27,8 +27,6 @@ require 'gettext_rails/version'
 
 PKG_VERSION = GetTextRails::VERSION
 
-task :default => [:makemo]
-
 ############################################################
 # Manage po/mo files
 ############################################################
@@ -45,6 +43,10 @@ task :makemo do
   $stderr.puts "Create samples/rails plugin mo files."
   GetText.create_mofiles(:po_root => "sample/vendor/plugins/lang_helper/po", 
                          :mo_root => "sample/vendor/plugins/lang_helper/locale")
+
+  cd "test"
+  sh "rake makemo"
+  cd ".."
 end
 
 desc "Update pot/po files to match new version."
@@ -56,6 +58,7 @@ task :updatepo do
 			 "gettext_rails #{PKG_VERSION}")
 
 end
+
 
 ############################################################
 # Package tasks
