@@ -25,3 +25,13 @@ config.action_mailer.delivery_method = :test
 # This is necessary if your schema can't be completely dumped by the schema dumper,
 # like if you have constraints or database-specific column types
 # config.active_record.schema_format = :sql
+$LOAD_PATH.unshift RAILS_ROOT + "/../../locale/lib"
+$LOAD_PATH.unshift RAILS_ROOT + "/../../locale_rails/lib"
+$LOAD_PATH.unshift RAILS_ROOT + "/../../gettext/lib"
+$LOAD_PATH.unshift RAILS_ROOT + "/../../gettext_activerecord/lib"
+$LOAD_PATH.unshift RAILS_ROOT + "/../../gettext_rails/lib"
+
+require 'locale_rails'
+require 'gettext_activerecord'
+require 'gettext_rails'
+

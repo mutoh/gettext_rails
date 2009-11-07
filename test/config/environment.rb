@@ -38,7 +38,17 @@ Rails::Initializer.run do |config|
   # The default locale is :en and all translations from config/locales/*.rb,yml are auto loaded.
   # config.i18n.load_path += Dir[Rails.root.join('my', 'locales', '*.{rb,yml}')]
   # config.i18n.default_locale = :de
-  config.gem "locale_rails"
-  config.gem "gettext_activerecord"
-  config.gem "gettext_rails"
+#  config.gem "locale_rails"
+#  config.gem "gettext_activerecord"
+#  config.gem "gettext_rails"
 end
+
+$LOAD_PATH.unshift RAILS_ROOT + "/../../locale/lib"
+$LOAD_PATH.unshift RAILS_ROOT + "/../../locale_rails/lib"
+$LOAD_PATH.unshift RAILS_ROOT + "/../../gettext/lib"
+$LOAD_PATH.unshift RAILS_ROOT + "/../../gettext_activerecord/lib"
+$LOAD_PATH.unshift RAILS_ROOT + "/../../gettext_rails/lib"
+
+require 'locale_rails'
+require 'gettext_activerecord'
+require 'gettext_rails'

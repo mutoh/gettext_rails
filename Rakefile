@@ -95,7 +95,11 @@ task :package => [:makemo]
 ############################################################
 
 Rake::RDocTask.new { |rdoc|
-  allison = `allison --path`.chop
+  begin
+    allison = `allison --path`.chop
+  rescue
+    allison = ''
+  end
   rdoc.rdoc_dir = 'doc'
   rdoc.title    = "gettext_rails API Reference"
   rdoc.options << '--line-numbers' << '--inline-source'
@@ -114,5 +118,13 @@ task :release => [ :package ] do
   rubyforge.add_release("gettext", "gettext_rails", 
                         PKG_VERSION, 
                         "pkg/gettext_rails-#{PKG_VERSION}.gem")
+end
+
+# Run the unit tests
+desc 'Run tests'
+task :test do
+  cd "test"
+  sh $0 + " test"
+  cd ".."
 end
 

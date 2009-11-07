@@ -8,7 +8,6 @@
 
   Original: gettext/lib/rails.rb from Ruby-GetText-Package-1.93.0
 
-  $Id$
 =end
 
 module ActionView #:nodoc:
@@ -16,9 +15,9 @@ module ActionView #:nodoc:
  
     module DateHelper #:nodoc: all
       include GetText
-      bindtextdomain "rails"
+      bindtextdomain "gettext_rails"
 
-      alias distance_of_time_in_words_without_locale distance_of_time_in_words #:nodoc:
+      alias distance_of_time_in_words_without_gettext_rails distance_of_time_in_words #:nodoc:
 
       # This is FAKE constant. The messages are found by rgettext as the msgid. 
       MESSAGESS = [N_('less than 5 seconds'), N_('less than 10 seconds'), N_('less than 20 seconds'),
@@ -31,7 +30,7 @@ module ActionView #:nodoc:
       NYEARS  = [/^over (\d+) years?$/, Nn_('over 1 year', 'over %{num} years')]
 
       def distance_of_time_in_words(from_time, to_time = 0, include_seconds = false)
-        msg = distance_of_time_in_words_without_locale(from_time, to_time, include_seconds)
+        msg = distance_of_time_in_words_without_gettext_rails(from_time, to_time, include_seconds)
         match = false
         [NMINUTES, NHOURS, NDAYS, NMONTHS, NYEARS].each do |regexp, nn|
           if regexp =~ msg
