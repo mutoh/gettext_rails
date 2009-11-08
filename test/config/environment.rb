@@ -1,7 +1,7 @@
 # Be sure to restart your server when you modify this file
 
 # Specifies gem version of Rails to use when vendor/rails is not present
-RAILS_GEM_VERSION = '2.3.2' unless defined? RAILS_GEM_VERSION
+#RAILS_GEM_VERSION = '2.3.4' unless defined? RAILS_GEM_VERSION
 
 # Bootstrap the Rails environment, frameworks, and default configuration
 require File.join(File.dirname(__FILE__), 'boot')
@@ -43,12 +43,3 @@ Rails::Initializer.run do |config|
 #  config.gem "gettext_rails"
 end
 
-$LOAD_PATH.unshift RAILS_ROOT + "/../../locale/lib"
-$LOAD_PATH.unshift RAILS_ROOT + "/../../locale_rails/lib"
-$LOAD_PATH.unshift RAILS_ROOT + "/../../gettext/lib"
-$LOAD_PATH.unshift RAILS_ROOT + "/../../gettext_activerecord/lib"
-$LOAD_PATH.unshift RAILS_ROOT + "/../../gettext_rails/lib"
-
-require 'locale_rails'
-require 'gettext_activerecord'
-require 'gettext_rails'

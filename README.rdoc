@@ -86,6 +86,7 @@ See sample direcotries for more details.
 See {Ruby-GetText-Package HOWTO for Ruby on Rails}[http://www.yotabanana.com/hiki/ruby-gettext-howto-rails.html] for more details.
 
 == Support matrix
+* gettext_rails-2.1.0 - rails-2.3.2,2.3.3,2.3.4
 * gettext_rails-2.0.2 - rails-2.3.2
 * gettext_rails-2.0.1 - rails-2.3.2
 * gettext_rails-2.0.0 - rails-2.3.2
@@ -159,7 +160,7 @@ LGPL(Lesser General Public License: http://www.gnu.org/licenses/lgpl-3.0.txt).
 * Greek(el)                 - 2.0.0
 * Hungarian(hu)             - 2.0.0
 * Italian(it)               - 1.6.0 (old)
-* Japanese(ja)              - 2.0.2
+* Japanese(ja)              - 2.1.0
 * Korean(ko)                - 1.9.0 (old)
 * Latvian(lv)               - 2.0.0 
 * Norwegian(nb)             - 2.0.0
