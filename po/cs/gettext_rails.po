@@ -8,8 +8,8 @@
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: gettext_rails 1.93.0\n"
-"POT-Creation-Date: 2009-02-20 20:21+0900\n"
+"Project-Id-Version: gettext_rails 2.1.0\n"
+"POT-Creation-Date: 2010-03-02 00:47+0900\n"
 "PO-Revision-Date: 2006-12-16 13:08+0100\n"
 "Last-Translator: Karel Miarka <kajism@yahoo.com>\n"
 "Language-Team: Czech\n"
@@ -20,65 +20,59 @@ msgstr ""
 "10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
 "X-Poedit-Language: Czech\n"
 
-#: lib/gettext_rails/action_view/active_record_helper.rb:23
-msgid "%{num} error prohibited this %{record} from being saved"
-msgid_plural "%{num} errors prohibited this %{record} from being saved"
-msgstr[0] "%{num} chyba znemožnila uložení záznamu %{record} "
-msgstr[1] "%{num} chyby znemožnily uložení záznamu %{record} "
-msgstr[2] "%{num} chyb znemožnilo uložení záznamu %{record} "
-
-#: lib/gettext_rails/action_view/active_record_helper.rb:25
-msgid "There was a problem with the following field:"
-msgid_plural "There were problems with the following fields:"
-msgstr[0] "Problémy jsou s následujícím polem:"
-msgstr[1] "Problémy jsou s následujícími poli:"
-msgstr[2] "Problémy jsou s následujícími poli:"
-
-#: lib/gettext_rails/action_view/date_helper.rb:24
+#: lib/gettext_rails/action_view/date_helper.rb:23
 msgid "less than 5 seconds"
 msgstr "méně než 5 sekund"
 
-#: lib/gettext_rails/action_view/date_helper.rb:24
+#: lib/gettext_rails/action_view/date_helper.rb:23
 msgid "less than 10 seconds"
 msgstr "méně než 10 sekund"
 
-#: lib/gettext_rails/action_view/date_helper.rb:24
+#: lib/gettext_rails/action_view/date_helper.rb:23
 msgid "less than 20 seconds"
 msgstr "méně než 20 sekund"
 
-#: lib/gettext_rails/action_view/date_helper.rb:25
+#: lib/gettext_rails/action_view/date_helper.rb:24
 msgid "half a minute"
 msgstr "půl minuty"
 
-#: lib/gettext_rails/action_view/date_helper.rb:25
+#: lib/gettext_rails/action_view/date_helper.rb:24
 msgid "less than a minute"
 msgstr "méně než minutu"
 
-#: lib/gettext_rails/action_view/date_helper.rb:25
+#: lib/gettext_rails/action_view/date_helper.rb:29
+#: lib/gettext_rails/action_view/date_helper.rb:24
 #, fuzzy
 msgid "about 1 month"
-msgstr "asi 1 hodina"
+msgid_plural "about %{num} months"
+msgstr[0] "asi 1 hodina"
+msgstr[1] "asi 1 hodina"
+msgstr[2] "asi 1 hodina"
 
-#: lib/gettext_rails/action_view/date_helper.rb:26
+#: lib/gettext_rails/action_view/date_helper.rb:31
+#: lib/gettext_rails/action_view/date_helper.rb:25
 #, fuzzy
 msgid "about 1 year"
-msgstr "asi 1 hodina"
+msgid_plural "about %{num} years"
+msgstr[0] "asi 1 hodina"
+msgstr[1] "asi 1 hodina"
+msgstr[2] "asi 1 hodina"
 
-#: lib/gettext_rails/action_view/date_helper.rb:27
+#: lib/gettext_rails/action_view/date_helper.rb:26
 msgid "1 minute"
 msgid_plural "%{num} minutes"
 msgstr[0] "1 minuta"
 msgstr[1] "%{num} minuty"
 msgstr[2] "%{num} minut"
 
-#: lib/gettext_rails/action_view/date_helper.rb:28
+#: lib/gettext_rails/action_view/date_helper.rb:27
 msgid "about 1 hour"
 msgid_plural "about %{num} hours"
 msgstr[0] "asi 1 hodina"
 msgstr[1] "asi %{num} hodiny"
 msgstr[2] "asi %{num} hodin"
 
-#: lib/gettext_rails/action_view/date_helper.rb:29
+#: lib/gettext_rails/action_view/date_helper.rb:28
 msgid "1 day"
 msgid_plural "%{num} days"
 msgstr[0] "1 den"
@@ -93,10 +87,36 @@ msgstr[0] "1 minuta"
 msgstr[1] "%{num} minuty"
 msgstr[2] "%{num} minut"
 
-#: lib/gettext_rails/action_view/date_helper.rb:31
+#: lib/gettext_rails/action_view/date_helper.rb:32
 #, fuzzy
 msgid "over 1 year"
 msgid_plural "over %{num} years"
 msgstr[0] "asi 1 hodina"
 msgstr[1] "asi %{num} hodina"
 msgstr[2] "asi %{num} hodina"
+
+#: lib/gettext_rails/action_view/date_helper.rb:33
+#, fuzzy
+msgid "almost 1 year"
+msgid_plural "almost %{num} years"
+msgstr[0] "asi 1 hodina"
+msgstr[1] "asi 1 hodina"
+msgstr[2] "asi 1 hodina"
+
+#: lib/gettext_rails/action_view/form_builder.rb:20
+msgid "\"#{@object.class}|#{method.to_s.humanize}\""
+msgstr ""
+
+#: lib/gettext_rails/action_view/active_record_helper.rb:24
+msgid "%{num} error prohibited this %{record} from being saved"
+msgid_plural "%{num} errors prohibited this %{record} from being saved"
+msgstr[0] "%{num} chyba znemožnila uložení záznamu %{record} "
+msgstr[1] "%{num} chyby znemožnily uložení záznamu %{record} "
+msgstr[2] "%{num} chyb znemožnilo uložení záznamu %{record} "
+
+#: lib/gettext_rails/action_view/active_record_helper.rb:26
+msgid "There was a problem with the following field:"
+msgid_plural "There were problems with the following fields:"
+msgstr[0] "Problémy jsou s následujícím polem:"
+msgstr[1] "Problémy jsou s následujícími poli:"
+msgstr[2] "Problémy jsou s následujícími poli:"

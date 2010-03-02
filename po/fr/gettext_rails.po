@@ -11,8 +11,8 @@
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: gettext_rails 1.93.0\n"
-"POT-Creation-Date: 2009-02-20 20:21+0900\n"
+"Project-Id-Version: gettext_rails 2.1.0\n"
+"POT-Creation-Date: 2010-03-02 00:47+0900\n"
 "PO-Revision-Date: 2005-12-17 14:33+0900\n"
 "Last-Translator: Vincent Isambart\n"
 "Language-Team: French\n"
@@ -21,61 +21,55 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n == 1 ? 0 : 1;\n"
 
-#: lib/gettext_rails/action_view/active_record_helper.rb:23
-msgid "%{num} error prohibited this %{record} from being saved"
-msgid_plural "%{num} errors prohibited this %{record} from being saved"
-msgstr[0] ""
-"%{num} erreur a empeché l'enregistrement '%{record}' d'être sauvegardé"
-msgstr[1] ""
-"%{num} erreurs ont empeché l'enregistrement '%{record}' d'être sauvegardé"
-
-#: lib/gettext_rails/action_view/active_record_helper.rb:25
-msgid "There was a problem with the following field:"
-msgid_plural "There were problems with the following fields:"
-msgstr[0] "Il y a eu des problèmes avec le champ suivant:"
-msgstr[1] "Il y a eu des problèmes avec les champs suivants:"
-
-#: lib/gettext_rails/action_view/date_helper.rb:24
+#: lib/gettext_rails/action_view/date_helper.rb:23
 msgid "less than 5 seconds"
 msgstr "moins de 5 secondes"
 
-#: lib/gettext_rails/action_view/date_helper.rb:24
+#: lib/gettext_rails/action_view/date_helper.rb:23
 msgid "less than 10 seconds"
 msgstr "moins de 10 secondes"
 
-#: lib/gettext_rails/action_view/date_helper.rb:24
+#: lib/gettext_rails/action_view/date_helper.rb:23
 msgid "less than 20 seconds"
 msgstr "moins de 20 secondes"
 
-#: lib/gettext_rails/action_view/date_helper.rb:25
+#: lib/gettext_rails/action_view/date_helper.rb:24
 msgid "half a minute"
 msgstr "la moitié d'une minute"
 
-#: lib/gettext_rails/action_view/date_helper.rb:25
+#: lib/gettext_rails/action_view/date_helper.rb:24
 msgid "less than a minute"
 msgstr "moins d'une minute"
 
-#: lib/gettext_rails/action_view/date_helper.rb:25
+#: lib/gettext_rails/action_view/date_helper.rb:29
+#: lib/gettext_rails/action_view/date_helper.rb:24
+#, fuzzy
 msgid "about 1 month"
-msgstr "environ 1 mois"
+msgid_plural "about %{num} months"
+msgstr[0] "environ 1 mois"
+msgstr[1] "environ 1 mois"
+
+#: lib/gettext_rails/action_view/date_helper.rb:31
+#: lib/gettext_rails/action_view/date_helper.rb:25
+#, fuzzy
+msgid "about 1 year"
+msgid_plural "about %{num} years"
+msgstr[0] "environ 1 an"
+msgstr[1] "environ 1 an"
 
 #: lib/gettext_rails/action_view/date_helper.rb:26
-msgid "about 1 year"
-msgstr "environ 1 an"
-
-#: lib/gettext_rails/action_view/date_helper.rb:27
 msgid "1 minute"
 msgid_plural "%{num} minutes"
 msgstr[0] "1 minute"
 msgstr[1] "%{num} minutes"
 
-#: lib/gettext_rails/action_view/date_helper.rb:28
+#: lib/gettext_rails/action_view/date_helper.rb:27
 msgid "about 1 hour"
 msgid_plural "about %{num} hours"
 msgstr[0] "environ 1 heure"
 msgstr[1] " environ %{num} heures"
 
-#: lib/gettext_rails/action_view/date_helper.rb:29
+#: lib/gettext_rails/action_view/date_helper.rb:28
 msgid "1 day"
 msgid_plural "%{num} days"
 msgstr[0] "1 jour"
@@ -87,8 +81,33 @@ msgid_plural "%{num} months"
 msgstr[0] "1 mois"
 msgstr[1] "%{num} mois"
 
-#: lib/gettext_rails/action_view/date_helper.rb:31
+#: lib/gettext_rails/action_view/date_helper.rb:32
 msgid "over 1 year"
 msgid_plural "over %{num} years"
 msgstr[0] "plus d'1 an"
 msgstr[1] "plus de %{num} ans"
+
+#: lib/gettext_rails/action_view/date_helper.rb:33
+#, fuzzy
+msgid "almost 1 year"
+msgid_plural "almost %{num} years"
+msgstr[0] "environ 1 an"
+msgstr[1] "environ 1 an"
+
+#: lib/gettext_rails/action_view/form_builder.rb:20
+msgid "\"#{@object.class}|#{method.to_s.humanize}\""
+msgstr ""
+
+#: lib/gettext_rails/action_view/active_record_helper.rb:24
+msgid "%{num} error prohibited this %{record} from being saved"
+msgid_plural "%{num} errors prohibited this %{record} from being saved"
+msgstr[0] ""
+"%{num} erreur a empeché l'enregistrement '%{record}' d'être sauvegardé"
+msgstr[1] ""
+"%{num} erreurs ont empeché l'enregistrement '%{record}' d'être sauvegardé"
+
+#: lib/gettext_rails/action_view/active_record_helper.rb:26
+msgid "There was a problem with the following field:"
+msgid_plural "There were problems with the following fields:"
+msgstr[0] "Il y a eu des problèmes avec le champ suivant:"
+msgstr[1] "Il y a eu des problèmes avec les champs suivants:"

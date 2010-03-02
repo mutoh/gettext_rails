@@ -8,8 +8,8 @@
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: gettext_rails 1.93.0\n"
-"POT-Creation-Date: 2009-02-20 20:21+0900\n"
+"Project-Id-Version: gettext_rails 2.1.0\n"
+"POT-Creation-Date: 2010-03-02 00:47+0900\n"
 "PO-Revision-Date: 2008-07-11 11:35+0300\n"
 "Last-Translator: Sava Chankov <sava.chankov@gmail.com>\n"
 "Language-Team: Bulgarian <ruby-on-rails-bulgaria@googlegroups.com>\n"
@@ -18,59 +18,55 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
-#: lib/gettext_rails/action_view/active_record_helper.rb:23
-msgid "%{num} error prohibited this %{record} from being saved"
-msgid_plural "%{num} errors prohibited this %{record} from being saved"
-msgstr[0] "Поради %{num} грешка %{record} не беше записан"
-msgstr[1] "Поради %{num} грешки %{record} не беше записан"
-
-#: lib/gettext_rails/action_view/active_record_helper.rb:25
-msgid "There was a problem with the following field:"
-msgid_plural "There were problems with the following fields:"
-msgstr[0] "Проблемът се дължи на:"
-msgstr[1] "Проблемите се дължат на:"
-
-#: lib/gettext_rails/action_view/date_helper.rb:24
+#: lib/gettext_rails/action_view/date_helper.rb:23
 msgid "less than 5 seconds"
 msgstr "по-малко от 5 секунди"
 
-#: lib/gettext_rails/action_view/date_helper.rb:24
+#: lib/gettext_rails/action_view/date_helper.rb:23
 msgid "less than 10 seconds"
 msgstr "по-малко от 10 секунди"
 
-#: lib/gettext_rails/action_view/date_helper.rb:24
+#: lib/gettext_rails/action_view/date_helper.rb:23
 msgid "less than 20 seconds"
 msgstr "по-малко от 20 секунди"
 
-#: lib/gettext_rails/action_view/date_helper.rb:25
+#: lib/gettext_rails/action_view/date_helper.rb:24
 msgid "half a minute"
 msgstr "половин минута"
 
-#: lib/gettext_rails/action_view/date_helper.rb:25
+#: lib/gettext_rails/action_view/date_helper.rb:24
 msgid "less than a minute"
 msgstr "по-малко от минута"
 
-#: lib/gettext_rails/action_view/date_helper.rb:25
+#: lib/gettext_rails/action_view/date_helper.rb:29
+#: lib/gettext_rails/action_view/date_helper.rb:24
+#, fuzzy
 msgid "about 1 month"
-msgstr "около 1 месец"
+msgid_plural "about %{num} months"
+msgstr[0] "около 1 месец"
+msgstr[1] "около 1 месец"
+
+#: lib/gettext_rails/action_view/date_helper.rb:31
+#: lib/gettext_rails/action_view/date_helper.rb:25
+#, fuzzy
+msgid "about 1 year"
+msgid_plural "about %{num} years"
+msgstr[0] "около 1 година"
+msgstr[1] "около 1 година"
 
 #: lib/gettext_rails/action_view/date_helper.rb:26
-msgid "about 1 year"
-msgstr "около 1 година"
-
-#: lib/gettext_rails/action_view/date_helper.rb:27
 msgid "1 minute"
 msgid_plural "%{num} minutes"
 msgstr[0] "1 минута"
 msgstr[1] "%{num} минути"
 
-#: lib/gettext_rails/action_view/date_helper.rb:28
+#: lib/gettext_rails/action_view/date_helper.rb:27
 msgid "about 1 hour"
 msgid_plural "about %{num} hours"
 msgstr[0] "около час"
 msgstr[1] "около %{num} часа"
 
-#: lib/gettext_rails/action_view/date_helper.rb:29
+#: lib/gettext_rails/action_view/date_helper.rb:28
 msgid "1 day"
 msgid_plural "%{num} days"
 msgstr[0] "1 ден"
@@ -82,8 +78,31 @@ msgid_plural "%{num} months"
 msgstr[0] "1 месец"
 msgstr[1] "%{num} месеци"
 
-#: lib/gettext_rails/action_view/date_helper.rb:31
+#: lib/gettext_rails/action_view/date_helper.rb:32
 msgid "over 1 year"
 msgid_plural "over %{num} years"
 msgstr[0] "повече от година"
 msgstr[1] "повече %{num} години"
+
+#: lib/gettext_rails/action_view/date_helper.rb:33
+#, fuzzy
+msgid "almost 1 year"
+msgid_plural "almost %{num} years"
+msgstr[0] "около 1 година"
+msgstr[1] "около 1 година"
+
+#: lib/gettext_rails/action_view/form_builder.rb:20
+msgid "\"#{@object.class}|#{method.to_s.humanize}\""
+msgstr ""
+
+#: lib/gettext_rails/action_view/active_record_helper.rb:24
+msgid "%{num} error prohibited this %{record} from being saved"
+msgid_plural "%{num} errors prohibited this %{record} from being saved"
+msgstr[0] "Поради %{num} грешка %{record} не беше записан"
+msgstr[1] "Поради %{num} грешки %{record} не беше записан"
+
+#: lib/gettext_rails/action_view/active_record_helper.rb:26
+msgid "There was a problem with the following field:"
+msgid_plural "There were problems with the following fields:"
+msgstr[0] "Проблемът се дължи на:"
+msgstr[1] "Проблемите се дължат на:"

@@ -26,13 +26,16 @@ module ActionView #:nodoc:
       NMINUTES = [/^(\d+) minutes?$/, Nn_('1 minute', '%{num} minutes')]
       NHOURS   = [/^about (\d+) hours?$/, Nn_('about 1 hour', 'about %{num} hours')]
       NDAYS    = [/^(\d+) days?$/, Nn_('1 day', '%{num} days')]
+      AMONTHS  = [/^about (\d+) months?$/, Nn_('about 1 month', 'about %{num} months')]
       NMONTHS  = [/^(\d+) months?$/, Nn_('1 month', '%{num} months')]
+      AYEARS  = [/^about (\d+) years?$/, Nn_('about 1 year', 'about %{num} years')]
       NYEARS  = [/^over (\d+) years?$/, Nn_('over 1 year', 'over %{num} years')]
+      ALYEARS  = [/^almost (\d+) years?$/, Nn_('almost 1 year', 'almost %{num} years')]
 
       def distance_of_time_in_words(from_time, to_time = 0, include_seconds = false)
         msg = distance_of_time_in_words_without_gettext_rails(from_time, to_time, include_seconds)
         match = false
-        [NMINUTES, NHOURS, NDAYS, NMONTHS, NYEARS].each do |regexp, nn|
+        [NMINUTES, NHOURS, NDAYS, AMONTHS, NMONTHS, AYEARS, NYEARS, ALYEARS].each do |regexp, nn|
           if regexp =~ msg
             match = true
             msg = n_(nn, $1.to_i) % {:num => $1}

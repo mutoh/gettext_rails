@@ -86,6 +86,7 @@ See sample direcotries for more details.
 See {Ruby-GetText-Package HOWTO for Ruby on Rails}[http://www.yotabanana.com/hiki/ruby-gettext-howto-rails.html] for more details.
 
 == Support matrix
+* gettext_rails-2.2.0 - rails-2.3.2,2.3.3,2.3.4,2.3.5
 * gettext_rails-2.1.0 - rails-2.3.2,2.3.3,2.3.4
 * gettext_rails-2.0.2 - rails-2.3.2
 * gettext_rails-2.0.1 - rails-2.3.2

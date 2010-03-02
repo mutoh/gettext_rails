@@ -8,8 +8,8 @@
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: gettext_rails 1.93.0\n"
-"POT-Creation-Date: 2009-02-20 20:21+0900\n"
+"Project-Id-Version: gettext_rails 2.1.0\n"
+"POT-Creation-Date: 2010-03-02 00:47+0900\n"
 "PO-Revision-Date: 2006-01-06 19:50+0100\n"
 "Last-Translator: damphyr <damphyr@gmx.net>\n"
 "Language-Team: Greek\n"
@@ -18,59 +18,55 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
-#: lib/gettext_rails/action_view/active_record_helper.rb:23
-msgid "%{num} error prohibited this %{record} from being saved"
-msgid_plural "%{num} errors prohibited this %{record} from being saved"
-msgstr[0] "%{num} λάθος  απέτρεψε την αποθήκευση της εγγραφής %{record}"
-msgstr[1] "%{num} λάθη απέτρεψαν την αποθήκευση της εγγραφής %{record}"
-
-#: lib/gettext_rails/action_view/active_record_helper.rb:25
-msgid "There was a problem with the following field:"
-msgid_plural "There were problems with the following fields:"
-msgstr[0] "Υπάρχουν προβλήματα στο παρακάτω πεδίο:"
-msgstr[1] "Υπάρχουν προβλήματα στα παρακάτω πεδία:"
-
-#: lib/gettext_rails/action_view/date_helper.rb:24
+#: lib/gettext_rails/action_view/date_helper.rb:23
 msgid "less than 5 seconds"
 msgstr "λιγότερο από 5 δευτερόλεπτα"
 
-#: lib/gettext_rails/action_view/date_helper.rb:24
+#: lib/gettext_rails/action_view/date_helper.rb:23
 msgid "less than 10 seconds"
 msgstr "λιγότερο από 10 δευτερόλεπτα"
 
-#: lib/gettext_rails/action_view/date_helper.rb:24
+#: lib/gettext_rails/action_view/date_helper.rb:23
 msgid "less than 20 seconds"
 msgstr "λιγότερο από 20 δευτερόλεπτα"
 
-#: lib/gettext_rails/action_view/date_helper.rb:25
+#: lib/gettext_rails/action_view/date_helper.rb:24
 msgid "half a minute"
 msgstr "μισό λεπτό"
 
-#: lib/gettext_rails/action_view/date_helper.rb:25
+#: lib/gettext_rails/action_view/date_helper.rb:24
 msgid "less than a minute"
 msgstr "λιγότερο από ένα λεπτό"
 
-#: lib/gettext_rails/action_view/date_helper.rb:25
+#: lib/gettext_rails/action_view/date_helper.rb:29
+#: lib/gettext_rails/action_view/date_helper.rb:24
+#, fuzzy
 msgid "about 1 month"
-msgstr "περίπου ένα μήνα"
+msgid_plural "about %{num} months"
+msgstr[0] "περίπου ένα μήνα"
+msgstr[1] "περίπου ένα μήνα"
+
+#: lib/gettext_rails/action_view/date_helper.rb:31
+#: lib/gettext_rails/action_view/date_helper.rb:25
+#, fuzzy
+msgid "about 1 year"
+msgid_plural "about %{num} years"
+msgstr[0] "περίπου ένα χρόνο"
+msgstr[1] "περίπου ένα χρόνο"
 
 #: lib/gettext_rails/action_view/date_helper.rb:26
-msgid "about 1 year"
-msgstr "περίπου ένα χρόνο"
-
-#: lib/gettext_rails/action_view/date_helper.rb:27
 msgid "1 minute"
 msgid_plural "%{num} minutes"
 msgstr[0] "%{num} λεπτό"
 msgstr[1] "%{num} λεπτά"
 
-#: lib/gettext_rails/action_view/date_helper.rb:28
+#: lib/gettext_rails/action_view/date_helper.rb:27
 msgid "about 1 hour"
 msgid_plural "about %{num} hours"
 msgstr[0] "περίπου %{num} ώρα"
 msgstr[1] "περίπου %{num} ώρες"
 
-#: lib/gettext_rails/action_view/date_helper.rb:29
+#: lib/gettext_rails/action_view/date_helper.rb:28
 msgid "1 day"
 msgid_plural "%{num} days"
 msgstr[0] "%{num} μέρα"
@@ -82,8 +78,31 @@ msgid_plural "%{num} months"
 msgstr[0] "ένα μήνα"
 msgstr[1] "%{num} μήνες"
 
-#: lib/gettext_rails/action_view/date_helper.rb:31
+#: lib/gettext_rails/action_view/date_helper.rb:32
 msgid "over 1 year"
 msgid_plural "over %{num} years"
 msgstr[0] "πάνω από χρόνο"
 msgstr[1] "πάνω από %{num} χρόνια"
+
+#: lib/gettext_rails/action_view/date_helper.rb:33
+#, fuzzy
+msgid "almost 1 year"
+msgid_plural "almost %{num} years"
+msgstr[0] "περίπου ένα χρόνο"
+msgstr[1] "περίπου ένα χρόνο"
+
+#: lib/gettext_rails/action_view/form_builder.rb:20
+msgid "\"#{@object.class}|#{method.to_s.humanize}\""
+msgstr ""
+
+#: lib/gettext_rails/action_view/active_record_helper.rb:24
+msgid "%{num} error prohibited this %{record} from being saved"
+msgid_plural "%{num} errors prohibited this %{record} from being saved"
+msgstr[0] "%{num} λάθος  απέτρεψε την αποθήκευση της εγγραφής %{record}"
+msgstr[1] "%{num} λάθη απέτρεψαν την αποθήκευση της εγγραφής %{record}"
+
+#: lib/gettext_rails/action_view/active_record_helper.rb:26
+msgid "There was a problem with the following field:"
+msgid_plural "There were problems with the following fields:"
+msgstr[0] "Υπάρχουν προβλήματα στο παρακάτω πεδίο:"
+msgstr[1] "Υπάρχουν προβλήματα στα παρακάτω πεδία:"

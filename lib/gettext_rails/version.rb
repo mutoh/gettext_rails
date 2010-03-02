@@ -8,6 +8,6 @@
 =end
 
 module GetTextRails
-  RAILS_VERSION = "2.3.4"
-  VERSION = "2.1.0"
+  RAILS_VERSION = "2.3.5"
+  VERSION = "2.2.0"
 end

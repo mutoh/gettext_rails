@@ -20,15 +20,12 @@ class UsersControllerTest < ActionController::TestCase
 
   test "should get localized distance_of_time_in_words" do
     get :distance_of_time_in_words, :lang => "ja"
-    assert_html("ja/distance_of_time_in_words.html")
+    version = (Rails.version < "2.3.5") ? ".2.3.4" : ""
+    assert_html("ja/distance_of_time_in_words.html#{version}")
     assert_response :success
 
     get :distance_of_time_in_words, :lang => "en"
-    assert_html("en/distance_of_time_in_words.html")
-    assert_response :success
-
-    get :distance_of_time_in_words, :lang => "fr"
-    assert_html("fr/distance_of_time_in_words.html")
+    assert_html("en/distance_of_time_in_words.html#{version}")
     assert_response :success
   end
 
