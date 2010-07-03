@@ -141,7 +141,7 @@ LGPL(Lesser General Public License: http://www.gnu.org/licenses/lgpl-3.0.txt).
 * Spanish(es)
   * David Espada <davinci at escomposlinux.org> (current)
   * David Moreno Garza <damog at damog.net>
-* Ukrainian(ua)              - Alex Rootoff <rootoff at pisem.net>
+* Ukrainian(uk)              - Alex Rootoff <rootoff at pisem.net>
 * Vietnamese(vi)             - Ngoc Dao Thanh <ngocdaothanh at gmail.com>
 
 == Status of translations
@@ -169,7 +169,7 @@ LGPL(Lesser General Public License: http://www.gnu.org/licenses/lgpl-3.0.txt).
 * Russian(ru)               - 2.0.0
 * Serbian(sr)               - 1.91.0 (old)
 * Spanish(es)               - 2.0.0
-* Ukrainian(ua)             - 2.0.0
+* Ukrainian(uk)             - 2.0.0
 * Vietnamese(vi)            - 2.0.0
 
 == Maintainer
