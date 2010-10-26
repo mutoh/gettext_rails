@@ -8,10 +8,10 @@
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: gettext_rails 2.1.0\n"
+"Project-Id-Version: gettext_rails 2.2.0\n"
 "POT-Creation-Date: 2010-03-02 00:47+0900\n"
-"PO-Revision-Date: 2006-01-06 19:50+0100\n"
-"Last-Translator: damphyr <damphyr@gmx.net>\n"
+"PO-Revision-Date: 2010-10-26 14:50+0200\n"
+"Last-Translator: Fotos Georgiadis <fotos@rento.gr>\n"
 "Language-Team: Greek\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -40,19 +40,17 @@ msgstr "λιγότερο από ένα λεπτό"
 
 #: lib/gettext_rails/action_view/date_helper.rb:29
 #: lib/gettext_rails/action_view/date_helper.rb:24
-#, fuzzy
 msgid "about 1 month"
 msgid_plural "about %{num} months"
-msgstr[0] "περίπου ένα μήνα"
-msgstr[1] "περίπου ένα μήνα"
+msgstr[0] "περίπου 1 μήνα"
+msgstr[1] "περίπου %{num} μήνες"
 
 #: lib/gettext_rails/action_view/date_helper.rb:31
 #: lib/gettext_rails/action_view/date_helper.rb:25
-#, fuzzy
 msgid "about 1 year"
 msgid_plural "about %{num} years"
-msgstr[0] "περίπου ένα χρόνο"
-msgstr[1] "περίπου ένα χρόνο"
+msgstr[0] "περίπου 1 χρόνο"
+msgstr[1] "περίπου %{num} χρόνια"
 
 #: lib/gettext_rails/action_view/date_helper.rb:26
 msgid "1 minute"
@@ -81,15 +79,14 @@ msgstr[1] "%{num} μήνες"
 #: lib/gettext_rails/action_view/date_helper.rb:32
 msgid "over 1 year"
 msgid_plural "over %{num} years"
-msgstr[0] "πάνω από χρόνο"
+msgstr[0] "πάνω από 1 χρόνο"
 msgstr[1] "πάνω από %{num} χρόνια"
 
 #: lib/gettext_rails/action_view/date_helper.rb:33
-#, fuzzy
 msgid "almost 1 year"
 msgid_plural "almost %{num} years"
-msgstr[0] "περίπου ένα χρόνο"
-msgstr[1] "περίπου ένα χρόνο"
+msgstr[0] "σχεδόν 1 χρόνο"
+msgstr[1] "σχεδόν %{num} χρόνια"
 
 #: lib/gettext_rails/action_view/form_builder.rb:20
 msgid "\"#{@object.class}|#{method.to_s.humanize}\""
@@ -98,11 +95,12 @@ msgstr ""
 #: lib/gettext_rails/action_view/active_record_helper.rb:24
 msgid "%{num} error prohibited this %{record} from being saved"
 msgid_plural "%{num} errors prohibited this %{record} from being saved"
-msgstr[0] "%{num} λάθος  απέτρεψε την αποθήκευση της εγγραφής %{record}"
+msgstr[0] "%{num} λάθος απέτρεψε την αποθήκευση της εγγραφής %{record}"
 msgstr[1] "%{num} λάθη απέτρεψαν την αποθήκευση της εγγραφής %{record}"
 
 #: lib/gettext_rails/action_view/active_record_helper.rb:26
 msgid "There was a problem with the following field:"
 msgid_plural "There were problems with the following fields:"
-msgstr[0] "Υπάρχουν προβλήματα στο παρακάτω πεδίο:"
+msgstr[0] "Υπάρχει πρόβλημα στο παρακάτω πεδίο:"
 msgstr[1] "Υπάρχουν προβλήματα στα παρακάτω πεδία:"
+
